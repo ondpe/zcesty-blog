@@ -23,9 +23,25 @@ section: post
     {% endfor %}
     </p>
   {% endif %}
-
 </article>
 
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
+<nav class="post-nav">
+  {% set posts = collections.postsAll %}
+  {% set currentIndex = 0 %}
+  {% for post in posts %}
+    {% if post.url == page.url %}
+      {% set currentIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  <p>
+    {% if posts[currentIndex + 1] %}
+      <a href="{{ posts[currentIndex + 1].url }}">← {{ posts[currentIndex + 1].data.title }}</a>
+    {% endif %}
+    {% if posts[currentIndex + 1] and posts[currentIndex - 1] %} | {% endif %}
+    {% if posts[currentIndex - 1] %}
+      <a href="{{ posts[currentIndex - 1].url }}">{{ posts[currentIndex - 1].data.title }} →</a>
+    {% endif %}
+  </p>
 </nav>
+

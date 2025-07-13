@@ -217,3 +217,13 @@ button {
     height: auto !important;
     object-fit: contain;
   }
+
+  .post-nav p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}

@@ -51,6 +51,10 @@ module.exports = function(eleventyConfig) {
     return [...tagSet];
   });
 
+eleventyConfig.addCollection("postsAll", function(collectionApi) {
+  return collectionApi.getFilteredByGlob("./posts/*.md").sort((a, b) => b.date - a.date);
+});
+
   // --- FILTERS ---
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
