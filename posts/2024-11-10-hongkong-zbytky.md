@@ -1,54 +1,63 @@
 ---
-title: "Hongkong - zbytky"
 date: 2024-11-10
+hero: /images/IMG_5659.jpeg
+summary: Park, chrám a nafukovací pandy.
 tags: ['Tchaj-wan']
+title: Hongkong - zbytky
 ---
 
-Dneska to bude trochu větší bizár. Tak jdeme na to. Den začínám zhruba hodinovou projížďkou místním autobusem. Cesta příjemně utíká a tak se brzy ocitám u svého prvního dnešního cíle. Kowloon Walled City Park. 
+Dneska to bude trochu větší bizár. Tak jdeme na to. Den začínám zhruba hodinovou projížďkou místním autobusem. Cesta příjemně utíká a tak se brzy ocitám u svého prvního dnešního cíle. Kowloon Walled City Park.
 
-[![](../images/IMG_5659)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCUI5PGDjl5x9jqXe5bH1Tyr0htW09jLTlQ39bbif7xffZcgoPUIA4LqU96q3Tr31IKrHSfJmwMZfRwhObXuImxFJO1evnsAbmxOsNVjbFijND0KLFHfEQ1OVfw55bjlyBHKJCW-PGILeHGUEH_yuF65mfGFyOY590b-mOeaA4gBkVDC3wPdl_selISnlE/s5712/IMG_5659.HEIC)Na první pohled je to docela pěkný park, s orientálním pavilonkem, lidmi cvičícími tai-chi, čistými záchody a zastřešenou chodbičkou. Ta se mimochodem chvilkami hodí, protože se sem tam snáší z nebe i drobný déšť. Nojo, ale proč Walled City? 
+![Vstup do Kowloon Walled City Park](/images/IMG_5659.jpeg)  
+Na první pohled je to docela pěkný park, s orientálním pavilonkem, lidmi cvičícími tai-chi, čistými záchody a zastřešenou chodbičkou.
 
-[![](../images/IMG_5655)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiuYXJ6SDTZhFJUkOqphetm9VJIfv1GCZk4sto_GNclZiKLBEA-UD582KvnSwPxLZLhf9G6J8anrtK1pTVmTVJ36bW0VUw3biTVgqS2KXP-w8ZJRPithaU9Wra478fk5Dgk2qUpIQKHdCrxhmOnU0_Q1oS4J89IpZi4xqbNcRmDFUbM4Q4k2V5hj1jQB5q/s5712/IMG_5655.HEIC)  
-[![](../images/IMG_5654)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju8S92aNnQi-MO4t-OXfcBRZqCmYKTKj4DCpbOJY-o4-AP1D__4q7xuOw1KYkuQQU8P4T3dLZxEypESgvLb5HkiBNb8ZAXEAHwoWZrPbe0qPnUxPUbxjWOybNWKN0Mr6BSl7i_un3oGYqZl09nhs0wdINjeTbvyJuTqvyA0p22MoyWO1ImLU1w8nlUZG3K/s5712/IMG_5654.HEIC)Z cedule se dozvídám, že tenhle kousek území byla původně pevnost postavená proti Britům. Obsazení nedalekého ostrova Hongkong nezabránila, ale nějakým způsobem vypadla z následné smlouvy o pronájmu. Takže tu postupně vznikla organická čtvrť, někdo, zejména čínská vláda, by třeba řekla až skoro slum. Níže je zpodobnění, jak to asi vypadalo, no fuj.
+![Zbytky starých základů](/images/IMG_5655.jpeg)  
+![Cedule s historií města](/images/IMG_5654.jpeg)  
+![Model původní zástavby](/images/IMG_5660.jpeg)
 
-[![](../images/IMG_5660)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_ZIaqUiYIgZklYy5d2w0g3eSLQ6sgaN2lKYlQALwuT4adcqNCFRzZ3SiWcUMvcah6yPwOfFygGe_M8uJ9bXHygLJbnqlYMtjp4z2E5-FYZzKx9BCGYqyx_Bwo47Q2fk64G3Z-25trioyF_ela-X02kevLXbDvpQxLhnfWJUkX0WP7dXQi_42ConlJkZeZ/s5712/IMG_5660.HEIC)V devadesátých letech dvacátého století, jakmile se Hongkong vrátil pod čínskou správu, si řekli, že s touhle ohyzdností je potřeba zatočit. Byla tu provedena kompletní asanace a výsledkem je tenhle útulný, ale trochu obyčejný parčík. Zachovalo se tu jen pár základů staveb.
+V devadesátých letech tu proběhla kompletní asanace a výsledkem je tenhle útulný, ale trochu obyčejný parčík.
 
-[![](../images/IMG_5661)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBRebubFtjxxI_XSVtpouUL7DIaiNF5a-uB7BqXTENdVW-kXAQGH3wvv74mBxmnuUbC548LvYfpuTVoJ_hB5m8Zc2ii697ShaXU4Tjx1DEWsJY8Fr7w16YRelOfAhzoZPIKJYxDlH_M1pECgRUgDunRtmWNtVnd_wvhywLVZflVAeOnUyO8FiXFha53J15/s4032/IMG_5661.HEIC)Vydávám se směrem k chrámu Wong Tai Sin. Nevím o něm zatím nic, jen, že kousek od něj je stanice metra, takže zpátky nebudu muset autobusem.
+![Dochované zdivo původní pevnosti](/images/IMG_5661.jpeg)
 
-Nějakých dvacet minut cesty procházím místním sídlištěm. A je to parádní sídliště! Navoněné, vyleštěné, za odměnu. Na Hongkong jsou tu neobvykle široké ulice a sem tam i nějaká ta zeleň. A poměrně velký klid. Až si říkám, kde všichni lidi z těch obrovských paneláků jsou.
+Vydávám se směrem k chrámu Wong Tai Sin. Nevím o něm zatím nic, jen, že kousek od něj je stanice metra.
 
-[![](../images/IMG_5663)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOHQhRVzIwYe9F5BdzjGyesnw8fSCQSg3cOmLQWqjZ2ISpNJn3POWAM-wrMq2GbyunzK_h1fiGU4Wei2bNGFgE68xXSOUsaaod2Acyd9cPTA4H88ZrMBZflh45Agmm5JzK8U4DObR2F6m5gRGgSMv2onmS6lRv64MENW6OHhYGpTWOILZACWEFtq0KYL25/s4032/IMG_5663.HEIC)  
-[![](../images/IMG_5664)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW7c8buwtf6arBD0ynXPZF_ygk5uNIpUyllPtvlBn6OIEb0y3eOGSGUpKaSGxZrzhU90vwv7pAr4pi2vMkac1ScZLoQUqfPRJlfUBr_L2-Evd4m3Cjn2y3mF1ffBwYWHXeMy1sJyHuX-Q-dHwMl96VBb0WPsDRE1Y4j0o6dLvrXUbzUnfWpFpV3Iw8Asu8/s5712/IMG_5664.HEIC)  
-[![](../images/IMG_5665)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicEilDMXtJ12ODKQFVpd17-w_zHRR31dzhXj4V44VU-M5tFMbFHwWTUQ6lp7bRrv5YUP_YHbpXXgy21uJVCaP1-l0To9C6IgW60RykfM4ept3auE47laavUVMZe48y4a6vuT5VEqj1J-kMOTxJNQ6228sRtjXlDhWKgrgbebDU0zQf319xRzqzPT0zPOkx/s5712/IMG_5665.HEIC)Když dorazím k chrámu, pochopím, že jsou tady. Popravdě, oni tohle budou asi spíš turisti z pevninské číny, ale zato jsou tu nejspíš úplně všichni.
+![Paneláky cestou k chrámu](/images/IMG_5663.jpeg)  
+![Sídliště v Kowloonu](/images/IMG_5664.jpeg)  
+![Široká ulice se zelení](/images/IMG_5665.jpeg)
 
-[![](../images/IMG_5668)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha3zWIKUkpTpmD0C0Ic3m8nn6ORVeqe0NKuss9BGWh2roR8GCFHJwKHuyINr5g1RAempjheWYkLs3AXlxajB2LJtjbN-d15FlIJntT301BfthKk8kldqEdejgUCvLu8bXin5uXpYXVQTUGp3zW8OLQzjmW19zRZPpzao6oiMQsR_S-6EQxyCdI8tpoRDzm/s5712/IMG_5668.HEIC)Chrám Wong Tai Sin, jak se dozvídám, je taoistický a je zasvěcený (pokud s v taoismu dá tohle slovo použít) poutníkovi Wong Tai Sin. Asi vás nepřekvapí, že to byl chudý pastýř. Tenhle Tai Sin ale umí plnit přání a prý velmi dobře. Takže se tu motají lidé s kouřícími tyčinkami, vesele platí obětiny a občas se možná i modlí. Ale spíš se motají.
+![Vchod do chrámu Wong Tai Sin](/images/IMG_5668.jpeg)  
+Chrám je taoistický, zasvěcený poutníkovi Wong Tai Sin, který prý plní přání.
 
-[![](../images/IMG_5670)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCQojowpya_17ovWtMPfYNa23xMAnk7xmvrraEDBciv69IKIGMSFXuPQafMMB1RjGqewekflFLAM8CdUxBfQhh51L1XKWzqUFyQZ8gFrslh5gw28Kk04qKHwwgJ8RiYGSmXGalz5tKodSwuBwysGEhXlXVvAKzdsNj3u-DJ9G2Fn5TPKQ7KiN3IP4m6lVx/s4032/IMG_5670.HEIC)  
-[![](../images/IMG_5671)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9-GQCo81BB8oKFs1npcwpWMaNnhxpW7QTnVbP7icOZ636vqJTuZsDDARxmw392ZDXLk60cmGXYKAUFdBpO3abSZ1J0KpB3TfopA8Y8hbmg_sKp5Lo7p3xk11JoRst7_7frPaoBO3EGOnlp_3Io1vofzysGJ4JjVmHVtlV24l8QkESI0G5EbtRF2BWJNVF/s5712/IMG_5671.HEIC)  
-[![](../images/IMG_5669)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWmc5oujmYFtCSzCuaIvQ4WXVRWjJfQcg0JoTj-VTWkTyFkG6MGaA_Cbb1B66h-5VRbb2IyM1j2B5ycLhwoXBnWeQC-wlvoQ2cQk6cxFNeKGKDMjByVxqJzY58bfFZgbkIwLXSJxnd_XtCN95IU1OFi9n-rUGNdEfcQ5eztFkR_8XuEu9TawuxDSFTZ5Hv/s5712/IMG_5669.HEIC)V zadní části komplexu se nachází perla, zahrada splněných přání. Už včera jsem zahlédl chrám vyzdobený k 75. výročí založení ČLR a nejspíš to nebude náhoda. Vláda jede propagaci ČLR přes chrámy. Tady to vzali opravdu zgruntu a v zahradě splněných přání je mezi původní výzdobou spousta ozdobiček a nejedna nafukovací panda v žertovné pozici.
+![Lidé s vonnými tyčinkami](/images/IMG_5670.jpeg)  
+![Hlavní hala chrámu](/images/IMG_5671.jpeg)  
+![Obětiny a návštěvníci](/images/IMG_5669.jpeg)
 
-[![](../images/IMG_5674)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiN-TjU-nivaI9CST0NlcP2M0fG5Rw6h5y6V9KYSUhScRymzkb-NI1AN0wiklSxdl_pa2HC9cRCuqmWjttPCwJ-0y3AzUsVpJBtDuMGXOxz2RW6K5RYqJFpEYwQ5XjAoP6V4Di1LJfA4PqU0P0Hr8QTBkZcAA_bQjiFwexa7N2R2sANkEc9X5k1JUYJ5jw/s5712/IMG_5674.HEIC)  
-[![](../images/IMG_5675)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvvhklPKcs0nsribGZV1zlwwriZWUJwgMkWk0jFhK1g7GVitns3gUdldSXPZKhky4RsFN6G20wC0FdSgNByJxE5jvnNEEn5QDwd00Yv0Zn9w1p0AH9f43XbU6EUn2u-bZ99Tuc0tkyswsr4FUVof307kRSiQjAEjjwbh0twpNo5SaWmXM2sMze_rGGxFeT/s5712/IMG_5675.HEIC)  
-[![](../images/IMG_5676)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4Q70PqNZsNZ3eazTAAMjZCLD7_2qKvk1S0sXoXAZOAlE_nQTiNapaMgLm05Hww8nlQYAHgC97fRIs1JHZekZWCmrAkc-Np0vPV8gRE-PX-__HQxYE5W8OocxMQ1Crr6_1sy7Y0z045jpbjBjy3Zw-eOwhvpCXTNgGZUh6qYdOWx5yyqC4265qvGFkAS6I/s5712/IMG_5676.HEIC)  
-[![](../images/IMG_5677)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQG0pLDRv1K-2Kf9GLifMeFa0tZJEZaEDF_lOMzUTUtj-kXhQd-nVr_0gsTcwPbQToEZa4o96Dyt9_hv_3ai767Z8cUtQOreHMPj1pBrhqq8WhrAFManr2KcEe8Qy6npiUWpk4FutgRLbuFlH72K-9tNkF5FEDHaslqUqrV88jMiwy2l2nXcJbMAMKOrXw/s5712/IMG_5677.HEIC)Nakonec se s námi rozloučí celá pandí rodinka.
+V zadní části komplexu se nachází zahrada splněných přání. Mezi původní výzdobou je i spousta ozdobiček a nafukovací pandy.
 
-[![](../images/IMG_5678)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4sjKcRJqR4jIPMq1dJw3wv_ldgA4hKoS9KEM_OKjcw2mRMBpcYVFlPALe7KxmKQ-P2nEWPopQJ524vjJBSl13lTosO736-npuQhycFW8tsIg7Ic6TObOH945abqntkzaR4Vu8UEVwOJXy0K50xim2Js8mXMlEIEryOkax_jfyViIthOdC9_Njc3ASJyt1/s5712/IMG_5678.HEIC)No není to krásné? Tak dál. Na programu je nejošklivější panelák v Hongkongu. Cestou k němu si pomůžu metrem a pak zkusím ještě jeden přívoz. Jede na čas, stojí tentokrát 30 korun, ale zase jsou z něj pěkné výhledy a loď má punc i čmuch autenticity. 
+![Zahrada splněných přání](/images/IMG_5674.jpeg)  
+![Dekorace a lampiony](/images/IMG_5675.jpeg)  
+![Barevná výzdoba chrámu](/images/IMG_5676.jpeg)  
+![Nafukovací panda](/images/IMG_5677.jpeg)
 
-[![](../images/IMG_5680)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijxaeh0vVOI6EhVXQR0wBczxKUJZFUfv-HhejlaET5Xh0fRUlI8YOP_t3zd3ZM8LfR69irskS4C606aFPKD8t3XMIzIfgSOt3zZnPXEOMFrYCZ77QFjibKg6-fcjWB17wB9ylpdZVAbnlk-pT_IYr9Tw0lKJbWdmXaO5g4yTxnJ7FRjbLxPUiqmyPN_LVa/s5712/IMG_5680.HEIC)Zbytek dojedu oblíbenou tramvají.
+![Rodinka pand na rozloučenou](/images/IMG_5678.jpeg)
 
-[![](../images/IMG_5683)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAKFGXyBU31TKP4X1GO3AzR8KcmreC_i_-UeuLacVntS-DG_dBTleLXyKYMmDvCbrY05tR9OHXKUi8pwXtKU5is4jPwAXRkGEt3s-qMBqJyF8qh6i1nBCdCbHj9TpQV43CNVvzld5gnISqeW4rMHgGBAds4BRWyRDfcHAP9piO_EnEAia0VRxrZqUfJxQL/s5712/IMG_5683.HEIC)Nejošklivější panelák v Hongkongu má přezdívku Monster House. A jak zjišťuju, patří k dobré tradici se tu u něj vyfotit.
+Na programu je nejošklivější panelák v Hongkongu. Cestou k němu si pomůžu metrem a pak ještě jeden přívoz.
 
-Pravda, Louvre to zrovna není, ale v takovém Macau by se sotva dostal do Top 10. Napadá mě, že bychom v Praze mohli turisty začít vozit na Novou Harfu.
+![Výhled z přívozu](/images/IMG_5680.jpeg)  
+Zbytek dojedu oblíbenou tramvají.
 
-[![](../images/IMG_5685)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijJ8DfNiluRTEQrSagEOfleF02PgjUhNbY5krTzGJe501GKKleP14-HHL4xzOI9oP7zwFJqlX_Z6SPplV8xzNLb1Pndlq2m9vUvLb5GA_g9SexrdzCxhScfxxT8iTurr1hYRVufAjmo5m6mV-1DZwE4aAhRqUxMqwMDtb4MMnOd57tz8TvE9ZL-e04sC3a/s5712/IMG_5685.HEIC)  
-[![](../images/IMG_5688)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbJov1EFFatVKIpAP05gc_A0kwby6mvxc1sBnduYgfkcyaDUq-NY_wUyhBWTOo-77Fv8Fj8ybQySPVxCRrL_Q9-KfYuTtRmgBQDy18NGtwV5a2Zu4ykArKKhJEMJijjyImZ-rxf4w56MLjTpVUOO6oWiANbDCCs_HaBmuCFxLu9Z0qP7wAZlo6YJdvQQN4/s4032/IMG_5688.HEIC)  
-[![](../images/IMG_5689)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgv7It9jO-WbXQO6Z61DVy2CDHe3mUkUVhUEDQX-5PwLNS4O4ukvjcCs0oykmrF4BizZd-yev3mZ2wcGOhf4LO9fh-j2Wik3J6eKrYh1cqpb-_qMRL4Lido4YfQBaQTEzBMpeANRCpAGP1baQ68LgnlSSyaluJ6ZAQ-ogDUpXRKnUzkomTuWzpqILo-lnb9/s5712/IMG_5689.HEIC)K obědu ulovím čínskou omeletu na rýži.
+![Jízda tramvají](/images/IMG_5683.jpeg)
 
-[![](../images/IMG_5691)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD2mF4dyEDFqEac63065gGI4rlXgZfU5tfAibZ4cMTMpic2-q6fFh19fjI-owo01aYnmtb2Kbni8PHwCK7WuS74dM3mE-U2-Hiz7nKBL7mJP94fPdBc8jzJeagmSUmN-16GQP-_69EKhyphenhyphenm5E4q2mf6OyMJs2Mzk461cbv-y3SJBtvZo7xHDojnFOEtp_1s/s5712/IMG_5691.HEIC)Cestou zpátky k hotelu pozoruju další podivnost, kterou jsem radši nefotil. Na různých zastřešených místech, hlavně v nadchodech, tu sedí arabské ženy. Na první pohled to vypadá jak naši bezdomovci, ale jsou pěkně oblečené, na dekách nebo rybářských stoličkách a s piknikovými koši. Ale na fakt dost ošklivých místech. Představte si piknik v podjezdu U Bulhara. Nedělní piknik.
+Monster House patří k dobré tradici se u něj vyfotit.
 
-A pak už je čas vyzvednout batoh z hotelu a vyrazit na letiště. Mají tady skvělou věc, check-in ve městě. Funguje to tak, že až 24 hodin předem můžete u stanice Airport Expresu vyřešit check-in a zbavit se zavazadel. Bohužel se o téhle věci dozvím jen pár hodin před odletem, ale i tak ji využívám a ještě chvilku brouzdám okolo přístavu.
+![Monster House, pohled zespodu](/images/IMG_5685.jpeg)  
+![Detail panelového komplexu](/images/IMG_5688.jpeg)  
+![Turistická póza](/images/IMG_5689.jpeg)
 
-Kupí se tu lidi na ulici, jako kdyby se chystali na trh. Arabský piknik to není, tak se ptám co se děje. Prý je dneska den, kdy je možné zajistit přepravu na Filipíny, asi zrovna odjíždí loď. Místní filipínští expati si z toho při té příležitosti udělali takový komunitní den. Posedávají, popíjejí, mají taky piknik, jen místo koberců jsou obložení zabaleným taškami a krabicemi s lístečky s destinací.
+![Čínská omeleta na rýži](/images/IMG_5691.jpeg)
 
-[![](../images/IMG_5695)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjmnPXePC8bO8t7WbLFDYg4bOUzAelx0g3ZI3K0pgYB6xRx8XsYxUFfBSIy3htQLqpnx-7-92cl01Xy0a3_ssAPz5B1f45oBrsgLum4Qaf_GqivKDQ8SnchwGuaKymYzxmZSXeIsLNelrwD9T3aoU8GTQbD3GfFQDRiYVHuiSfgzFoeEztuPCRekQhIU6M/s5712/IMG_5695.HEIC)Pak už v poklidu cesta na letiště a přelet do Tajpeje. Do města dorazím sice asi až v půl jedenácté večer, ale připadá mi to tu jak po zombie apokalypse. Nikde nikdo. Uvidíme zítra přes den.
+Cestou zpět pozoruju skupiny žen posedávajících v nadchodech, a nakonec dorazím na check-in Airport Expressem.
 
+![Fronta na přepravu na Filipíny](/images/IMG_5695.jpeg)
+
+Pak už jen noční přelet do Tajpeje.
