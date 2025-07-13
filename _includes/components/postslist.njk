@@ -1,9 +1,11 @@
 <section>
   {% for post in postlist %}
     <article>
-      {% if post.data.hero %}
-        <img src="{{ post.data.hero | url }}" alt="Hero obrázek" style="max-width:100%; height:auto; margin-bottom: 0.5em;" />
-      {% endif %}
+  {% if post.data.hero %}
+    <a href="{{ post.url | url }}">
+      <img src="{{ post.data.hero | url }}" alt="Hero obrázek" style="max-width:100%; height:auto; margin-bottom: 0.5em;" />
+    </a>
+  {% endif %}
 
       <h3>
         <a href="{{ post.url | url }}">
