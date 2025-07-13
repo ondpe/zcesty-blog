@@ -1,6 +1,16 @@
 <footer>
 <script src="https://unpkg.com/baguettebox.js@1.11.1/dist/baguetteBox.min.js"></script>
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a img[alt]').forEach(img => {
+      if (!img.title) {
+        img.title = img.alt;
+      }
+    });
+    baguetteBox.run('.gallery');
+  });
+</script>
+<script>
   window.addEventListener('DOMContentLoaded', () => {
     baguetteBox.run('.gallery');
      overlayBackgroundColor: 'rgba(0,0,0,0.8)'

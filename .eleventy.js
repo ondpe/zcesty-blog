@@ -17,12 +17,12 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAttrs)
     .use(markdownItAnchor, { permalink: false })
     .use(markdownItForInline, 'image_linker', 'image', (tokens, idx) => {
-      const token = tokens[idx];
-      const src = token.attrGet('src');
-      const alt = token.content || '';
-      token.type = 'html_inline';
-      token.content = `<a href="${src}" class="gallery"><img src="${src}" alt="${alt}"></a>`;
-    });
+   const token = tokens[idx];
+   const src = token.attrGet('src');
+   const alt = token.content || '';
+   token.type = 'html_inline';
+   token.content = `<a href="${src}" data-caption="${alt}"><img src="${src}" alt="${alt}"></a>`;
+});
 
   eleventyConfig.setLibrary("md", md);
 
