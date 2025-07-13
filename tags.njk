@@ -3,21 +3,16 @@ pagination:
   data: collections
   size: 1
   alias: tag
-  filter:
-    - all
-    - nav
-    - post
-    - posts
 permalink: /tags/{{ tag }}/
 layout: layouts/base.njk
 eleventyComputed:
-  title: "Tagged “{{ tag }}”"
+  title: "Cesta na {{ tag }}"
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
-<h1>Tagged “{{ tag }}”</h1>
+<h1>Cesta na {{ tag }}</h1>
 
-{% set postslist = collections[tag] %}
+{% set postlist = collections[tag] or [] %}
 {% include "components/postslist.njk" %}
 
 <nav>

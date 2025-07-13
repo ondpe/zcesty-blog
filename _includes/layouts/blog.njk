@@ -1,11 +1,15 @@
 ---
 layout: layouts/base.njk
-section: blog
-permalink: /blog/index.html
+title: "Z Cesty"
+eleventyComputed:
+  metaDescription: "Všechny články z blogu"
 ---
-<h1>{{ title }}</h1>
 
-{{ layoutContent | safe }}
+<h1>Všechny články</h1>
 
-{% set postslist = collections.post %}
+{% set postlist = collections.post | reverse %}
 {% include "components/postslist.njk" %}
+
+<nav>
+  <a href="/">← Zpět na úvod</a>
+</nav>

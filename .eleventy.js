@@ -37,6 +37,23 @@ module.exports = function(eleventyConfig) {
     }, {});
   });
 
+ eleventyConfig.addFilter("date", (value, format = "yyyy-MM-dd") => {
+    return DateTime.fromJSDate(value).toFormat(format);
+  });
+
+   // Tags
+  eleventyConfig.addCollection("tagList", function (collectionApi) {
+  const tagSet = new Set();
+  collectionApi.getAll().forEach((item) => {
+    if ("tags" in item.data) {
+      let tags = item.data.tags;
+      tags = Array.isArray(tags) ? tags : [tags];
+      tags.forEach((tag) => tagSet.add(tag));
+    }
+  });
+  return [...tagSet];
+});
+
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
@@ -81,6 +98,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin/");
   // We additionally output a copy of our CSS for use in Decap CMS previews
   eleventyConfig.addPassthroughCopy("_includes/assets/css/inline.css");
+  eleventyConfig.addPassthroughCopy("images");
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
