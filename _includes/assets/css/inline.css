@@ -210,3 +210,10 @@ button {
 		font-size: 1.1rem;
 	}
 }
+  .full-image img {
+    max-height: 90vh !important;
+    max-width: 90vw !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+  }
