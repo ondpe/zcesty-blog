@@ -6,11 +6,11 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: layouts/base.njk
 eleventyComputed:
-  title: "Cesta na {{ tag }}"
+  title: "{{ tag }} popořadě"
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
-<h1>Komplet cesta {{ tag }}</h1>
+<h1>{{ tag }} popořadě</h1>
 
 {% set postlist = collections[tag] or [] %}
 {% include "components/postslist.njk" %}
