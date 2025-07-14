@@ -1,8 +1,10 @@
 ---
-title: "Cesta, Taipei letiště a Hongkong"
+title: Cesta, Taipei letiště a Hongkong
 date: 2024-11-07
-tags: ['Tchaj-wan']
-summary: Let přes Taipei a první dojmy z Hongkongu.
+author: Ondřej Peterka
+summary: Doletím přes Taipei do Hongkongu, obdivuji dvoupatrovou tramvaj a eskalátory.
+tags:
+  - Tchaj-wan
 hero: /images/IMG_5505.jpeg
 ---
 
