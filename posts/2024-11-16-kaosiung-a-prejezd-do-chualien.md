@@ -2,7 +2,7 @@
 title: "Kao-siung a přejezd do Chua-lien"
 date: 2024-11-16
 tags: ['Tchaj-wan']
-summary: Deštivé ráno u moderního železničního muzea v Kao-siungu střídá čtyřhodinová cesta napříč Tchaj-wanem až do Chua-lien. První třída s bento boxem, pláštěnky pro psy, plastiky mezi lokomotivami a večerní kung-pao se stoletým vejcem.
+summary: Zmoknu, navštívím železniční muzeum s vlaky, pak pojedu vlakem a sním stoleté vejce.
 hero: /images/IMG_6017.jpeg
 ---
 

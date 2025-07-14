@@ -2,7 +2,7 @@
 title: "Park Ali-šan a Kuan-c'ling"
 date: 2024-11-14
 tags: ['Tchaj-wan']
-summary: Výletní den začíná východem slunce na Ču-šanu, pokračuje blouděním mezi lesními pavilony a starými cypřiši v mlžném parku Ali-šan a končí koupelí v horkých pramenech ospalého Kuan-c'lingu.
+summary: Vstanu za tmy, pojedu chvíli vlakem, pak pojedu dlouho vlakem a den zakončím v lázních.
 hero: /images/IMG_5869.jpeg
 ---
 

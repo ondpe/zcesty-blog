@@ -2,7 +2,7 @@
 title: "Kuan-c'ling, Ťia-i a Kao-siung"
 date: 2024-11-15
 tags: ['Tchaj-wan']
-summary: Ranní mléčný čaj v prázdném hotelu, motýlí park a pípající autobusy v horách, oběd v Ťia-i bez chodníků a mlhavé odpoledne u Lotosového jezera s pagodami, konfuciánským chrámem i smradlavým tofu. Tchaj-wan na třikrát a každý úplně jinak.
+summary: Obdivuju motýly, potom chrámy v mlze a nakonec smradlavé Tofu.
 hero: /images/IMG_5964.jpeg
 ---
 

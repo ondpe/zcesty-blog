@@ -2,7 +2,7 @@
 title: "Stále deštivá Tchaj-pej a večerní Ťia-i"
 date: 2024-11-12
 tags: ['Tchaj-wan']
-summary: Dešť v Taipei, návštěva chrámu Lung-šan, exkurze do světa elektroniky a večerní příjezd do Ťia-i s procházkou po nočním trhu.
+summary: Zmoknu, navštívím chrám Lung-šan, zmoknu, projdu se po místním elektru, navštívím železniční muzeum bez vlaků a večer dorazím na noční trh do Ťia-i.
 hero: /images/IMG_5742.jpeg
 ---
 
@@ -28,7 +28,7 @@ Cestou narazím na krásně opravený historický distrikt. Oproti běžné ulic
 
 ![Chrám Lung-šan](/images/IMG_5746.jpeg)
 
-Kombinuje v sobě prvky Buddhismu, Taoismu a masové turistiky. Ale jak říkají Taoisté, i cesta může být cíl. A navíc vevnitr neprší.
+Kombinuje v sobě prvky Buddhismu, Taoismu a masové turistiky. Ale jak říkají Taoisté, i cesta může být cíl. A navíc vevnitř neprší.
 
 ![Interiér chrámu](/images/IMG_5748.jpeg)  
 ![Sochy uvnitř chrámu](/images/IMG_5749.jpeg)  
@@ -38,7 +38,7 @@ Naproti chrámu je příhodně stanice metra, tak vyrážím k dalšímu místu,
 
 ![Syntrend — moderní obchodní dům](/images/IMG_5755.jpeg)
 
-Ten první je takové navoněné elektro Palladium, ten druhý, Kuang-Chua je zajímavější. Představte si obyčejej\u00nou tržnici, jen v jednotlivých kójích jsou malí prodejci elektroniky, náhradních inkoustů do tiskáren, fotoaparátů, selfí tyčí, power bank a dalšího haraburdí.
+Ten první je takové navoněné elektro Palladium, ten druhý, Kuang-Chua je zajímavější. Představte si obyčejnou tržnici, jen v jednotlivých kójích jsou malí prodejci elektroniky, náhradních inkoustů do tiskáren, fotoaparátů, selfí tyčí, power bank a dalšího haraburdí.
 
 Večer zjišťuju, že jsem to nějak zapomněl zdokumentovat, takže se sem asi budu muset před odjezdem ještě vrátit.
 
@@ -75,7 +75,7 @@ Interiér je poměrně spartánský, sedí se v uspořádání tři-dva, ale na�
 
 ![Sedadla ve vlaku](/images/IMG_5769.jpeg)
 
-Po hodince a půl vystupuju v Ťia-i. Teda ne tak úqplně. Vlastně vůbec. Aby se jim totiž povedlo udělat trať dostatečně rovně, vede dost daleko od některých měst, zejména od Ťia-i.
+Po hodince a půl vystupuju v Ťia-i. Teda ne tak úplně. Vlastně vůbec. Aby se jim totiž povedlo udělat trať dostatečně rovně, vede dost daleko od některých měst, zejména od Ťia-i.
 
 ![Příjezd do Ťia-i](/images/IMG_5776.jpeg)
 

@@ -2,7 +2,7 @@
 title: "Podél Východního zlomu"
 date: 2024-11-17
 tags: ['Tchaj-wan']
-summary: Autobusová výprava podél východního pobřeží Tchaj-wanu s devíti zastávkami – od sluncem zalité pláže Ťi-čchi přes vyhlídkový hydrant, sopečné útesy a rybí oběd až po planinu s rýží a kamennou jeskyni. Zakončeno smaženou Hakka směsí a chladným větrem od moře.
+summary: Jedu s místními na výlet.
 hero: /images/IMG_6068.jpeg
 ---
 

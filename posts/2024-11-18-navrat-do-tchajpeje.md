@@ -2,7 +2,7 @@
 title: "Návrat do Tchaj-peje"
 date: 2024-11-18
 tags: ['Tchaj-wan']
-summary: Návrat do Tchaj-peje podél východního pobřeží, návštěva památníku 28. února, pompézní Čankajškovo mauzoleum i jeho služební vůz, přemítání u kávy a bloumání mezi galerií a knedlíčky v dešti.
+summary: Jedu vlakem, pak se vydám na historicko-politickou vycházku, ochutnám místní kávu a téměř nezmoknu.
 hero: /images/IMG_6116.jpeg
 ---
 

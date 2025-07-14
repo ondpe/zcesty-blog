@@ -2,7 +2,7 @@
 title: "Ali-šan a Velká věž"
 date: 2024-11-13
 tags: ['Tchaj-wan']
-summary: Výprava historickou železnicí do pohoří Ali-šan, výstup na horu Tá-tchá šan při západu slunce a objevování horské přírody i místní kuchyně.
+summary: Pojedu dlouho vlakem, poobědvám japonskou petržel a vystoupám na horu.
 hero: /images/IMG_5796.jpeg
 ---
 

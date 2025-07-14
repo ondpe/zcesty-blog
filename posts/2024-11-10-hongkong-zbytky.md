@@ -1,7 +1,7 @@
 ---
 date: 2024-11-10
 hero: /images/IMG_5659.jpeg
-summary: Park, chrám a nafukovací pandy.
+summary: Navštívím park na místě slumu, chrám s turisty a nafukovacími pandami a nejošklivější panelák ve městě.
 tags: ['Tchaj-wan']
 title: Hongkong - zbytky
 ---

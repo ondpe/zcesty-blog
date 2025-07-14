@@ -2,7 +2,7 @@
 title: "Deštivá Tchaj-pej"
 date: 2024-11-11
 tags: ['Tchaj-wan']
-summary: Déšť překazil plány na vyhlídku z Taipei 101, ale vedl k výšlapu džunglí na Sloní horu, návštěvě vegetariánské jídelny, poznání tajemství vibrujícího závaží v Taipei 101 a nakonec i k tradičním lázním ve čtvrti Beitou.
+summary: Vylezu na Sloní horu, zmoknu, neuvidím skoro nic z Taipei 101 a den zakončím v lázních.
 hero: /images/IMG_5704.jpeg
 ---
 

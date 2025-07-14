@@ -2,7 +2,7 @@
 title: "Mao-kchung a okolní džungle"
 date: 2024-11-19
 tags: ['Tchaj-wan']
-summary: Jízda lanovkou nad džunglí, bloudění mezi čajovými políčky, průzkum rozbahněných pěšinek i vyhlídková jízda bez řidiče skrz Tchaj-pej. Klid, mlha, promočené boty a dobrý čaj.
+summary: Jedu lanovkou, pak se projdu džunglí, pak se prodírám džunglí a nakonec si koupím nové kalhoty.
 hero: /images/IMG_6139.jpeg
 ---
 
