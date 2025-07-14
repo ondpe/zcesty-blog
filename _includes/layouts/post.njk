@@ -27,13 +27,13 @@ section: post
   {% endfor %}
 
   <div>
-    {% if posts[currentIndex - 1] %}
-      <a href="{{ posts[currentIndex - 1].url }}">← {{ posts[currentIndex - 1].data.title }}</a>
+    {% if posts[currentIndex + 1] %}
+      <a href="{{ posts[currentIndex + 1].url }}">← {{ posts[currentIndex + 1].data.title }}</a>
     {% endif %}
   </div>
   <div>
-    {% if posts[currentIndex + 1] %}
-      <a href="{{ posts[currentIndex + 1].url }}">{{ posts[currentIndex + 1].data.title }} →</a>
+    {% if posts[currentIndex - 1] %}
+      <a href="{{ posts[currentIndex - 1].url }}">{{ posts[currentIndex - 1].data.title }} →</a>
     {% endif %}
   </div>
 </nav>
