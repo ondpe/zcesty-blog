@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # nebo "master", podle toho co máš ve skutečnosti
+  branch: master # nebo "master", podle toho co máš ve skutečnosti
 
 media_folder: "images" # kam se ukládají obrázky v repozitáři
 public_folder: "/images" # jak se obrázky odkazují z webu
