@@ -11,23 +11,13 @@ section: post
     </small>
   </p>
 
- <div class="gallery">
-  {{ layoutContent | safe }}
-</div>
+  <div class="gallery">
+    {{ layoutContent | safe }}
+  </div>
 
-  {% if tags %}
-    <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-    </p>
-  {% endif %}
-</article>
+<hr />
 
-<nav class="post-nav">
+<nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center;">
   {% set posts = collections.postsAll %}
   {% set currentIndex = 0 %}
   {% for post in posts %}
@@ -36,14 +26,17 @@ section: post
     {% endif %}
   {% endfor %}
 
-  <p>
-    {% if posts[currentIndex + 1] %}
-      <a href="{{ posts[currentIndex + 1].url }}">← {{ posts[currentIndex + 1].data.title }}</a>
-    {% endif %}
-    {% if posts[currentIndex + 1] and posts[currentIndex - 1] %} | {% endif %}
+  <div>
     {% if posts[currentIndex - 1] %}
-      <a href="{{ posts[currentIndex - 1].url }}">{{ posts[currentIndex - 1].data.title }} →</a>
+      <a href="{{ posts[currentIndex - 1].url }}">← {{ posts[currentIndex - 1].data.title }}</a>
     {% endif %}
-  </p>
+  </div>
+  <div>
+    {% if posts[currentIndex + 1] %}
+      <a href="{{ posts[currentIndex + 1].url }}">{{ posts[currentIndex + 1].data.title }} →</a>
+    {% endif %}
+  </div>
 </nav>
 
+<hr />
+</article>
