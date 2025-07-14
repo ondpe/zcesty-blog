@@ -16,7 +16,6 @@ collections:
     fields:
       - { label: "Titulek", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
-      - { label: "Autor", name: "author", widget: "string", default: "Ondra" }
       - { label: "Shrnutí", name: "summary", widget: "text" }
       - { label: "Tagy", name: "tags", widget: "list" }
       - { label: "Hero obrázek", name: "hero", widget: "image" }
