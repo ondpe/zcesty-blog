@@ -10,7 +10,7 @@ eleventyComputed:
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
-<h1>Cesta na {{ tag }}</h1>
+<h1>Komplet cesta {{ tag }}</h1>
 
 {% set postlist = collections[tag] or [] %}
 {% include "components/postslist.njk" %}
