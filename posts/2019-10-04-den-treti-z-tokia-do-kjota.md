@@ -3,7 +3,7 @@ title: "Den třetí - z Tokia do Kjóta"
 date: 2019-10-04
 tags: ['Japonsko']
 summary: 'Projedu se vlakem, navštívím hrad a projdu se oranžovými branami.'
-hero: /images/DSC01447.JPG
+hero: /images/DSC01511.JPG
 ---
 
 
@@ -70,10 +70,12 @@ Uvnitř je pak ještě jeden palác, který ale svou krásu halí modernistický
 Žádné velké nadšení to ve mně nevzbuzuje. Zase se mi potvrzuje, že množství turistů je spíš znakem "tady ne". Opouštím hrad a vydávám se na železniční stanici Nidžó. Cestou potkávám malý buddhistický chrám se zahradou, prý založen v devátém století. Turisti žádní a místo parádní.
 
 ![Obrázek](/images/DSC01483.JPG)
+
 ![Obrázek](/images/DSC01484.JPG)
 
 ### Odbočka ke krabicím
 Většina aut tu vypadá, jako kdyby v Japonsku platila daň za cm čtvereční zabrané plochy (možná i platí). Cestou tak potkávám pořád stejné krabice a krabičky.
+
 ![Obrázek](/images/DSC01486.JPG)
 
 Vyvozuju z toho závěr, že auto je pro běžného japonce čistě užitková věc a naše SUV mánie by jim asi dlouho vrtala hlavou.
@@ -82,7 +84,9 @@ Vyvozuju z toho závěr, že auto je pro běžného japonce čistě užitková v
 Dvěma různými lokálkami s přestupem na Kjótském nádraží, které už zvládám levou zadní, se dostávám k hoře Inari. Už je kolem čtvrté, tak doufám, že by nemusel být úplně nával. Chyba. Vystrašen z hradu se prodírám lesem selfí tyčí a čekám podobně nezajímavý průběh. Druhá chyba.
 
 ![Obrázek](/images/DSC01488.JPG)
+
 ![Obrázek](/images/DSC01489.JPG)
+
 ![Obrázek](/images/DSC01490.JPG)
 
 Na hoře Inari se nachází, kromě hlavní svatyně, od které se startuje, několik desítek svatyní. Ty jsou navzájem pospojovány cestami s branami. Každá brána byla darem někoho jiného, každá má své věnování a je trochu odlišná, barvou, tvarem a někdy i materiálem (některé brány jsou kamenné). Vše, co je nabarveno, je laděno do oranžova tak, aby to co nejvíc připomínalo uctívané lišky.
@@ -141,8 +145,11 @@ Už se stmívá, cestu osvětlují po stranách lampy pouličního osvětlení, 
 U hlavní svatyně je pořád ještě dost rušno, ale díky nasvícení je tohle místo neuvěritelně fotogenické.
 
 ![Obrázek](/images/DSC01535.JPG)
+
 ![Obrázek](/images/DSC01538.JPG)
+
 ![Obrázek](/images/DSC01540.JPG)
+
 ![Obrázek](/images/DSC01541.JPG)
 
 Vracím se na nádraží, tohle byl fakt silný zážitek.

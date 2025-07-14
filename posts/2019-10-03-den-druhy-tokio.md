@@ -3,7 +3,7 @@ title: "Den druhý - Tokio"
 date: 2019-10-03
 tags: ['Japonsko']
 summary: 'Prohlédnu si ulici s kuchyňským náčiním, chrámy, parky a přejdu přes přechod.'
-hero: /images/IMG_20191003_085456.jpg
+hero: /images/DSC01430.JPG
 ---
 
 
@@ -88,6 +88,7 @@ Cestou na nádraží ještě potkávám zátiší s automaty a místním výběr
 Po vystoupení z vlaku míjím historické hello kitty metro a vmáčknu se do davu lidí, který čeká na zelenou na známém přechodu.
 
 ![Obrázek](/images/DSC01427.JPG)
+
 ![Obrázek](/images/DSC01429.JPG)
 
 3, 2, 1 .. start!
@@ -139,6 +140,7 @@ Hodinky ukazují 16 kilometrů v nohách, tak se mi nechce nic moc vymýšlet a 
 Nejspíš otec se synem a v menu vlastně jen jedno jídlo s několik obměnami. Ale jaké jídlo! Parádně naložené vepřové, pomalu několikrát smažené, k tomu miso polévka s mušlemi, rýže a dvě omáčky, sezamová, nebo tradiční.
 
 ![Obrázek](/images/IMG_20191003_181917.jpg)
+
 ![Obrázek](/images/IMG_20191003_182244.jpg)
 
 Každá část chutnala výborně a jinak. Dal bych sem doporučení, ale na Googlu jsem je nenašel.

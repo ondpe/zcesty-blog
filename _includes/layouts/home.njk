@@ -1,11 +1,22 @@
 ---
 layout: layouts/base.njk
-title: "Z Cesty"
+title: "Z cesty"
 eleventyComputed:
   metaDescription: "Všechny články z blogu"
 ---
 
-<h1>Všechny příspěvky</h1>
+<h1>Všechny články od nejnovějšího</h1>
+
+<hr>
+<p>Po kliknutí sem si můžete přečíst vybranou cestu popořadě: 
+<ul>{% for tag in collections.tagList %}
+      {% if tag != "post" %}
+        <li><a href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+      {% endif %}
+    {% endfor %} </p>
+</ul>
+<hr>
+<br>
 
 {% set postlist = collections.post | reverse %}
 {% include "components/postslist.njk" %}
