@@ -99,7 +99,7 @@ eleventyConfig.addCollection("postsAll", function(collectionApi) {
 
   // --- STATIC FILES ---
   eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("admin/");
   eleventyConfig.addPassthroughCopy("_includes/assets/css/inline.css");
   eleventyConfig.addPassthroughCopy("images");
