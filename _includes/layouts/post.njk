@@ -11,6 +11,10 @@ section: post
     </small>
   </p>
 
+  {% if summary %}
+    <p><strong>{{ summary }}</strong></p>
+  {% endif %}
+
   <div class="gallery">
     {{ layoutContent | safe }}
   </div>
