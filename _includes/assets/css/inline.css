@@ -1,13 +1,13 @@
 :root {
-  --primary: #0b6b5c;
-  --primary-dark: #064d42;
-  --background: #f6f2ec;
+  --primary: #2f6f9f;
+  --primary-dark: #1d4f73;
+  --background: #eef6fb;
   --surface: #fff;
-  --surface-soft: #fffaf3;
+  --surface-soft: #f7fbfe;
   --text: #1f2428;
   --muted: #69737d;
-  --line: #d9d0c4;
-  --shadow: 0 18px 48px rgba(53, 42, 31, 0.08);
+  --line: #c8ddea;
+  --shadow: 0 18px 48px rgba(32, 78, 112, 0.1);
 }
 
 *,
@@ -56,7 +56,7 @@ code {
   gap: 1rem;
   padding: 1.25rem clamp(1rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 250, 243, 0.92);
+  background: rgba(247, 251, 254, 0.94);
 }
 
 .site-brand {
@@ -184,9 +184,9 @@ main {
 .timeline-list a.is-current {
   margin: 0 -0.6rem;
   padding: 0.65rem 0.6rem;
-  border: 1px solid #b7d8d0;
+  border: 1px solid #98bfd9;
   border-radius: 6px;
-  background: #e9f7f4;
+  background: #e6f2f9;
 }
 
 .trip-list span,
@@ -225,7 +225,7 @@ main {
 .post-card-image {
   display: block;
   min-height: 100%;
-  background: #e9e2d8;
+  background: #d9eaf4;
 }
 
 .post-card-image img {
@@ -275,9 +275,9 @@ a[rel="tag"]:visited {
   align-items: center;
   min-height: 1.7rem;
   padding: 0 0.55rem;
-  border: 1px solid #c7ddd8;
+  border: 1px solid #b8d5e8;
   border-radius: 999px;
-  background: #eef8f5;
+  background: #edf7fc;
   color: var(--primary-dark);
   font-size: 0.72rem;
   font-weight: 900;
