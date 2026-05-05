@@ -3,44 +3,69 @@ layout: layouts/base.njk
 section: post
 ---
 
-<article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
-    </small>
-  </p>
-
-  {% if summary %}
-    <p><strong>{{ summary }}</strong></p>
+{% set currentTrip = "" %}
+{% if tags %}
+  {% if tags[0] != "post" %}
+    {% set currentTrip = tags[0] %}
+  {% elif tags[1] %}
+    {% set currentTrip = tags[1] %}
   {% endif %}
+{% endif %}
 
-  <div class="gallery">
-    {{ layoutContent | safe }}
-  </div>
+{% set tripPosts = collections[currentTrip] or [] %}
 
-<hr />
+<div class="content-grid">
+  <section class="content-main">
+    <article class="post-detail">
+      <h1>{{ title }}</h1>
+      <p class="post-date">
+        <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
+        {% if currentTrip %}<span> · {{ currentTrip }}</span>{% endif %}
+      </p>
 
-<nav class="post-nav" style="display: flex; justify-content: space-between; align-items: center;">
-  {% set posts = collections.postsAll %}
-  {% set currentIndex = 0 %}
-  {% for post in posts %}
-    {% if post.url == page.url %}
-      {% set currentIndex = loop.index0 %}
-    {% endif %}
-  {% endfor %}
+      {% if summary %}
+        <p><strong>{{ summary }}</strong></p>
+      {% endif %}
 
-  <div>
-    {% if posts[currentIndex + 1] %}
-      <a href="{{ posts[currentIndex + 1].url }}">← {{ posts[currentIndex + 1].data.title }}</a>
-    {% endif %}
-  </div>
-  <div>
-    {% if posts[currentIndex - 1] %}
-      <a href="{{ posts[currentIndex - 1].url }}">{{ posts[currentIndex - 1].data.title }} →</a>
-    {% endif %}
-  </div>
-</nav>
+      <div class="gallery">
+        {{ layoutContent | safe }}
+      </div>
 
-<hr />
-</article>
+      <nav class="post-nav">
+        {% set posts = collections.postsAll %}
+        {% set currentIndex = 0 %}
+        {% for post in posts %}
+          {% if post.url == page.url %}
+            {% set currentIndex = loop.index0 %}
+          {% endif %}
+        {% endfor %}
+
+        <div>
+          {% if posts[currentIndex + 1] %}
+            <a href="{{ posts[currentIndex + 1].url }}">← {{ posts[currentIndex + 1].data.title }}</a>
+          {% endif %}
+        </div>
+        <div>
+          {% if posts[currentIndex - 1] %}
+            <a href="{{ posts[currentIndex - 1].url }}">{{ posts[currentIndex - 1].data.title }} →</a>
+          {% endif %}
+        </div>
+      </nav>
+    </article>
+  </section>
+
+  {% if currentTrip and tripPosts.length %}
+    <aside class="content-sidebar" aria-label="Příspěvky v cestě">
+      <h2>V téhle cestě</h2>
+      <nav class="timeline-list">
+        {% for post in tripPosts %}
+          <a href="{{ post.url | url }}"{% if post.url == page.url %} class="is-current"{% endif %}>
+            <time datetime="{{ post.date | machineDate }}">{{ post.date | czDate }}</time>
+            <span>{{ post.data.title }}</span>
+          </a>
+        {% endfor %}
+      </nav>
+      <a class="back-link" href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }} popořadě</a>
+    </aside>
+  {% endif %}
+</div>
