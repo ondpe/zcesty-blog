@@ -1,11 +1,10 @@
 ---
 title: "Cape Coast"
-date: 2022-11-17
-tags: ['Ghana']
-summary: 'Nekoupíme si rychlovarnou konvici a dojedeme zpátky k oceánu.'
-hero: 
+date: "2022-11-17"
+tags: ["Ghana"]
+summary: "Nekoupíme si rychlovarnou konvici a dojedeme zpátky k oceánu."
+hero: "/images/20221116_173804.JPG"
 ---
-
 
 Ráno vyrážíme na stanici troter směr Cape Coast. Z Kumasi je to nějakých 220 kilometrů na jih. Bohužel to není úplně hlavní směr, takže trotro se plní jen velmi pomalu. Nakonec sedíme v dodávce dvě hodiny, za neustálého nabízení různých předmětů místními prodejci a prodejkyněmi. Když už to začne nabírat poměrně absurdní rozměr, přijde prodavač s rychlovarnými konvicemi. A nakonec ještě přece jen i další kněz.
 
