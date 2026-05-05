@@ -1,34 +1,106 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://identity.netlify.com">
-    <link rel="stylesheet" href="widgets/travel-markdown.css" />
-    <title>Decap CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Z cesty admin</title>
+    <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script src="widgets/travel-markdown.js"></script>
-    <!-- Include Netlify Identity for authentication -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script type="module" src="/admin/preview-templates/index.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          } else {
-            window.netlifyIdentity.on("logout", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
+    <main class="app">
+      <section class="login-view" id="loginView">
+        <form class="login-panel" id="loginForm">
+          <h1>Z cesty admin</h1>
+          <label>
+            Heslo
+            <input id="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit">Přihlásit</button>
+          <p class="message" id="loginMessage"></p>
+        </form>
+      </section>
+
+      <section class="admin-view" id="adminView" hidden>
+        <header class="topbar">
+          <div>
+            <strong>Z cesty admin</strong>
+            <span id="saveState">Připraveno</span>
+          </div>
+          <nav>
+            <a href="/">Web</a>
+            <button id="logout" type="button">Odhlásit</button>
+          </nav>
+        </header>
+
+        <div class="workspace">
+          <aside class="sidebar">
+            <div class="sidebar-head">
+              <h2>Články</h2>
+              <button id="newPost" type="button">Nový</button>
+            </div>
+            <div class="post-list" id="postList"></div>
+          </aside>
+
+          <section class="editor">
+            <div class="fields">
+              <label>
+                Titulek
+                <input id="title" type="text" />
+              </label>
+              <label>
+                Datum
+                <input id="date" type="date" />
+              </label>
+              <label>
+                Cesta
+                <input id="trip" type="text" />
+              </label>
+              <label>
+                Země
+                <input id="country" type="text" />
+              </label>
+              <label>
+                Místo
+                <input id="location" type="text" />
+              </label>
+              <label>
+                Tagy
+                <input id="tags" type="text" placeholder="Japonsko, vlak, praktické" />
+              </label>
+              <label class="wide">
+                Shrnutí
+                <input id="summary" type="text" />
+              </label>
+              <label class="wide">
+                Hero obrázek
+                <input id="hero" type="text" placeholder="/images/fotka.jpg" />
+              </label>
+            </div>
+
+            <div class="editor-toolbar">
+              <button type="button" data-prefix="# ">H1</button>
+              <button type="button" data-prefix="## ">H2</button>
+              <button type="button" data-prefix="### ">H3</button>
+              <button type="button" id="italic">Kurzíva</button>
+              <button type="button" id="link">Odkaz</button>
+              <label class="photo-button">
+                Vybrat fotky
+                <input id="photos" type="file" accept="image/*" multiple />
+              </label>
+              <button id="save" type="button">Uložit</button>
+            </div>
+
+            <div class="pending" id="pendingImages" hidden></div>
+
+            <div class="split">
+              <textarea id="body" spellcheck="true"></textarea>
+              <article class="preview" id="preview"></article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
