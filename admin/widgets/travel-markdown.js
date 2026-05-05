@@ -2,218 +2,230 @@
   const DEFAULT_MAX_SIZE = 1920;
   const DEFAULT_QUALITY = 0.85;
 
-  const TravelMarkdownControl = createClass({
-    getInitialState() {
-      return {
-        processing: false,
-        downloads: [],
-        error: "",
-      };
-    },
+  function registerTravelMarkdownWidget() {
+    if (!window.CMS || !window.createClass || !window.h) {
+      window.setTimeout(registerTravelMarkdownWidget, 50);
+      return;
+    }
 
-    componentWillUnmount() {
-      this.revokeDownloads();
-    },
+    const h = window.h;
+    const createClass = window.createClass;
 
-    revokeDownloads() {
-      this.state.downloads.forEach(item => URL.revokeObjectURL(item.url));
-    },
-
-    getValue() {
-      return this.props.value || "";
-    },
-
-    setValue(value) {
-      this.props.onChange(value);
-    },
-
-    applyWrap(before, after) {
-      const textarea = this.textarea;
-      const value = this.getValue();
-      const start = textarea.selectionStart;
-      const end = textarea.selectionEnd;
-      const selected = value.slice(start, end);
-      const next = value.slice(0, start) + before + selected + after + value.slice(end);
-
-      this.setValue(next);
-      window.requestAnimationFrame(() => {
-        textarea.focus();
-        textarea.setSelectionRange(start + before.length, start + before.length + selected.length);
-      });
-    },
-
-    applyLinePrefix(prefix) {
-      const textarea = this.textarea;
-      const value = this.getValue();
-      const start = textarea.selectionStart;
-      const lineStart = value.lastIndexOf("\n", start - 1) + 1;
-      const next = value.slice(0, lineStart) + prefix + value.slice(lineStart);
-
-      this.setValue(next);
-      window.requestAnimationFrame(() => {
-        textarea.focus();
-        textarea.setSelectionRange(start + prefix.length, start + prefix.length);
-      });
-    },
-
-    insertLink() {
-      const textarea = this.textarea;
-      const value = this.getValue();
-      const start = textarea.selectionStart;
-      const end = textarea.selectionEnd;
-      const selected = value.slice(start, end) || "text odkazu";
-      const nextText = `[${selected}](https://)`;
-      const next = value.slice(0, start) + nextText + value.slice(end);
-
-      this.setValue(next);
-      window.requestAnimationFrame(() => {
-        textarea.focus();
-        const urlStart = start + selected.length + 3;
-        textarea.setSelectionRange(urlStart, urlStart + 8);
-      });
-    },
-
-    async handlePhotos(event) {
-      const files = Array.from(event.target.files || []);
-      event.target.value = "";
-      if (files.length === 0) return;
-
-      this.revokeDownloads();
-      this.setState({ processing: true, downloads: [], error: "" });
-
-      try {
-        const prepared = await Promise.all(files.map((file, index) => preparePhoto(file, index)));
-        prepared.sort((a, b) => a.takenAt - b.takenAt || a.index - b.index);
-
-        const markdown = prepared
-          .map(item => `![Obrazek](/images/${item.filename})`)
-          .join("\n\n");
-
-        this.insertAtCursor(markdown);
-        this.setState({ processing: false, downloads: prepared });
-      } catch (error) {
-        this.setState({
+    const TravelMarkdownControl = createClass({
+      getInitialState() {
+        return {
           processing: false,
           downloads: [],
-          error: "Nekterou fotku se nepodarilo otevrit. Zkus ji z Apple Photos exportovat jako JPG.",
+          error: "",
+        };
+      },
+
+      componentWillUnmount() {
+        this.revokeDownloads();
+      },
+
+      revokeDownloads() {
+        this.state.downloads.forEach(item => URL.revokeObjectURL(item.url));
+      },
+
+      getValue() {
+        return this.props.value || "";
+      },
+
+      setValue(value) {
+        this.props.onChange(value);
+      },
+
+      applyWrap(before, after) {
+        const textarea = this.textarea;
+        const value = this.getValue();
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const selected = value.slice(start, end);
+        const next = value.slice(0, start) + before + selected + after + value.slice(end);
+
+        this.setValue(next);
+        window.requestAnimationFrame(() => {
+          textarea.focus();
+          textarea.setSelectionRange(start + before.length, start + before.length + selected.length);
         });
-      }
-    },
+      },
 
-    insertAtCursor(text) {
-      const textarea = this.textarea;
-      const value = this.getValue();
-      const start = textarea.selectionStart;
-      const end = textarea.selectionEnd;
-      const needsBefore = start > 0 && !value.slice(0, start).endsWith("\n\n");
-      const needsAfter = end < value.length && !value.slice(end).startsWith("\n\n");
-      const insert = `${needsBefore ? "\n\n" : ""}${text}${needsAfter ? "\n\n" : ""}`;
-      const next = value.slice(0, start) + insert + value.slice(end);
+      applyLinePrefix(prefix) {
+        const textarea = this.textarea;
+        const value = this.getValue();
+        const start = textarea.selectionStart;
+        const lineStart = value.lastIndexOf("\n", start - 1) + 1;
+        const next = value.slice(0, lineStart) + prefix + value.slice(lineStart);
 
-      this.setValue(next);
-      window.requestAnimationFrame(() => {
-        const pos = start + insert.length;
-        textarea.focus();
-        textarea.setSelectionRange(pos, pos);
-      });
-    },
+        this.setValue(next);
+        window.requestAnimationFrame(() => {
+          textarea.focus();
+          textarea.setSelectionRange(start + prefix.length, start + prefix.length);
+        });
+      },
 
-    downloadAll() {
-      this.state.downloads.forEach((item, index) => {
-        window.setTimeout(() => item.link.click(), index * 250);
-      });
-    },
+      insertLink() {
+        const textarea = this.textarea;
+        const value = this.getValue();
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const selected = value.slice(start, end) || "text odkazu";
+        const nextText = `[${selected}](https://)`;
+        const next = value.slice(0, start) + nextText + value.slice(end);
 
-    renderToolbarButton(label, title, onClick) {
-      return h(
-        "button",
-        {
-          type: "button",
-          className: "travel-md-button",
-          title,
-          onClick,
-        },
-        label
-      );
-    },
+        this.setValue(next);
+        window.requestAnimationFrame(() => {
+          textarea.focus();
+          const urlStart = start + selected.length + 3;
+          textarea.setSelectionRange(urlStart, urlStart + 8);
+        });
+      },
 
-    render() {
-      return h("div", { className: "travel-md" }, [
-        h("div", { className: "travel-md-toolbar" }, [
-          this.renderToolbarButton("H1", "Nadpis 1", () => this.applyLinePrefix("# ")),
-          this.renderToolbarButton("H2", "Nadpis 2", () => this.applyLinePrefix("## ")),
-          this.renderToolbarButton("H3", "Nadpis 3", () => this.applyLinePrefix("### ")),
-          this.renderToolbarButton("I", "Kurziva", () => this.applyWrap("*", "*")),
-          this.renderToolbarButton("Link", "Odkaz", this.insertLink),
-          h("label", { className: "travel-md-photo-button" }, [
-            this.state.processing ? "Zmensuji..." : "Vybrat fotky",
-            h("input", {
-              type: "file",
-              accept: "image/*",
-              multiple: true,
-              disabled: this.state.processing || this.props.disabled,
-              onChange: this.handlePhotos,
-            }),
-          ]),
-          h(
-            "button",
-            {
-              type: "button",
-              className: "travel-md-button",
-              disabled: this.state.downloads.length === 0,
-              onClick: this.downloadAll,
-            },
-            "Stahnout JPG"
-          ),
-        ]),
-        h("textarea", {
-          id: this.props.forID,
-          className: "travel-md-textarea",
-          value: this.getValue(),
-          disabled: this.props.disabled,
-          placeholder: "Piš text, vkládej fotky a nech mezi bloky volný řádek.",
-          ref: node => {
-            this.textarea = node;
+      async handlePhotos(event) {
+        const files = Array.from(event.target.files || []);
+        event.target.value = "";
+        if (files.length === 0) return;
+
+        this.revokeDownloads();
+        this.setState({ processing: true, downloads: [], error: "" });
+
+        try {
+          const prepared = await Promise.all(files.map((file, index) => preparePhoto(file, index)));
+          prepared.sort((a, b) => a.takenAt - b.takenAt || a.index - b.index);
+
+          const markdown = prepared
+            .map(item => `![Obrazek](/images/${item.filename})`)
+            .join("\n\n");
+
+          this.insertAtCursor(markdown);
+          this.setState({ processing: false, downloads: prepared });
+        } catch (error) {
+          this.setState({
+            processing: false,
+            downloads: [],
+            error: "Nekterou fotku se nepodarilo otevrit. Zkus ji z Apple Photos exportovat jako JPG.",
+          });
+        }
+      },
+
+      insertAtCursor(text) {
+        const textarea = this.textarea;
+        const value = this.getValue();
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const needsBefore = start > 0 && !value.slice(0, start).endsWith("\n\n");
+        const needsAfter = end < value.length && !value.slice(end).startsWith("\n\n");
+        const insert = `${needsBefore ? "\n\n" : ""}${text}${needsAfter ? "\n\n" : ""}`;
+        const next = value.slice(0, start) + insert + value.slice(end);
+
+        this.setValue(next);
+        window.requestAnimationFrame(() => {
+          const pos = start + insert.length;
+          textarea.focus();
+          textarea.setSelectionRange(pos, pos);
+        });
+      },
+
+      downloadAll() {
+        this.state.downloads.forEach((item, index) => {
+          window.setTimeout(() => item.link.click(), index * 250);
+        });
+      },
+
+      renderToolbarButton(label, title, onClick) {
+        return h(
+          "button",
+          {
+            type: "button",
+            className: "travel-md-button",
+            title,
+            onClick,
           },
-          onChange: event => this.setValue(event.target.value),
-        }),
-        this.state.error
-          ? h("p", { className: "travel-md-error" }, this.state.error)
-          : null,
-        this.state.downloads.length > 0
-          ? h("div", { className: "travel-md-downloads" }, [
-              h(
-                "p",
-                null,
-                `Vlozeno ${this.state.downloads.length} fotek. Stahni JPG a nahraj je v CMS do slozky images.`
-              ),
-              this.state.downloads.map(item =>
+          label
+        );
+      },
+
+      render() {
+        return h("div", { className: "travel-md" }, [
+          h("div", { className: "travel-md-toolbar" }, [
+            this.renderToolbarButton("H1", "Nadpis 1", () => this.applyLinePrefix("# ")),
+            this.renderToolbarButton("H2", "Nadpis 2", () => this.applyLinePrefix("## ")),
+            this.renderToolbarButton("H3", "Nadpis 3", () => this.applyLinePrefix("### ")),
+            this.renderToolbarButton("I", "Kurziva", () => this.applyWrap("*", "*")),
+            this.renderToolbarButton("Link", "Odkaz", this.insertLink),
+            h("label", { className: "travel-md-photo-button" }, [
+              this.state.processing ? "Zmensuji..." : "Vybrat fotky",
+              h("input", {
+                type: "file",
+                accept: "image/*",
+                multiple: true,
+                disabled: this.state.processing || this.props.disabled,
+                onChange: this.handlePhotos,
+              }),
+            ]),
+            h(
+              "button",
+              {
+                type: "button",
+                className: "travel-md-button",
+                disabled: this.state.downloads.length === 0,
+                onClick: this.downloadAll,
+              },
+              "Stahnout JPG"
+            ),
+          ]),
+          h("textarea", {
+            id: this.props.forID,
+            className: "travel-md-textarea",
+            value: this.getValue(),
+            disabled: this.props.disabled,
+            placeholder: "Piš text, vkládej fotky a nech mezi bloky volný řádek.",
+            ref: node => {
+              this.textarea = node;
+            },
+            onChange: event => this.setValue(event.target.value),
+          }),
+          this.state.error
+            ? h("p", { className: "travel-md-error" }, this.state.error)
+            : null,
+          this.state.downloads.length > 0
+            ? h("div", { className: "travel-md-downloads" }, [
                 h(
-                  "a",
-                  {
-                    key: item.filename,
-                    href: item.url,
-                    download: item.filename,
-                    ref: node => {
-                      item.link = node;
+                  "p",
+                  null,
+                  `Vlozeno ${this.state.downloads.length} fotek. Stahni JPG a nahraj je v CMS do slozky images.`
+                ),
+                this.state.downloads.map(item =>
+                  h(
+                    "a",
+                    {
+                      key: item.filename,
+                      href: item.url,
+                      download: item.filename,
+                      ref: node => {
+                        item.link = node;
+                      },
                     },
-                  },
-                  item.filename
-                )
-              ),
-            ])
-          : null,
-      ]);
-    },
-  });
+                    item.filename
+                  )
+                ),
+              ])
+            : null,
+        ]);
+      },
+    });
 
-  const TravelMarkdownPreview = createClass({
-    render() {
-      return h("div", null, this.props.value || "");
-    },
-  });
+    const TravelMarkdownPreview = createClass({
+      render() {
+        return h("div", null, this.props.value || "");
+      },
+    });
 
-  CMS.registerWidget("travel_markdown", TravelMarkdownControl, TravelMarkdownPreview);
+    window.CMS.registerWidget("travel_markdown", TravelMarkdownControl, TravelMarkdownPreview);
+  }
+
+  registerTravelMarkdownWidget();
 
   async function preparePhoto(file, index) {
     const takenAt = await readTakenAt(file);
@@ -254,16 +266,16 @@
 
   function readExifDate(buffer) {
     const view = new DataView(buffer);
-    if (view.getUint16(0) !== 0xffd8) return null;
+    if (view.byteLength < 4 || view.getUint16(0) !== 0xffd8) return null;
 
     let offset = 2;
-    while (offset < view.byteLength) {
+    while (offset + 4 < view.byteLength) {
       const marker = view.getUint16(offset);
       offset += 2;
       if (marker === 0xffe1) {
         const length = view.getUint16(offset);
         const start = offset + 2;
-        if (readAscii(view, start, 6) !== "Exif\0\0") return null;
+        if (start + 6 > view.byteLength || readAscii(view, start, 6) !== "Exif\0\0") return null;
         return parseTiffDate(view, start + 6, Math.min(start + length, view.byteLength));
       }
 
@@ -274,6 +286,7 @@
   }
 
   function parseTiffDate(view, tiffStart, tiffEnd) {
+    if (tiffStart + 8 > tiffEnd) return null;
     const littleEndian = readAscii(view, tiffStart, 2) === "II";
     const firstIfdOffset = getUint32(view, tiffStart + 4, littleEndian);
     const exifIfd = findTagValue(view, tiffStart + firstIfdOffset, tiffStart, tiffEnd, 0x8769, littleEndian);
@@ -283,7 +296,7 @@
       findTagValue(view, tiffStart + exifIfd, tiffStart, tiffEnd, 0x9003, littleEndian) ||
       findTagValue(view, tiffStart + exifIfd, tiffStart, tiffEnd, 0x9004, littleEndian);
 
-    if (!dateOffset) return null;
+    if (!dateOffset || tiffStart + dateOffset + 19 > tiffEnd) return null;
 
     const raw = readAscii(view, tiffStart + dateOffset, 19);
     const match = raw.match(/^(\d{4}):(\d{2}):(\d{2}) (\d{2}):(\d{2}):(\d{2})$/);
