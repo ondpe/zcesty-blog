@@ -1,6 +1,10 @@
 (function () {
   const DEFAULT_MAX_SIZE = 1920;
   const DEFAULT_QUALITY = 0.85;
+  const downloadStore = {
+    downloads: [],
+    urlsByFilename: new Map(),
+  };
 
   function registerTravelMarkdownWidget() {
     if (!window.CMS || !window.createClass || !window.h) {
@@ -15,17 +19,18 @@
       getInitialState() {
         return {
           processing: false,
-          downloads: [],
+          downloads: downloadStore.downloads,
           error: "",
         };
       },
 
       componentWillUnmount() {
-        this.revokeDownloads();
       },
 
       revokeDownloads() {
-        this.state.downloads.forEach(item => URL.revokeObjectURL(item.url));
+        downloadStore.downloads.forEach(item => URL.revokeObjectURL(item.url));
+        downloadStore.downloads = [];
+        downloadStore.urlsByFilename.clear();
       },
 
       getValue() {
@@ -98,9 +103,12 @@
             .map(item => `![Obrazek](/images/${item.filename})`)
             .join("\n\n");
 
+          downloadStore.downloads = prepared;
+          downloadStore.urlsByFilename = new Map(prepared.map(item => [item.filename, item.url]));
+          this.setState({ processing: false, downloads: downloadStore.downloads });
           this.insertAtCursor(markdown);
-          this.setState({ processing: false, downloads: prepared });
         } catch (error) {
+          this.revokeDownloads();
           this.setState({
             processing: false,
             downloads: [],
@@ -129,7 +137,14 @@
 
       downloadAll() {
         this.state.downloads.forEach((item, index) => {
-          window.setTimeout(() => item.link.click(), index * 250);
+          window.setTimeout(() => {
+            const link = document.createElement("a");
+            link.href = item.url;
+            link.download = item.filename;
+            document.body.append(link);
+            link.click();
+            link.remove();
+          }, index * 250);
         });
       },
 
@@ -203,9 +218,6 @@
                       key: item.filename,
                       href: item.url,
                       download: item.filename,
-                      ref: node => {
-                        item.link = node;
-                      },
                     },
                     item.filename
                   )
@@ -218,7 +230,10 @@
 
     const TravelMarkdownPreview = createClass({
       render() {
-        return h("div", null, this.props.value || "");
+        return h("div", {
+          className: "travel-md-preview",
+          dangerouslySetInnerHTML: { __html: renderMarkdown(this.props.value || "") },
+        });
       },
     });
 
@@ -411,5 +426,54 @@
 
   function getUint32(view, offset, littleEndian) {
     return view.getUint32(offset, littleEndian);
+  }
+
+  function renderMarkdown(markdown) {
+    return markdown
+      .split(/\n{2,}/)
+      .map(block => renderBlock(block.trim()))
+      .filter(Boolean)
+      .join("");
+  }
+
+  function renderBlock(block) {
+    if (!block) return "";
+
+    const imageMatch = block.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imageMatch) {
+      const [, alt, src] = imageMatch;
+      return `<p><img src="${escapeAttribute(resolvePreviewSrc(src))}" alt="${escapeAttribute(alt)}"></p>`;
+    }
+
+    const headingMatch = block.match(/^(#{1,3})\s+(.+)$/);
+    if (headingMatch) {
+      const level = headingMatch[1].length;
+      return `<h${level}>${renderInline(headingMatch[2])}</h${level}>`;
+    }
+
+    return `<p>${renderInline(block).replace(/\n/g, "<br>")}</p>`;
+  }
+
+  function renderInline(text) {
+    return escapeHtml(text)
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2">$1</a>')
+      .replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+  }
+
+  function resolvePreviewSrc(src) {
+    const filename = src.split("/").pop();
+    return downloadStore.urlsByFilename.get(filename) || src;
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function escapeAttribute(value) {
+    return escapeHtml(value).replace(/'/g, "&#39;");
   }
 })();

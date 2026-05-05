@@ -98,3 +98,17 @@
   color: #0b6b5c;
   font-weight: 700;
 }
+
+.travel-md-preview img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.travel-md-preview p,
+.travel-md-preview h1,
+.travel-md-preview h2,
+.travel-md-preview h3 {
+  overflow-wrap: anywhere;
+}
