@@ -35,6 +35,10 @@ exports.handler = async function handler(event) {
       return savePost(body);
     }
 
+    if (action === "delete") {
+      return deletePost(body.path);
+    }
+
     return json(400, { error: "Unknown action" });
   } catch (error) {
     console.error(error);
@@ -159,6 +163,54 @@ async function savePost(body) {
     path,
     commit: commit.sha,
     images: images.map(image => `images/${image.filename}`),
+  });
+}
+
+async function deletePost(path) {
+  assertSafePath(path, "posts", ".md");
+
+  const post = await getContent(path);
+  const ref = await githubJson(`/repos/${repo()}/git/ref/heads/${encodeURIComponent(branch())}`);
+  const headSha = ref.object.sha;
+  const headCommit = await githubJson(`/repos/${repo()}/git/commits/${headSha}`);
+  const baseTreeSha = headCommit.tree.sha;
+
+  const tree = await githubJson(`/repos/${repo()}/git/trees`, {
+    method: "POST",
+    body: {
+      base_tree: baseTreeSha,
+      tree: [
+        {
+          path,
+          mode: "100644",
+          type: "blob",
+          sha: null,
+        },
+      ],
+    },
+  });
+
+  const commit = await githubJson(`/repos/${repo()}/git/commits`, {
+    method: "POST",
+    body: {
+      message: `Delete post: ${path.split("/").pop()}`,
+      tree: tree.sha,
+      parents: [headSha],
+    },
+  });
+
+  await githubJson(`/repos/${repo()}/git/refs/heads/${encodeURIComponent(branch())}`, {
+    method: "PATCH",
+    body: {
+      sha: commit.sha,
+      force: false,
+    },
+  });
+
+  return json(200, {
+    path,
+    deleted: post.sha,
+    commit: commit.sha,
   });
 }
 

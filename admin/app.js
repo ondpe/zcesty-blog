@@ -19,6 +19,8 @@
     postList: document.querySelector("#postList"),
     newPost: document.querySelector("#newPost"),
     save: document.querySelector("#save"),
+    deletePost: document.querySelector("#deletePost"),
+    togglePreview: document.querySelector("#togglePreview"),
     saveState: document.querySelector("#saveState"),
     photos: document.querySelector("#photos"),
     pendingImages: document.querySelector("#pendingImages"),
@@ -40,6 +42,8 @@
   els.logout.addEventListener("click", logout);
   els.newPost.addEventListener("click", newPost);
   els.save.addEventListener("click", savePost);
+  els.deletePost.addEventListener("click", deletePost);
+  els.togglePreview.addEventListener("click", togglePreview);
   els.photos.addEventListener("change", handlePhotos);
   els.body.addEventListener("input", renderPreview);
   Object.values(els.fields).forEach(input => input.addEventListener("input", renderPreview));
@@ -103,6 +107,7 @@
     state.currentPath = path;
     state.pendingImages = [];
     fillForm(result.post.frontmatter, result.post.body);
+    els.deletePost.disabled = false;
     renderPostList();
     renderPendingImages();
     renderPreview();
@@ -112,6 +117,7 @@
   function newPost() {
     state.currentPath = "";
     state.pendingImages = [];
+    els.deletePost.disabled = true;
     fillForm(
       {
         title: "",
@@ -160,6 +166,36 @@
     } finally {
       els.save.disabled = false;
     }
+  }
+
+  async function deletePost() {
+    if (!state.currentPath) {
+      setStatus("Nový článek ještě nejde smazat");
+      return;
+    }
+
+    const title = els.fields.title.value.trim() || state.currentPath;
+    if (!window.confirm(`Opravdu smazat článek "${title}"? Fotky v images zůstanou zachované.`)) {
+      return;
+    }
+
+    setStatus("Mažu článek...");
+    els.deletePost.disabled = true;
+    try {
+      const result = await api("delete", { path: state.currentPath });
+      state.currentPath = "";
+      state.pendingImages = [];
+      setStatus(`Smazáno: ${result.commit.slice(0, 7)}`);
+      await loadPosts();
+    } catch (error) {
+      setStatus(error.message);
+      els.deletePost.disabled = false;
+    }
+  }
+
+  function togglePreview() {
+    const hidden = document.body.classList.toggle("is-preview-hidden");
+    els.togglePreview.textContent = hidden ? "Zobrazit náhled" : "Skrýt náhled";
   }
 
   async function handlePhotos(event) {
