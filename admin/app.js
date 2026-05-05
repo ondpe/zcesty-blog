@@ -253,7 +253,8 @@
     const frontmatter = readFrontmatter();
     const title = frontmatter.title || "Bez názvu";
     const meta = [frontmatter.date, frontmatter.location, frontmatter.country].filter(Boolean).join(" · ");
-    els.preview.innerHTML = `<h1>${escapeHtml(title)}</h1>${meta ? `<p><small>${escapeHtml(meta)}</small></p>` : ""}${frontmatter.summary ? `<p><strong>${escapeHtml(frontmatter.summary)}</strong></p>` : ""}${renderMarkdown(els.body.value)}`;
+    const publicPath = `/posts/${slugify(title)}/`;
+    els.preview.innerHTML = `<p class="preview-link"><a href="${publicPath}" target="_blank" rel="noopener">Zobrazit článek: ${escapeHtml(publicPath)}</a></p><h1>${escapeHtml(title)}</h1>${meta ? `<p><small>${escapeHtml(meta)}</small></p>` : ""}${frontmatter.summary ? `<p><strong>${escapeHtml(frontmatter.summary)}</strong></p>` : ""}${renderMarkdown(els.body.value)}`;
   }
 
   function applyLinePrefix(prefix) {
