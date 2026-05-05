@@ -6,19 +6,21 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: layouts/base.njk
 eleventyComputed:
-  title: "{{ tag }} popořadě"
+  title: "{{ tag }} {{ collections[tag] | postYears }}"
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
+{% set postlist = collections[tag] or [] %}
+{% set years = postlist | postYears %}
+
 <section class="page-intro">
   <p class="eyebrow">Cesta</p>
-  <h1>{{ tag }} popořadě</h1>
+  <h1>{{ tag }}{% if years %} {{ years }}{% endif %}</h1>
   <p>Články jsou tady seřazené chronologicky, aby se cesta četla jako deník od začátku do konce.</p>
 </section>
 
 <div class="content-grid">
   <section class="content-main">
-    {% set postlist = collections[tag] or [] %}
     {% include "components/postslist.njk" %}
   </section>
 

@@ -72,6 +72,13 @@ eleventyConfig.addCollection("postsAll", function(collectionApi) {
     }).format(dateObj);
   });
 
+  eleventyConfig.addFilter("postYears", posts => {
+    if (!Array.isArray(posts)) return "";
+    const years = [...new Set(posts.map(post => DateTime.fromJSDate(post.date).toFormat("yyyy")))];
+    if (years.length <= 2) return years.join(", ");
+    return `${years[0]}-${years[years.length - 1]}`;
+  });
+
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
