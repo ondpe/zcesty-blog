@@ -1,23 +1,80 @@
 backend:
   name: git-gateway
-  branch: master # nebo "master", podle toho co máš ve skutečnosti
+  branch: master
 
-media_folder: "images" # kam se ukládají obrázky v repozitáři
-public_folder: "/images" # jak se obrázky odkazují z webu
+local_backend: true
+
+media_folder: "images"
+public_folder: "/images"
+
+site_url: /
+display_url: /
+logo_url: /static/favicon.svg
+
+editor:
+  preview: true
 
 collections:
   - name: "posts"
     label: "Články"
+    label_singular: "Článek"
     folder: "posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "md"
     format: "frontmatter"
+    summary: "{{date}} - {{title}}"
+    sortable_fields: ["date", "title", "trip", "country"]
+    view_filters:
+      - label: "Japonsko"
+        field: tags
+        pattern: "Japonsko"
+      - label: "Ghana"
+        field: tags
+        pattern: "Ghana"
+      - label: "Tchaj-wan"
+        field: tags
+        pattern: "Tchaj-wan"
     fields:
-      - { label: "Titulek", name: "title", widget: "string" }
-      - { label: "Datum", name: "date", widget: "datetime" }
-      - { label: "Shrnutí", name: "summary", widget: "text" }
-      - { label: "Tagy", name: "tags", widget: "list" }
-      - { label: "Hero obrázek", name: "hero", widget: "image" }
-      - { label: "Obsah", name: "body", widget: "markdown" }
-
+      - label: "Titulek"
+        name: "title"
+        widget: "string"
+      - label: "Datum"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+      - label: "Cesta"
+        name: "trip"
+        widget: "string"
+        required: false
+        hint: "Například Japonsko 2019 nebo Tchaj-wan 2024."
+      - label: "Země"
+        name: "country"
+        widget: "string"
+        required: false
+      - label: "Místo"
+        name: "location"
+        widget: "string"
+        required: false
+      - label: "Shrnutí"
+        name: "summary"
+        widget: "text"
+      - label: "Tagy"
+        name: "tags"
+        widget: "list"
+        default: ["post"]
+        allow_add: true
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "string"
+      - label: "Hero obrázek"
+        name: "hero"
+        widget: "image"
+        hint: "Před nahráním fotku připrav v nástroji Fotky pro blog: Full HD JPG, kvalita 85."
+      - label: "Obsah"
+        name: "body"
+        widget: "travel_markdown"
+        hint: "Tlačítko Vybrat fotky je zmenší na Full HD JPG, seřadí podle data pořízení a vloží markdown odkazy do článku."

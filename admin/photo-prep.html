@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fotky pro blog</title>
+    <link rel="stylesheet" href="photo-prep.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <a href="index.html">Zpet do CMS</a>
+        <h1>Fotky pro blog</h1>
+      </header>
+
+      <section class="panel">
+        <div>
+          <h2>Pripravit fotky</h2>
+          <p>
+            Vyber fotky z Apple Photos nebo ze souboru. Vsechno se zpracuje jen
+            v tomhle prohlizeci: max 1920 px na delsi strane, JPG kvalita 85.
+          </p>
+        </div>
+
+        <label class="dropzone" for="photos">
+          <span>Vybrat fotky</span>
+          <small>JPG, PNG, WEBP nebo HEIC, pokud ho prohlizec umi otevrit</small>
+          <input id="photos" type="file" accept="image/*" multiple />
+        </label>
+
+        <div class="controls">
+          <label>
+            Prefix nazvu
+            <input id="prefix" type="text" autocomplete="off" />
+          </label>
+          <label>
+            Delsi strana
+            <input id="maxSize" type="number" min="640" max="3840" step="160" value="1920" />
+          </label>
+          <label>
+            JPG kvalita
+            <input id="quality" type="number" min="50" max="95" step="1" value="85" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="process" type="button" disabled>Zmensit fotky</button>
+          <button id="downloadAll" type="button" disabled>Stahnout vse</button>
+        </div>
+      </section>
+
+      <section class="panel results-panel">
+        <h2>Hotove soubory</h2>
+        <p class="empty" id="emptyState">Tady se ukazou pripravene JPG soubory.</p>
+        <div class="results" id="results"></div>
+      </section>
+    </main>
+
+    <script src="photo-prep.js"></script>
+  </body>
+</html>
