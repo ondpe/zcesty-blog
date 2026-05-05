@@ -29,9 +29,6 @@
     fields: {
       title: document.querySelector("#title"),
       date: document.querySelector("#date"),
-      trip: document.querySelector("#trip"),
-      country: document.querySelector("#country"),
-      location: document.querySelector("#location"),
       tags: document.querySelector("#tags"),
       summary: document.querySelector("#summary"),
       hero: document.querySelector("#hero"),
@@ -122,9 +119,6 @@
       {
         title: "",
         date: new Date().toISOString().slice(0, 10),
-        trip: "",
-        country: "",
-        location: "",
         tags: ["post"],
         summary: "",
         hero: "",
@@ -239,10 +233,9 @@
   function fillForm(frontmatter, body) {
     els.fields.title.value = frontmatter.title || "";
     els.fields.date.value = String(frontmatter.date || "").slice(0, 10);
-    els.fields.trip.value = frontmatter.trip || "";
-    els.fields.country.value = frontmatter.country || "";
-    els.fields.location.value = frontmatter.location || "";
-    els.fields.tags.value = Array.isArray(frontmatter.tags) ? frontmatter.tags.join(", ") : frontmatter.tags || "";
+    els.fields.tags.value = Array.isArray(frontmatter.tags)
+      ? frontmatter.tags.filter(tag => tag !== "post").join(", ")
+      : frontmatter.tags || "";
     els.fields.summary.value = frontmatter.summary || "";
     els.fields.hero.value = frontmatter.hero || "";
     els.body.value = body || "";
@@ -252,9 +245,6 @@
     return {
       title: els.fields.title.value.trim(),
       date: els.fields.date.value,
-      trip: els.fields.trip.value.trim(),
-      country: els.fields.country.value.trim(),
-      location: els.fields.location.value.trim(),
       tags: els.fields.tags.value.split(",").map(tag => tag.trim()).filter(Boolean),
       summary: els.fields.summary.value.trim(),
       hero: els.fields.hero.value.trim(),
@@ -288,7 +278,7 @@
   function renderPreview() {
     const frontmatter = readFrontmatter();
     const title = frontmatter.title || "Bez názvu";
-    const meta = [frontmatter.date, frontmatter.location, frontmatter.country].filter(Boolean).join(" · ");
+    const meta = [frontmatter.date, frontmatter.tags[0]].filter(Boolean).join(" · ");
     const publicPath = `/posts/${slugify(title)}/`;
     els.preview.innerHTML = `<p class="preview-link"><a href="${publicPath}" target="_blank" rel="noopener">Zobrazit článek: ${escapeHtml(publicPath)}</a></p><h1>${escapeHtml(title)}</h1>${meta ? `<p><small>${escapeHtml(meta)}</small></p>` : ""}${frontmatter.summary ? `<p><strong>${escapeHtml(frontmatter.summary)}</strong></p>` : ""}${renderMarkdown(els.body.value)}`;
   }

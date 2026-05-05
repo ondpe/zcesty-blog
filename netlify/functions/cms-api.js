@@ -310,9 +310,6 @@ function stringifyPost(frontmatter, body) {
   const fields = [
     "title",
     "date",
-    "trip",
-    "country",
-    "location",
     "tags",
     "summary",
     "hero",
