@@ -5,22 +5,30 @@ eleventyComputed:
   metaDescription: "Všechny články z blogu"
 ---
 
-<h1>Všechny články od nejnovějšího</h1>
+<section class="page-intro">
+  <p class="eyebrow">Travel blog</p>
+  <h1>Všechny články od nejnovějšího</h1>
+  <p>Nejnovější zápisky jsou nahoře. Jednotlivé cesty si můžeš otevřít vpravo a číst je popořadě od prvního dne.</p>
+</section>
 
-<hr>
-<p>Po kliknutí sem si můžete přečíst vybranou cestu popořadě: 
-<ul>{% for tag in collections.tagList %}
-      {% if tag != "post" %}
-        <li><a href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
-      {% endif %}
-    {% endfor %} </p>
-</ul>
-<hr>
-<br>
+<div class="content-grid">
+  <section class="content-main">
+    {% set postlist = collections.post | reverse %}
+    {% include "components/postslist.njk" %}
+  </section>
 
-{% set postlist = collections.post | reverse %}
-{% include "components/postslist.njk" %}
-
-<nav>
-  <a href="/">← Zpět na úvod</a>
-</nav>
+  <aside class="content-sidebar" aria-label="Cesty">
+    <h2>Cesty</h2>
+    <p>Vyber cestu a čti ji chronologicky.</p>
+    <nav class="trip-list">
+      {% for tag in collections.tagList %}
+        {% if tag != "post" and tag != "all" and tag != "postsAll" and tag != "tagList" and tag != "authors" %}
+          <a href="/tags/{{ tag | slug }}/">
+            <span>{{ tag }}</span>
+            <small>{{ collections[tag].length }} článků</small>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </aside>
+</div>

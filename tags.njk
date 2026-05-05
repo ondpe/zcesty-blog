@@ -10,11 +10,28 @@ eleventyComputed:
   metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
 ---
 
-<h1>{{ tag }} popořadě</h1>
+<section class="page-intro">
+  <p class="eyebrow">Cesta</p>
+  <h1>{{ tag }} popořadě</h1>
+  <p>Články jsou tady seřazené chronologicky, aby se cesta četla jako deník od začátku do konce.</p>
+</section>
 
-{% set postlist = collections[tag] or [] %}
-{% include "components/postslist.njk" %}
+<div class="content-grid">
+  <section class="content-main">
+    {% set postlist = collections[tag] or [] %}
+    {% include "components/postslist.njk" %}
+  </section>
 
-<nav>
-  <a href="{{ '/' | url }}">← Všechny příspěvky</a>
-</nav>
+  <aside class="content-sidebar" aria-label="Příspěvky v cestě">
+    <h2>V téhle cestě</h2>
+    <nav class="timeline-list">
+      {% for post in postlist %}
+        <a href="{{ post.url | url }}">
+          <time datetime="{{ post.date | machineDate }}">{{ post.date | czDate }}</time>
+          <span>{{ post.data.title }}</span>
+        </a>
+      {% endfor %}
+    </nav>
+    <a class="back-link" href="{{ '/' | url }}">Všechny příspěvky</a>
+  </aside>
+</div>
