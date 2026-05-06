@@ -14,7 +14,7 @@ section: post
 
 {% set tripPosts = collections[currentTrip] or [] %}
 
-<div class="content-grid">
+<div class="content-grid post-layout">
   <section class="content-main">
     <article class="post-detail">
       <h1>{{ title }}</h1>
@@ -55,7 +55,17 @@ section: post
   </section>
 
   {% if currentTrip and tripPosts.length %}
-    <aside class="content-sidebar" aria-label="Příspěvky v cestě">
+    <input class="trip-toggle" type="checkbox" id="trip-toggle">
+    <label class="trip-toggle-label" for="trip-toggle">
+      <span class="trip-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span>V téhle cestě</span>
+    </label>
+
+    <aside class="content-sidebar trip-sidebar" aria-label="Příspěvky v cestě">
       <h2>V téhle cestě</h2>
       <nav class="timeline-list">
         {% for post in tripPosts %}

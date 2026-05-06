@@ -1,9 +1,9 @@
 :root {
   --primary: #2f6f9f;
   --primary-dark: #1d4f73;
-  --background: #eef6fb;
+  --background: #f8fbfd;
   --surface: #fff;
-  --surface-soft: #f7fbfe;
+  --surface-soft: #fbfdff;
   --text: #1f2428;
   --muted: #69737d;
   --line: #c8ddea;
@@ -56,7 +56,7 @@ code {
   gap: 1rem;
   padding: 1.25rem clamp(1rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
-  background: rgba(247, 251, 254, 0.94);
+  background: rgba(251, 253, 255, 0.94);
 }
 
 .site-brand {
@@ -141,6 +141,11 @@ main {
   min-width: 0;
 }
 
+.trip-toggle,
+.trip-toggle-label {
+  display: none;
+}
+
 .content-sidebar {
   position: sticky;
   top: 1rem;
@@ -205,6 +210,19 @@ main {
   display: inline-flex;
   margin-top: 1rem;
   font-weight: 800;
+}
+
+.trip-toggle-icon {
+  display: grid;
+  gap: 4px;
+  width: 1rem;
+}
+
+.trip-toggle-icon span {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
 }
 
 .posts-list {
@@ -349,6 +367,41 @@ footer {
   .content-sidebar {
     position: static;
     order: -1;
+  }
+
+  .post-layout .content-sidebar {
+    order: 3;
+  }
+
+  .post-layout .trip-sidebar {
+    display: none;
+  }
+
+  .post-layout .trip-toggle-label {
+    display: inline-flex;
+    order: 2;
+    align-items: center;
+    justify-self: start;
+    gap: 0.5rem;
+    min-height: 2.4rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 900;
+    box-shadow: 0 8px 22px rgba(32, 78, 112, 0.08);
+    cursor: pointer;
+  }
+
+  .post-layout .trip-toggle:checked + .trip-toggle-label {
+    border-color: #98bfd9;
+    background: #eaf5fb;
+  }
+
+  .post-layout .trip-toggle:checked ~ .trip-sidebar {
+    display: block;
   }
 
   .post-card {
