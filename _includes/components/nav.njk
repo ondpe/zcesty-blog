@@ -2,7 +2,8 @@
   <ul>
     {% for tag in collections.tagList %}
       {% if tag != "post" and tag != "all" and tag != "postsAll" and tag != "tagList" and tag != "authors" %}
-        <li><a href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+        {% set years = collections[tag] | postYears %}
+        <li><a href="/tags/{{ tag | slug }}/">{{ tag }}{% if years %} {{ years }}{% endif %}</a></li>
       {% endif %}
     {% endfor %}
   </ul>

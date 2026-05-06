@@ -53,7 +53,9 @@ code {
 
 .site-header {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 2rem;
+  align-items: start;
   padding: 1.25rem clamp(1rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
   background: rgba(251, 253, 255, 0.94);
@@ -80,6 +82,7 @@ header nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  justify-content: flex-end;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -369,6 +372,14 @@ footer {
 }
 
 @media (max-width: 880px) {
+  .site-header {
+    grid-template-columns: 1fr;
+  }
+
+  header nav ul {
+    justify-content: flex-start;
+  }
+
   .content-grid {
     grid-template-columns: 1fr;
   }
@@ -376,6 +387,10 @@ footer {
   .content-sidebar {
     position: static;
     order: -1;
+  }
+
+  .home-trip-sidebar {
+    display: none;
   }
 
   .post-layout .content-sidebar {
