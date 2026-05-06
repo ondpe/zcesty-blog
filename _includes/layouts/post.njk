@@ -13,6 +13,7 @@ section: post
 {% endif %}
 
 {% set tripPosts = collections[currentTrip] or [] %}
+{% set currentTripYears = tripPosts | postYears %}
 
 <div class="content-grid post-layout">
   <section class="content-main">
@@ -20,7 +21,7 @@ section: post
       <h1>{{ title }}</h1>
       <p class="post-date">
         <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
-        {% if currentTrip %}<span> · {{ currentTrip }}</span>{% endif %}
+        {% if currentTrip %}<span> · {{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</span>{% endif %}
       </p>
 
       {% if summary %}
@@ -75,7 +76,7 @@ section: post
           </a>
         {% endfor %}
       </nav>
-      <a class="back-link" href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }} popořadě</a>
+      <a class="back-link" href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a>
     </aside>
   {% endif %}
 </div>

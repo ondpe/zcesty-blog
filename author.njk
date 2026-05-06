@@ -35,16 +35,6 @@ eleventyComputed:
 					<small>{{ post.date | readableDate }} by <a href="/authors/{{ post.author | slug }}/">{{ post.author }}</a></small>
 				</time>
 			</p>
-			{% if post.tags %}
-				<p>
-					{% for tag in post.tags %}
-		  			{%- if tag != "post" -%}
-		  				{% set tagUrl %}/tags/{{ tag }}/{% endset %}
-		  			<a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-		  			{%- endif -%}
-					{% endfor %}
-				</p>
-			{% endif %}
 		</article>
 	{% endfor %}
   <nav>

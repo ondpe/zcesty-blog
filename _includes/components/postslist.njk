@@ -22,17 +22,7 @@
           <p>{{ post.data.summary }}</p>
         {% endif %}
 
-        {% if post.data.tags %}
-          <p class="tag-row">
-            {% for tag in post.data.tags %}
-              {% if tag != "post" %}
-                <a href="/tags/{{ tag | slug }}/" rel="tag">{{ tag }}</a>
-              {% endif %}
-            {% endfor %}
-          </p>
-        {% endif %}
       </div>
     </article>
   {% endfor %}
 </section>
-

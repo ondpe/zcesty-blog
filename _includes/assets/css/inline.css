@@ -281,34 +281,6 @@ main {
   font-weight: 800;
 }
 
-.tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-a[rel="tag"],
-a[rel="tag"]:visited {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.7rem;
-  padding: 0 0.55rem;
-  border: 1px solid #b8d5e8;
-  border-radius: 999px;
-  background: #edf7fc;
-  color: var(--primary-dark);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-a[rel="tag"]:hover {
-  border-color: var(--primary);
-  background: var(--primary);
-  color: #fff;
-}
-
 .post-detail {
   max-width: 760px;
   margin: 0 auto;

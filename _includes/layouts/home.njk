@@ -23,8 +23,9 @@ eleventyComputed:
     <nav class="trip-list">
       {% for tag in collections.tagList %}
         {% if tag != "post" and tag != "all" and tag != "postsAll" and tag != "tagList" and tag != "authors" %}
+          {% set years = collections[tag] | postYears %}
           <a href="/tags/{{ tag | slug }}/">
-            <span>{{ tag }}</span>
+            <span>{{ tag }}{% if years %} {{ years }}{% endif %}</span>
             <small>{{ collections[tag].length }} článků</small>
           </a>
         {% endif %}
