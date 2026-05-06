@@ -33,24 +33,31 @@ section: post
       </div>
 
       <nav class="post-nav">
-        {% set posts = collections.postsAll %}
+        {% set navPosts = collections.postsAll | reverse %}
+        {% if tripPosts.length %}
+          {% set navPosts = tripPosts %}
+        {% endif %}
+
         {% set currentIndex = 0 %}
-        {% for post in posts %}
+        {% for post in navPosts %}
           {% if post.url == page.url %}
             {% set currentIndex = loop.index0 %}
           {% endif %}
         {% endfor %}
 
-        <div>
-          {% if posts[currentIndex + 1] %}
-            <a href="{{ posts[currentIndex + 1].url }}">← {{ posts[currentIndex + 1].data.title }}</a>
-          {% endif %}
-        </div>
-        <div>
-          {% if posts[currentIndex - 1] %}
-            <a href="{{ posts[currentIndex - 1].url }}">{{ posts[currentIndex - 1].data.title }} →</a>
-          {% endif %}
-        </div>
+        {% if navPosts[currentIndex - 1] %}
+          <a class="post-nav-link post-nav-prev" href="{{ navPosts[currentIndex - 1].url | url }}">
+            <span>Předchozí</span>
+            <strong>{{ navPosts[currentIndex - 1].data.title }}</strong>
+          </a>
+        {% endif %}
+
+        {% if navPosts[currentIndex + 1] %}
+          <a class="post-nav-link post-nav-next" href="{{ navPosts[currentIndex + 1].url | url }}">
+            <span>Následující</span>
+            <strong>{{ navPosts[currentIndex + 1].data.title }}</strong>
+          </a>
+        {% endif %}
       </nav>
     </article>
   </section>

@@ -325,10 +325,47 @@ footer {
 }
 
 .post-nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 2rem;
+}
+
+.post-nav-link,
+.post-nav-link:visited {
+  display: grid;
+  gap: 0.25rem;
+  min-height: 5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f3f9fd;
+  color: var(--text);
+  box-shadow: 0 10px 24px rgba(32, 78, 112, 0.08);
+}
+
+.post-nav-link:hover {
+  border-color: #98bfd9;
+  background: #e7f3fa;
+}
+
+.post-nav-link span {
+  color: var(--primary-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.post-nav-link strong {
+  align-self: end;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.post-nav-next {
+  grid-column: 2;
+  text-align: right;
 }
 
 @media (max-width: 880px) {
@@ -342,7 +379,7 @@ footer {
   }
 
   .post-layout .content-sidebar {
-    order: 3;
+    order: -1;
   }
 
   .post-layout .trip-sidebar {
@@ -351,7 +388,7 @@ footer {
 
   .post-layout .trip-toggle-label {
     display: inline-flex;
-    order: 2;
+    order: -2;
     align-items: center;
     justify-self: start;
     gap: 0.5rem;
@@ -382,5 +419,14 @@ footer {
 
   .post-card-image img {
     max-height: 260px;
+  }
+
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav-next {
+    grid-column: auto;
+    text-align: left;
   }
 }
