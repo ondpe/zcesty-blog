@@ -35,7 +35,7 @@ Zpátky ve městě navštívím druhou stavbu z devatenáctého století, hodino
 
 ![Obrázek](/images/20260907110130-02-img-1470.jpg)
 
-Uvnitř je k dispozici kompletní 3D model Sappora konce 19. století.
+Uvnitř je kompletní 3D model Sappora konce 19. století.
 
 ![Obrázek](/images/20260907110301-01-img-1471.jpg)
 
