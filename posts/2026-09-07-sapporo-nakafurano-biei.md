@@ -49,7 +49,11 @@ A to už je čas sednout do vlaku směr letiště, vystoupit o zastávku dřív,
 
 Půjčení probíhá podobně jako v Evropě, jen k tomu dostanete kabelu s návody a do místního formuláře musíte vypsat všechna svoje ubytování po cestě.
 
-Dostal jsem upgrade na Nissa Kicks. Výhoda je, že to je 4x4, takže kdyby sněžilo, bude se mi v horách líp jezdit. Nevýhoda je, že byť je to auto model 2025, infotainment připomíná středověk.
+Dostal jsem upgrade na Nissa Kicks. Výhoda je, že to je 4x4, takže kdyby sněžilo, bude se mi v horách líp jezdit. Nevýhoda je, že byť je to auto model 2025, infotainment připomíná středověk. Takže místo Apple car play mě čeká cestování s využitím zabudované navigaci. Dokonalá imerze.
+
+Paní co mi dala tašku s návody mi ochotně přepla auto do Angličtiny, což mělo vliv asi na 30 % nápisů.
+
+![Obrázek](/images/20260907131121-01-img-1477.jpg)
 
 ![Obrázek](/images/20260907130321-01-img-1474.jpg)
 
