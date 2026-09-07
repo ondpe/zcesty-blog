@@ -13,9 +13,9 @@ První se mi do cesty postaví historická budova Seikatei z 19. století.
 
 ![Obrázek](/images/20260907094508-01-img-1462.jpg)
 
-Prý se v tomhle místě jednou zastavil Císař a z krásy místní zahrady si doslova sednul na zadek.
+Prý se v tomhle místě jednou zastavil Císař Meiji a z krásy místní zahrady si doslova sednul na zadek.
 
-Na památku jeho spočinuti tu nechali vystavět rezidenční budovu v kombinaci západního…
+Na památku jeho spočinutí tu nechali vystavět rezidenční budovu v kombinaci západního…
 
 ![Obrázek](/images/20260907094935-02-img-1463.jpg)
 
