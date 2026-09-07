@@ -105,7 +105,7 @@ Naštěstí tu pár restaurací funguje. Vybírám podle ošuntelosti.
 
 ![Obrázek](/images/20260907182523-03-img-1500.jpg)
 
-K večeři je smažené kuře Hokkaidó. Vezmete fish&chips, vyměníte rybu za kuře, hranolky za rýži a hrášek za edamame.
+K večeři je smažené kuře Hokkaidó. Vezmete fish&chips, jen vyměníte rybu za kuře, hranolky za rýži a hrášek za edamame.
 
 ![Obrázek](/images/20260907182741-04-img-1501.jpg)
 
