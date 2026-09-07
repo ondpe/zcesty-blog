@@ -51,25 +51,41 @@ Půjčení probíhá podobně jako v Evropě, jen k tomu dostanete kabelu s náv
 
 Dostal jsem upgrade na Nissa Kicks. Výhoda je, že to je 4x4, takže kdyby sněžilo, bude se mi v horách líp jezdit. Nevýhoda je, že byť je to auto model 2025, infotainment připomíná středověk. Takže místo Apple car play mě čeká cestování s využitím zabudované navigaci. Dokonalá imerze.
 
-Paní co mi dala tašku s návody mi ochotně přepla auto do Angličtiny, což mělo vliv asi na 30 % nápisů.
+![Obrázek](/images/20260907130321-01-img-1474.jpg)
+
+Paní co mi dala tašku s návody mi ochotně přepla auto do Angličtiny, což mělo vliv na přibližně 30 % textu.
 
 ![Obrázek](/images/20260907131121-01-img-1477.jpg)
 
-![Obrázek](/images/20260907130321-01-img-1474.jpg)
+Nic naplat vyrážím do divočiny. Na první odpočívce je pro výstrahu vycpaný medvěd. Takhle za plůtkem nevypadá tak děsivě.
 
 ![Obrázek](/images/20260907143731-03-img-1478.jpg)
 
+Konečně dorazím do Nakafurano. Oblast je známá pěstováním levandule. Tu pěstují i na místní sjezdovce.
 
 ![Obrázek](/images/20260907155751-01-img-1479.jpg)
 
+Pro turisty je připravená autentická farma.
+
 ![Obrázek](/images/20260907160551-02-img-1482.jpg)
+
+Kde si mohou vyfotit sami sebe.
 
 ![Obrázek](/images/20260907160948-03-img-1485.jpg)
 
+Nebo místní při autentické práci.
 
 ![Obrázek](/images/20260907161158-01-img-1488.jpg)
 
+Tady si dovolím mírně odbočit k řízení. Na téhle fotce parkoviště vidíte spořádanost místních. A podobně to je na silnicích. 
+
 ![Obrázek](/images/20260907161451-02-img-1490.jpg)
+
+Z rychlostních limitů by leckterému motoristovi praskla žilka. Na neoznačené silnici 60 km/h, na dálnici až 80 km/h a pokud snad na silnici není středová čára, rychlost padá na 30. V obci nebo mimo.
+
+V praxi to vypadá tak, že vláček aut jede zhruba 80 na 60. A když dojede kamion nebo kohokoli, kdo fakt chce jet těch 60, tak zpomalí. Mimo čtyřproudové úseky dálnic, kterých bylo cestou jen pár, jsem neviděl jediný předjížděcí manévr. Od kohokoli.
+
+## Biei
 
 ![Obrázek](/images/20260907163859-03-img-1491.jpg)
 
