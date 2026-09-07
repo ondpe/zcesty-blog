@@ -31,7 +31,7 @@ A jezírko. Ono jezírko se jmenuje podle profesora Ono, který se prý o něj c
 
 ![Obrázek](/images/20260907101917-03-img-1468.jpg)
 
-Zpátky ve městě navštívím druhou stavbu z devatenáctého století, hodinovou věž. Je vystavěna v americkém osadnickém stylu a dokončena byla roku 1878, hodiny zde byly osazeny až v roce 1881, což je shodou okolností stejný rok, kdy byla poprvé otevřena a poté shořela budova Národního divadla v Praze.
+Zpátky ve městě navštívím druhou stavbu z devatenáctého století, hodinovou věž. Je vystavěna v americkém osadnickém stylu a dokončena byla roku 1878. Hodiny zde byly osazeny až v roce 1881, což je shodou okolností stejný rok, kdy byla poprvé otevřena a poté shořela budova Národního divadla v Praze.
 
 ![Obrázek](/images/20260907110130-02-img-1470.jpg)
 
