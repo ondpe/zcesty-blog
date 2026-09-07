@@ -87,13 +87,26 @@ V praxi to vypadá tak, že vláček aut jede zhruba 80 na 60. A když dojede ka
 
 ## Biei
 
+Cestou do Biei je ještě jeden foto spot. Úplně rovná zvlněná silnice.
+
+Fotím motorkáře (poslušně jedoucího 60 km/h).
+
 ![Obrázek](/images/20260907163859-03-img-1491.jpg)
 
+A nevěstu, která se na silnici těsně pod horizontem fotí s kyticí. Z tohohle pohledu je těch 60 vlastně docela rozumné opatření. Nikdy nevíte, jestli za horizontem není nevěsta a svatební fotograf.
 
 ![Obrázek](/images/20260907163950-02-img-1495.jpg)
 
+Biei vypadá večer jako ospalá díra.
+
 ![Obrázek](/images/20260907180736-01-img-1498.jpg)
+
+Naštěstí tu pár restaurací funguje. Vybírám podle ošuntelosti.
 
 ![Obrázek](/images/20260907182523-03-img-1500.jpg)
 
+K večeři je smažené kuře Hokkaidó. Vezmete fish&chips, vyměníte rybu za kuře, hranolky za rýži a hrášek za edamame.
+
 ![Obrázek](/images/20260907182741-04-img-1501.jpg)
+
+A teď spát, zítra se jede do hor.
