@@ -5,14 +5,29 @@ tags: ["Hokkaido"]
 hero: "/images/20260907094508-01-img-1462.jpg"
 ---
 
+## Sapporo
+
+Ráno mi zbývá ještě něco času, tak vyrazím doprohlédnout si Sapporo. 
+
+První se mi do cesty postaví historická budova Seikatei z 19. století.
+
 ![Obrázek](/images/20260907094508-01-img-1462.jpg)
+
+Prý se v tomhle místě jednou zastavil Císař a z krásy místní zahrady si doslova sednul na zadek.
+
+Na památku jeho spočinuti tu nechali vystavět rezidenční budovu v kombinaci západního…
 
 ![Obrázek](/images/20260907094935-02-img-1463.jpg)
 
+a východního stylu. Kdyby se snad někdy zase vrátil, tak aby se mu sedělo lépe.
+
 ![Obrázek](/images/20260907095052-03-img-1464.jpg)
 
+Dál mě kroky vedou do rozlehlého areálu místní univerzity, který mimo jiné obsahuje topolovou alej.
 
 ![Obrázek](/images/20260907100849-01-img-1466.jpg)
+
+A jezírko. Ono jezírko se jmenuje podle profesora Ono, který se prý o něj celou svou akademickou kariéru staral jako o vlastní.
 
 ![Obrázek](/images/20260907101917-03-img-1468.jpg)
 
