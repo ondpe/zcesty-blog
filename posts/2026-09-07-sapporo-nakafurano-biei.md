@@ -2,7 +2,7 @@
 title: "Sapporo, Nakafurano, Biei"
 date: "2026-09-07"
 tags: ["Hokkaido"]
-hero: "/images/20260907094508-01-img-1462.jpg"
+hero: "/images/20260907163859-03-img-1491.jpg"
 ---
 
 ## Sapporo
