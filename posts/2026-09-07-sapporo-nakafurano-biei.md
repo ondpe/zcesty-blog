@@ -43,6 +43,16 @@ A horní patro opět dýchne westernem.
 
 ![Obrázek](/images/20260907110517-02-img-1472.jpg)
 
+## Nakafurano
+
+A to už je čas sednout do vlaku směr letiště, vystoupit o zastávku dřív, projít kolem rozpadajícího se outletu a půjčit auto. 
+
+Půjčení probíhá podobně jako v Evropě, jen k tomu dostanete kabelu s návody a do místního formuláře musíte vypsat všechna svoje ubytování po cestě.
+
+Dostal jsem upgrade na Nissa Kicks. Výhoda je, že to je 4x4, takže kdyby sněžilo, bude se mi v horách líp jezdit. Nevýhoda je, že byť je to auto model 2025, infotainment připomíná středověk.
+
+![Obrázek](/images/20260907130321-01-img-1474.jpg)
+
 ![Obrázek](/images/20260907143731-03-img-1478.jpg)
 
 
