@@ -13,7 +13,7 @@ První se mi do cesty postaví historická budova Seikatei z 19. století.
 
 ![Obrázek](/images/20260907094508-01-img-1462.jpg)
 
-Prý se v tomhle místě jednou zastavil Císař Meiji a z krásy místní zahrady si doslova sednul na zadek.
+Prý se v tomhle místě jednou zastavil císař Meiji a z krásy místní zahrady si doslova sednul na zadek.
 
 Na památku jeho spočinutí tu nechali vystavět rezidenční budovu v kombinaci západního…
 
@@ -53,7 +53,7 @@ Dostal jsem upgrade na Nissa Kicks. Výhoda je, že to je 4x4, takže kdyby sně
 
 ![Obrázek](/images/20260907130321-01-img-1474.jpg)
 
-Paní co mi dala tašku s návody mi ochotně přepla auto do Angličtiny, což mělo vliv na přibližně 30 % textu.
+Paní co mi dala tašku s návody mi ochotně přepla auto do angličtiny, což mělo vliv na přibližně 30 % textů.
 
 ![Obrázek](/images/20260907131121-01-img-1477.jpg)
 
