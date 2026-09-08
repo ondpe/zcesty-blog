@@ -76,7 +76,7 @@ A to všechno proto, abych si mohl na jeho terase dát kafe s výhledem.
 
 ![Obrázek](/images/20260908142401-01-img-1512.jpg)
 
-Výhled byl lepší, než kafe, ale je to nevadí. Neméně stylové to je i uvnitř.
+Výhled byl lepší, než kafe, ale to nevadí. Neméně stylové to je i uvnitř.
 
 ![Obrázek](/images/20260908150621-02-img-1521.jpg)
 
