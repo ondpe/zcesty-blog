@@ -28,7 +28,7 @@ O kousek výš jsou i modré vodopády.
 
 Popojedu ještě kousek výš, do téměř tisíci metrů, a vyrazím na první lehký trek. No spíš procházku. Je to jen pár kilometrů, tak jdu nalehko.
 
-První míjím místo, kde končí stopy většiny turistů.
+Míjím místo, kde končí stopy většiny turistů.
 
 ![Obrázek](/images/20260908102927-01-dsc02629.jpg)
 
