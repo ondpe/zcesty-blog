@@ -70,7 +70,7 @@ S ohledem na soukromí jen fotka blízkého okolí. Časem přibyl i jeden cykli
 
 Zpátky na cestě do Biei se chci zastavit ve dvou muzeích. To první nacházím úplnou náhodou.
 
-Je to projekt jednoho chlapíka, který celý život sbíral kousky dvou japonských umělců, jednoho malíře a jednoho tvůrce keramiky. A když už měl těch kousků na 400, koupil starý dřevěný dům, pak ho rozebral, převezl do kopců na Biei a zase složil.
+Je to projekt jednoho chlapíka, který celý život sbíral kousky dvou japonských umělců, jednoho malíře a jednoho tvůrce keramiky. A když už měl těch kousků na 400, koupil starý dřevěný dům, pak ho rozebral, převezl do kopců nad Biei a zase složil.
 
 A to všechno proto, abych si mohl na jeho terase dát kafe s výhledem.
 
