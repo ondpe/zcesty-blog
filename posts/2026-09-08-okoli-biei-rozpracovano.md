@@ -62,7 +62,7 @@ Po sestupu se vydávám ke zlatému hřebu dneška. Venkovní onsen Fukiage. I k
 
 Dva bazény s horkou vodou, která překvapivě voní. Čekal bych klasicky síru, ale tohle je nasládlé, trochu jako med. Možná trochu sirný med. A okolo les. V bazénech pár místních a jinak klid.
 
-S ohledem na soukromí jen fotka poblíž. Časem přibyl i jeden cyklista, ale nikomu to nevadilo.
+S ohledem na soukromí jen fotka blízkého okolí. Časem přibyl i jeden cyklista, ale nikomu to nevadilo.
 
 ![Obrázek](/images/20260908132700-02-img-1510.jpg)
 
