@@ -26,7 +26,7 @@ O kousek výš jsou i modré vodopády.
 
 ## Hora Tokači
 
-Popojedu ještě kousek výš, do téměř tisíci metrů a vyrazím na první lehký trek. No spíš procházku. Je to jen pár kilometrů, tak jdu nalehko.
+Popojedu ještě kousek výš, do téměř tisíci metrů, a vyrazím na první lehký trek. No spíš procházku. Je to jen pár kilometrů, tak jdu nalehko.
 
 První míjím místo, kde končí stopy většiny turistů.
 
