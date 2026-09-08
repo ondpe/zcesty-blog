@@ -96,11 +96,20 @@ Fotograf kromě focení vysázel i krásnou borovicovou alej.
 
 ## Krajina nad Biei
 
+Pan fotograf se specializoval na krajinu okolo Biei. Která je překrásná zjara, s koncem podzimu nebo v zimě. Teď je jen zajímavá.
+
+Fotím aspoň strom, který tam jen tak stál a koukal do polí.
+
 ![Obrázek](/images/20260908163206-03-dsc02646.jpg)
 
+A malebnou silničku, kde jsem rád za kochacích 60 kilometrů za hodinu.
 
 ![Obrázek](/images/20260908163113-01-dsc02645.jpg)
 
+K večeři tentokrát Biei Udon.
+
 ![Obrázek](/images/20260908180838-02-img-1560.jpg)
+
+Na závěr si odpustím ještě jedno setkání s Modrým jezírkem.
 
 ![Obrázek](/images/20260908184932-03-img-1561.jpg)
