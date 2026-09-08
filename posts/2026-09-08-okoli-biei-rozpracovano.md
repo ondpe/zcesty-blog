@@ -68,12 +68,23 @@ S ohledem na soukromí jen fotka poblíž. Časem přibyl i jeden cyklista, ale 
 
 ## Šinseikan
 
+Zpátky na cestě do Biei se chci zastavit ve dvou muzeích. To první nacházím spíš náhodou.
+
+Je to projekt jednoho chlapíka, který celý život sbíral kousky dvou japonských umělců, jednoho malíře a jednoho tvůrce keramiky. A když už měl těch kousků na 400, koupil starý dřevěný dům, pak ho rozebral, převezl do kopců na Biei a zase složil.
+
+A to všechno proto, abych si mohl na jeho terase dát kafe s výhledem.
+
 ![Obrázek](/images/20260908142401-01-img-1512.jpg)
+
+Výhled byl lepší, než kafe, ale je to nevadí. Neméně stylové to je i uvnitř.
 
 ![Obrázek](/images/20260908150621-02-img-1521.jpg)
 
+Přeď domem je i vlastnoručně zbudovaná kamenná zahrada. Úžasné místo. Oáza klidu.
+
 ![Obrázek](/images/20260908151100-03-img-1522.jpg)
 
+## Takušinkan
 
 ![Obrázek](/images/20260908153709-01-img-1523.jpg)
 
