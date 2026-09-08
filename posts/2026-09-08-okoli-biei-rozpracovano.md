@@ -94,7 +94,7 @@ Fotograf kromě focení krajiny okolo Biei vysázel i krásnou borovicovou alej.
 
 ![Obrázek](/images/20260908154432-02-img-1524.jpg)
 
-## Krajina nad Biei
+## Krajina okolo Biei
 
 Krajina okolo Biei je prý překrásná zjara, s koncem podzimu nebo v zimě. Teď je jen pěkná.
 
