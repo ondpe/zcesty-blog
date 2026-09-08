@@ -2,6 +2,7 @@
 title: "Sapporo, Nakafurano, Biei"
 date: "2026-09-07"
 tags: ["Hokkaido"]
+summary: "Objevím Sapporo konce 19. století, infotainment konce 20. a vycpaného medvěda."
 hero: "/images/20260907163859-03-img-1491.jpg"
 ---
 
