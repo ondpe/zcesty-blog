@@ -68,7 +68,7 @@ S ohledem na soukromí jen fotka blízkého okolí. Časem přibyl i jeden cykli
 
 ## Šinseikan
 
-Zpátky na cestě do Biei se chci zastavit ve dvou muzeích. To první nacházím spíš náhodou.
+Zpátky na cestě do Biei se chci zastavit ve dvou muzeích. To první nacházím úplnou náhodou.
 
 Je to projekt jednoho chlapíka, který celý život sbíral kousky dvou japonských umělců, jednoho malíře a jednoho tvůrce keramiky. A když už měl těch kousků na 400, koupil starý dřevěný dům, pak ho rozebral, převezl do kopců na Biei a zase složil.
 
