@@ -12,28 +12,47 @@ Ráno začnu tentokrát hotelovou snídaní. Je to fajn, ale byl jsem radši, kd
 
 ## Modré jezírko
 
-První zastávka je modré jezírko Modré jezírko. Je to to nejcennější 
+První zastávka je modré jezírko Modré jezírko. Je to to jedna z největších turistických zajímavostí v Biei a tomu odpovídá i rozměr parkoviště.
 
 ![Obrázek](/images/20260908090746-02-img-1503.jpg)
 
+Naštěstí jsem tu hned ráno, tak nic nebrání objevovat krásy modré. Takhle, většinou jsem k těmhle turistickým lákadlům skeptický, ale tohle je fakt hodně modré. #nofilter
+
 ![Obrázek](/images/20260908092216-03-dsc02625.jpg)
+
+O kousek výš jsou i modré vodopády.
 
 ![Obrázek](/images/20260908094440-04-dsc02626.jpg)
 
+## Hora Tokači
+
+Popojedu ještě kousek výš, do téměř tisíci metrů a vyrazím na první lehký trek. No spíš procházku. Je to jen pár kilometrů, tak jdu nalehko.
+
+První míjím místo, kde končí stopy většiny turistů.
 
 ![Obrázek](/images/20260908102927-01-dsc02629.jpg)
 
+Dobře na vrchol to dneska asi nebude, ale aspoň na hranici mraků bych se vydrápat chtěl. Když se pozorně podíváte, tak si můžete všimnout, že část mraků nejsou mraky, dým stoupající z hory.
+
 ![Obrázek](/images/20260908103142-02-dsc02630.jpg)
+
+Cestou potkávám krásné výhledy a vyvřeliny.
 
 ![Obrázek](/images/20260908110426-03-dsc02633.jpg)
 
+A značku, to doufám není “pozor medvěd”.
+
 ![Obrázek](/images/20260908110920-04-dsc02637.jpg)
 
+Nad místní útulnou moje kroky zastaví japonský bratranec Héfaista. Dneska to dál nepůjde.
 
 ![Obrázek](/images/20260908111721-01-dsc02638.jpg)
 
+Útulnu mají ale moc pěknou.
+
 ![Obrázek](/images/20260908111730-02-dsc02639.jpg)
 
+Cestou dolů se už jen kochám výhledy a klečí.
 
 ![Obrázek](/images/20260908115309-01-dsc02640.jpg)
 
