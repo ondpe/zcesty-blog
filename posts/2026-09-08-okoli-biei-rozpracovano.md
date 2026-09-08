@@ -60,7 +60,7 @@ Cestou dolů se už jen kochám výhledy a klečí.
 
 Po sestupu se vydávám ke zlatému hřebu dneška. Venkovní onsen Fukiage. I koupání na divoko má v Japonsku svůj řád. Onsen je krásné udržován, je k dispozici zábradlí a převlékací, tedy spíš svlékací, plošinka s lavičkou.
 
-Dva bazény s horkou vodou, která zajímavé voní. Čekal bych klasicky síru, ale tohle je nasládlé, trochu jako med. Možná trochu sirný med. A okolo les. V bazénech pár místních a jinak klid.
+Dva bazény s horkou vodou, která překvapivě voní. Čekal bych klasicky síru, ale tohle je nasládlé, trochu jako med. Možná trochu sirný med. A okolo les. V bazénech pár místních a jinak klid.
 
 S ohledem na soukromí jen fotka poblíž. Časem přibyl i jeden cyklista, ale nikomu to nevadilo.
 
