@@ -40,7 +40,7 @@ Cestou potkávám krásné výhledy a vyvřeliny.
 
 ![Obrázek](/images/20260908110426-03-dsc02633.jpg)
 
-A značku, to doufám není “pozor medvěd”.
+A značku, která snad neznamená “Pozor medvěd”.
 
 ![Obrázek](/images/20260908110920-04-dsc02637.jpg)
 
