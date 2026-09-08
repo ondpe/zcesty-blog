@@ -90,7 +90,7 @@ Druhá galerie nabízí o poznání lepší kafe a zato žádný výhled. Uvnit�
 
 ![Obrázek](/images/20260908153709-01-img-1523.jpg)
 
-Fotograf kromě focení krajiny okolo Biei vysázel i krásnou borovicovou alej.
+Fotograf kromě focení krajiny okolo Biei vysázel i krásnou březovou alej.
 
 ![Obrázek](/images/20260908154432-02-img-1524.jpg)
 
