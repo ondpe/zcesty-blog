@@ -27,3 +27,8 @@ hero: "/images/20260908081357-01-img-1502.jpg"
 ![Obrázek](/images/20260908111721-01-dsc02638.jpg)
 
 ![Obrázek](/images/20260908111730-02-dsc02639.jpg)
+
+
+![Obrázek](/images/20260908115309-01-dsc02640.jpg)
+
+![Obrázek](/images/20260908132700-02-img-1510.jpg)
