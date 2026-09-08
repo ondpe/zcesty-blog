@@ -102,7 +102,7 @@ Fotím aspoň strom, který tam jen tak stál a koukal do polí.
 
 ![Obrázek](/images/20260908163206-03-dsc02646.jpg)
 
-A malebnou silničku, kde jsem rád za kochacích 60 kilometrů za hodinu.
+A malebnou silničku, na které jsem rád za kochacích 60 kilometrů za hodinu.
 
 ![Obrázek](/images/20260908163113-01-dsc02645.jpg)
 
