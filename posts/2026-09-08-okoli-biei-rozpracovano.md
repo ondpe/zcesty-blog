@@ -86,9 +86,15 @@ Přeď domem je i vlastnoručně zbudovaná kamenná zahrada. Úžasné místo. 
 
 ## Takušinkan
 
+Druhá galerie nabízí o poznání lepší kafe a zato žádný výhled. Uvnitř jsou fotografie místní krajiny a přilehlé parkoviště pojme už i autobusy. Z nichž jeden se rozhodne dorazit chvilku po mě.
+
 ![Obrázek](/images/20260908153709-01-img-1523.jpg)
 
+Fotograf kromě focení vysázel i krásnou borovicovou alej.
+
 ![Obrázek](/images/20260908154432-02-img-1524.jpg)
+
+## Krajina nad Biei
 
 ![Obrázek](/images/20260908163206-03-dsc02646.jpg)
 
