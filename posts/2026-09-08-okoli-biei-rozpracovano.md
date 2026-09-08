@@ -6,7 +6,13 @@ summary: "Vyfotím modré jezírko, zastaví mě sopečná činnost a vyvařím 
 hero: "/images/20260908081357-01-img-1502.jpg"
 ---
 
+Ráno začnu tentokrát hotelovou snídaní. Je to fajn, ale byl jsem radši, když mi to v ryokanu někdo předvybral.
+
 ![Obrázek](/images/20260908081357-01-img-1502.jpg)
+
+## Modré jezírko
+
+První zastávka je modré jezírko Modré jezírko. Je to to nejcennější 
 
 ![Obrázek](/images/20260908090746-02-img-1503.jpg)
 
