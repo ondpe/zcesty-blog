@@ -70,9 +70,9 @@ V jednu chvíli se mrak zvedne natolik, že je vidět i dým valící se z hory.
 
 ![Obrázek](/images/20260909134331-02-img-1573.jpg)
 
-Říkám si, že každý mrak musí někde skončit a třeba nahoře bude líp. Nebude. Zvedá se vítr, pak začne mrholit, pak pršet a nakonec padat sněhová krupička. Teda padat, léta ve větru téměř vertikálně.
+Říkám si, že každý mrak musí někde skončit a třeba nahoře bude líp. Nebude. Zvedá se vítr, pak začne mrholit, pak pršet a nakonec padat sněhová krupička. Pak přestane padat a začne létat vertikálně.
 
-Balím to a otáčím zpět. K lanovce dojdu durch. Naštěstí se mi úplně nerozpustil lístek dolů.
+Chvilku se schovám za balvan, jestli to nepřejde. Nepřejde. Balím to a otáčím zpět. K lanovce dojdu durch. Naštěstí se mi úplně nerozpustil lístek dolů.
 
 ![Obrázek](/images/20260909145804-03-img-1574.jpg)
 
