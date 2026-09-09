@@ -6,9 +6,15 @@ summary: "Koupím si zvoneček na medvěda a zmoknu jak slepice."
 hero: "/images/20260909092238-01-dsc02647.jpg"
 ---
 
-![Obrázek](/images/20260909092238-01-dsc02647.jpg)
+Dneska mířím už opravdu do hor. Cestou ještě vyfotím krajinu Biei v ranním slunci.
 
 ![Obrázek](/images/20260909092308-02-dsc02649.jpg)
+
+A ještě jednu fotogenickou pneumatiku.
+
+![Obrázek](/images/20260909092238-01-dsc02647.jpg)
+
+## Higashikawa
 
 ![Obrázek](/images/20260909100632-03-img-1562.jpg)
 
