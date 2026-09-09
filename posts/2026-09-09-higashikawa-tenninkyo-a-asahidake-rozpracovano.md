@@ -26,14 +26,23 @@ Za vstupné v přepočtu 13 korun můžu obdivovat velké množství fotografií
 
 ## Tenninkyo
 
+A to už je čas vyrazit do rokle Tenninkyo, která vznikla erozivním působením místní říčky na zatuhlé pyroklastické proudy. Výsledkem jsou typické sloupcovité skalní útvary a prakticky opuštěné parkoviště.
+
 ![Obrázek](/images/20260909105544-02-dsc02650.jpg)
+
+Kousek výš po krátké procházce obdivuju vodopád Hagoromo. Prý nejvyšší na Hokkaidó.
 
 ![Obrázek](/images/20260909111154-03-dsc02655.jpg)
 
+Kousek od parkoviště je ještě odhalená skála, která vypadá trochu jako beton. Ukazuje to místo, kde se kus vyvřeliny odlomil, po té, co ho podemlela řeka.
 
 ![Obrázek](/images/20260909113233-01-dsc02662.jpg)
 
+Zastavím se ještě u Sedmibarevné fontány. Je to úplně normální fontána. Informační cedule tvrdí, že když správně svítí slunce, je možné spatřit za fontánou duhu. Což je tedy možné u každé fontány. Parčík ale poslouží jako dobré místo na oběhový piknik.
+
 ![Obrázek](/images/20260909115843-02-img-1564.jpg)
+
+## Asahidake
 
 ![Obrázek](/images/20260909130224-03-img-1568.jpg)
 
