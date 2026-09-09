@@ -77,3 +77,6 @@ Balím to a otáčím zpět. K lanovce dojdu durch. Naštěstí se mi úplně ne
 ![Obrázek](/images/20260909145804-03-img-1574.jpg)
 
 Na ubytování je to naštěstí kousek. Na pokoji rozvěsím mokré věci, čím dotvořím atmosféru alpské chaty, kterou se snažil navodit architekt. Pokud by alpské chaty měly venkovní onsen, vyhřívaná prkýnka s bidetem na dálkové ovládání a ve výtahu nouzovou toaletu, vypadaly by přesně takhle.
+
+
+![Obrázek](/images/20260909184129-01-img-1598.jpg)
