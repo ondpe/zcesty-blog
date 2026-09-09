@@ -16,10 +16,15 @@ A ještě jednu fotogenickou pneumatiku.
 
 ## Higashikawa
 
+Cestou zastavím ještě v městečku Higashikawa, což je japonské národní město fotografie. Aspoň to tedy tvrdí Higashikawa. Mají tu na to galerii s lehce brutalistním portálkem.
+
 ![Obrázek](/images/20260909100632-03-img-1562.jpg)
 
+Za vstupné v přepočtu 13 korun můžu obdivovat velké množství fotografií.
 
 ![Obrázek](/images/20260909101829-01-img-1563.jpg)
+
+## Tenninkyo
 
 ![Obrázek](/images/20260909105544-02-dsc02650.jpg)
 
