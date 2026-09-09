@@ -34,7 +34,7 @@ Kousek výš po krátké procházce obdivuju vodopád Hagoromo. Prý nejvyšší
 
 ![Obrázek](/images/20260909111154-03-dsc02655.jpg)
 
-Kousek od parkoviště je ještě odhalená skála, která vypadá trochu jako beton. Ukazuje to místo, kde se kus vyvřeliny odlomil, po té, co ho podemlela řeka.
+Kousek od parkoviště je ještě odhalená skála, která vypadá trochu jako beton. Cedule tvrdí, že se tu kus vyvřeliny odlomil, po té, co ho podemlela řeka.
 
 ![Obrázek](/images/20260909113233-01-dsc02662.jpg)
 
