@@ -44,18 +44,32 @@ Zastavím se ještě u Sedmibarevné fontány. Je to úplně normální fontána
 
 ## Asahidake
 
+Dneska večer spím pod horou Asahidake. Tak je to dobrá příležitost k tomu se na ni podívat. Část cesty navíc vede lanovka a nahoře by měly být sopečné výdechy.
+
+S ohledem na počasí kontroluju meteoradar a web kameru na horní stanici. Obojí vypadá ještě docela obstojně.
+
 ![Obrázek](/images/20260909130224-03-img-1568.jpg)
 
+Dokonce i první část cesty ještě svítí slunce.
 
 ![Obrázek](/images/20260909130348-01-img-1569.jpg)
 
+Pak už míň.
+
 ![Obrázek](/images/20260909130622-02-img-1570.jpg)
+
+A pak už vůbec.
 
 ![Obrázek](/images/20260909132908-03-img-1571.jpg)
 
+Cestička se ale příjemně vine mokřady a má to své kouzlo. Navíc jsem si na dolní stanici pořídil zvoneček na medvědy. Takže se cítím neohroženě.
 
 ![Obrázek](/images/20260909134006-01-img-1572.jpg)
 
+Na vyhlídce je docela dost volno.
+
 ![Obrázek](/images/20260909134331-02-img-1573.jpg)
+
+V jednu chvíli se mrak zvedne natolik, že je vidět i dým valící se z hory. Pak už je jen slyšet a cítit. V té mlze by klidně mohly být Piešťany.
 
 ![Obrázek](/images/20260909145804-03-img-1574.jpg)
