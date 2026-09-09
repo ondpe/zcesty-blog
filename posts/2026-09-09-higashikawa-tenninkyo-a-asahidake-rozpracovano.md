@@ -38,7 +38,7 @@ Kousek od parkoviště je ještě odhalená skála, která vypadá trochu jako b
 
 ![Obrázek](/images/20260909113233-01-dsc02662.jpg)
 
-Zastavím se ještě u Sedmibarevné fontány. Je to úplně normální fontána. Informační cedule tvrdí, že když správně svítí slunce, je možné spatřit za fontánou duhu. Což je tedy možné u každé fontány. Parčík ale poslouží jako dobré místo na oběhový piknik.
+Zastavím se ještě u Sedmibarevné fontány. Je to úplně normální fontána. Informační cedule tvrdí, že když správně svítí slunce, je možné spatřit za fontánou duhu. Jako u každé jiné fontány. Parčík ale poslouží jako dobré místo na oběhový piknik.
 
 ![Obrázek](/images/20260909115843-02-img-1564.jpg)
 
