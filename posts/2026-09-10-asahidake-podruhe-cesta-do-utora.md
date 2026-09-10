@@ -43,21 +43,34 @@ Cestou je naštěstí pár zastávek. První jsou vodopády Ryusei a Ginga. Ty j
 
 ![Obrázek](/images/20260910120008-02-dsc02692.jpg)
 
+Pak zastavím u odpočívárny s neotřelým orlojem a čistými záchody.
+
 ![Obrázek](/images/20260910132535-03-img-1599.jpg)
 
+A o hodinu a asi 40 kilometrů dál se projdu u nejsevernější japonské písečné pláže.
+
+![Obrázek](/images/20260910153344-01-img-1601.jpg)
+
+Má i vlastní nádraží.
 
 ![Obrázek](/images/20260910153022-01-img-1600.jpg)
 
+Vlak tu jezdí asi dvakrát denně. Mám kliku.
+
 ![Obrázek](/images/20260910154257-02-img-1603.jpg)
+
+Předposlední atrakce u cesty je cesta sama. Vyhlídka na které je možné meditovat, jestli i úplně rovná cesta může být cíl.
 
 ![Obrázek](/images/20260910162749-03-dsc02701.jpg)
 
+A poslední ještě jedny decentní vodopády, na kterých opět nejvíc ocením záchody.
 
 ![Obrázek](/images/20260910165507-01-dsc02702.jpg)
 
+A pak už ubytování. V Utoru toho moc není, co se týče střední cesty. Fancy hotely a pak kempy. V mojí obvyklé kategorii business hotel nic. Možná dole v přístavu ubytovna pro námořníky. Nakonec jsem našel ubytovnu s onsenem. Shiretoko Sunset. Nelhali.
+
 ![Obrázek](/images/20260910172515-02-img-1604.jpg)
 
+Pozoruju zapadající slunce a řeším s AI, jak si ustlat vlastní futon.
+
 ![Obrázek](/images/20260910173438-03-dsc02706.jpg)
-
-
-![Obrázek](/images/20260910153344-01-img-1601.jpg)
