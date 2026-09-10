@@ -3,7 +3,7 @@ title: "Asahidake podruhé, cesta do Utora"
 date: "2026-09-10"
 tags: ["Hokkaido"]
 summary: "Projdu se klečí, jedu dlouho autem a pozoruju západ slunce."
-hero: "/images/20260910081116-01-dsc02665.jpg"
+hero: "/images/20260910091137-03-dsc02685.jpg"
 ---
 
 Dneska start bohužel bez fotky snídaně, protože hotelové pyžamo nemá kapsu na mobil. A stejně se snažím spěchat, protože dneska vypadá počasí podstatně lépe.
