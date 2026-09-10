@@ -2,7 +2,7 @@
 title: "Asahidake podruhé, cesta do Utora"
 date: "2026-09-10"
 tags: ["Hokkaido"]
-summary: "Projdu se klečí a pak jedu dlouho autem."
+summary: "Projdu se klečí, jedu dlouho autem a pozoruju západ slunce."
 hero: "/images/20260910081116-01-dsc02665.jpg"
 ---
 
