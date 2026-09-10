@@ -71,6 +71,6 @@ A pak už ubytování. V Utoru toho moc není, co se týče střední cesty. Fan
 
 ![Obrázek](/images/20260910172515-02-img-1604.jpg)
 
-Pozoruju zapadající slunce a řeším s AI, jak si ustlat vlastní futon.
+Vypadá to jako malované kulisy z levného seriálu, ale je to opravdové. Pozoruju zapadající slunce a řeším s AI, jak si ustlat vlastní futon.
 
 ![Obrázek](/images/20260910173438-03-dsc02706.jpg)
