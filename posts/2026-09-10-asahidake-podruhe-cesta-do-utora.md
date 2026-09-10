@@ -6,7 +6,15 @@ summary: "Projdu se klečí a pak jedu dlouho autem."
 hero: "/images/20260910081116-01-dsc02665.jpg"
 ---
 
+Dneska start bohužel bez fotky snídaně, protože hotelové pyžamo nemá kapsu na mobil. A stejně se snažím spěchat, protože dneska vypadá počasí podstatně lépe.
+
+Lanovka v osm se vyplácí, nahoře je ještě poměrně prázdno a ranní slunce přeje barvám blížícího se podzimu.
+
+
 ![Obrázek](/images/20260910081116-01-dsc02665.jpg)
+
+Asahidake takhle vypadá trochu jak Sněžka od Luční boudy. Kdyby se ze Sněžky kouřilo.
+
 
 ![Obrázek](/images/20260910081427-02-dsc02667.jpg)
 
