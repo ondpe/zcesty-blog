@@ -63,7 +63,7 @@ Předposlední atrakce u cesty je cesta sama. Vyhlídka, na které je možné me
 
 ![Obrázek](/images/20260910162749-03-dsc02701.jpg)
 
-A poslední ještě jedny decentní vodopády, na kterých opět nejvíc ocením záchody.
+A poslední zastávka: ještě jedny decentní vodopády, na kterých opět nejvíc ocením záchody.
 
 ![Obrázek](/images/20260910165507-01-dsc02702.jpg)
 
