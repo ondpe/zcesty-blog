@@ -59,7 +59,7 @@ Vlak tu jezdí asi dvakrát denně. Mám kliku.
 
 ![Obrázek](/images/20260910154257-02-img-1603.jpg)
 
-Předposlední atrakce u cesty je cesta sama. Vyhlídka na které je možné meditovat, jestli i úplně rovná cesta může být cíl.
+Předposlední atrakce u cesty je cesta sama. Vyhlídka, na které je možné meditovat, jestli i úplně rovná cesta může být cíl.
 
 ![Obrázek](/images/20260910162749-03-dsc02701.jpg)
 
