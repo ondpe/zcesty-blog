@@ -58,3 +58,6 @@ Cestou je naštěstí pár zastávek. První jsou vodopády Ryusei a Ginga. Ty j
 ![Obrázek](/images/20260910172515-02-img-1604.jpg)
 
 ![Obrázek](/images/20260910173438-03-dsc02706.jpg)
+
+
+![Obrázek](/images/20260910153344-01-img-1601.jpg)
