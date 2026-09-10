@@ -37,6 +37,10 @@ Dole ještě fotím lanovku z rákosí. Vedle je upozornění, že nejnovější
 
 ![Obrázek](/images/20260910093934-01-dsc02687.jpg)
 
+Sedám do auta a dneska si v něm dost pobudu. Pět hodin s maximální povolenou rychlostí 60 km/h utíká ještě pomaleji, než normálně. Středověký infotainment vem čert, hlavně, že to má adaptivní tempomat.
+
+Cestou je naštěstí pár zastávek. První jsou vodopády Ryusei a Ginga. Ty jsou z důvodu úspory času umístěny hned vedle sebe a stačí tak vylézt jen na jednu vyhlídku.
+
 ![Obrázek](/images/20260910120008-02-dsc02692.jpg)
 
 ![Obrázek](/images/20260910132535-03-img-1599.jpg)
