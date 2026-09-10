@@ -29,10 +29,11 @@ Ještě jeden pohled zpátky na potvrzení, že nelézt nahoru bylo dobré rozho
 
 ![Obrázek](/images/20260910090433-02-dsc02683.jpg)
 
-Tak už jen lanovkou zase dolů. Dalo by se to i sejít pěšky, ale varují před medvědy a bažinou. Asi nepotřebuju ani jedno.
+Tak už jen lanovkou zase dolů. Dalo by se to i sejít pěšky, ale cedule varují před medvědy a bažinou. Asi nepotřebuju ani jedno.
 
 ![Obrázek](/images/20260910091137-03-dsc02685.jpg)
 
+Dole ještě fotím lanovku z rákosí. Vedle je upozornění, že nejnovější medvědí stopy na tom treku, co jsem ho nešel, jsou z pondělka.
 
 ![Obrázek](/images/20260910093934-01-dsc02687.jpg)
 
