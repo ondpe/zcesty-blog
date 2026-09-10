@@ -15,15 +15,21 @@ Lanovka v osm se vyplácí, nahoře je ještě poměrně prázdno a ranní slunc
 
 Asahidake takhle vypadá trochu jak Sněžka od Luční boudy. Kdyby se ze Sněžky kouřilo.
 
-
 ![Obrázek](/images/20260910081427-02-dsc02667.jpg)
+
+Fumaroly vydatně kouří a smrdí. Zvuk si představte jako start menšího proudového letadla. Nebo vapku. Co máte víc naposlouchané.
 
 ![Obrázek](/images/20260910083342-03-dsc02674.jpg)
 
+Pokus o zdolání vrcholu vzdávám, protože se honí mraky. Tak se jen tak courám klečí. Občas vykukuje stanice lanovky.
 
 ![Obrázek](/images/20260910090410-01-dsc02682.jpg)
 
+Ještě jeden pohled zpátky na potvrzení, že nelézt nahoru bylo dobré rozhodnutí.
+
 ![Obrázek](/images/20260910090433-02-dsc02683.jpg)
+
+Tak už jen lanovkou zase dolů. Dalo by se to i sejít pěšky, ale varují před medvědy a bažinou. Asi nepotřebuju ani jedno.
 
 ![Obrázek](/images/20260910091137-03-dsc02685.jpg)
 
