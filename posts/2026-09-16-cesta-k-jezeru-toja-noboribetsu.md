@@ -48,7 +48,7 @@ Nahoře cestou k hornímu jezeru Ooyunuma potkávám ještě jednoho ezo jelena.
 
 ![Obrázek](/images/20260916132954-02-dsc02832.jpg)
 
-A to už je horní jezírko, krásně barevné a jedovaté.
+A to už je horní jezírko, barevné a jedovaté.
 
 ![Obrázek](/images/20260916133932-03-dsc02836.jpg)
 
