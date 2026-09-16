@@ -60,7 +60,7 @@ A zároveň tím, jak si starou silnici vzala příroda zase zpátky.
 
 ![Obrázek](/images/20260916143735-02-dsc02843.jpg)
 
-Dorážím do cíle ještě za světla, tak si dám krátkou procházku po břehu jezera Toja. Nademnou je sopka Ousu. Zatím co Me-Akan si naposledy pořádně zasoptil před těmi sedmi tisíci lety, tady Oasu si pravidelně soptí každých zhruba 20-30 let. 1910, 1944, 1977 a poslední 2000. Zatím.
+Dorážím do cíle ještě za světla, tak si dám krátkou procházku po břehu jezera Toja. Nademnou je sopka Ousu. Zatím co Me-Akan si naposledy pořádně zasoptil před sedmi tisíci lety, tady Oasu si pravidelně soptí každých zhruba 20-30 let. 1910, 1944, 1977 a poslední 2000. Zatím.
 
 V těch 70. letech už tu byla poměrně velká vesnice, kterou dost poničilo sopečné bahno. Poučili se tu z toho a vytvořili spoustu záchytných kapes a odtokových kanálu. I tak se při tom posledním výbuchu v roce 2000 ocitlo pod bahnem dalších pár domů. Odtokový kanál je přípraven a já držím palce Ousu ať dá ještě chvilku pokoj.
 
