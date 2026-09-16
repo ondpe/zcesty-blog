@@ -22,7 +22,7 @@ Po Taiki musím směrem do Urakawy překonat hory. Mají tu odpočívku s krásn
 
 ![Obrázek](/images/20260916092142-03-img-1834.jpg)
 
-Od Urokawy jsou to pak ještě dvě hodinky cesty do Noboribetsu. Nejdřív pobřežní silnička lemovaná městečky. Silnička má klasickou šedesátku, ale v městečkách je často čtyřicítka. Takže se to docela dost vleče.
+Od Urokawy jsou to pak ještě dvě hodinky cesty do Noboribetsu. Nejdřív pobřežní silnička lemovaná městečky. Silnička má klasickou šedesátku, ale v městečkách je často čtyřicítka. Takže se to dost vleče.
 
 Pak přichází dálnice s ní maximálka 70. A posledních pár desítek kilometrů před Sapporem zázrak! Dálnice má najednou dva pruhy pro každý směr. To tedy není úplně obvyklé. A maximální rychlost je dovolená stovka. STOVKA! Svištím si to radostí s větrem o závod!
 
