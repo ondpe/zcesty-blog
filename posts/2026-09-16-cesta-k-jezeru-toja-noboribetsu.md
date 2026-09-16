@@ -14,7 +14,7 @@ Nejdřív přes tenhle krásný most.
 
 ![Obrázek](/images/20260916074448-04-img-1831.jpg)
 
-A pak na jih k Taiki. Cestou projíždím městečky, která působí dost americky. Pravoúhlá síť silnic, žádné chodníky, dráty visí ve vzduchu. Risknul jsem na červené i jednu fotku. Zhruba všechna města tu vypadají takhle easternově.
+A pak na jih k Taiki. Cestou projíždím městečky, která působí dost americky. Pravoúhlá síť silnic, žádné chodníky, dráty visí ve vzduchu. Risknul jsem na červené i jednu fotku. Všechna města tu vypadají takhle easternově. Jedno jako druhé.
 
 ![Obrázek](/images/20260916084246-02-img-1832.jpg)
 
