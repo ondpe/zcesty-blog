@@ -1,59 +1,85 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
-const UglifyJS = require("uglify-js");
-const htmlmin = require("html-minifier");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const htmlmin = require("html-minifier-terser");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItForInline = require("markdown-it-for-inline");
 const markdownItAnchor = require("markdown-it-anchor");
 
-module.exports = function(eleventyConfig) {
-  // --- PLUGINS ---
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+const SYSTEM_TAGS = new Set(["all", "post", "postsAll", "tagList", "tripList"]);
 
+function escapeHtmlAttr(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function isGenericAlt(alt) {
+  const normalized = String(alt || "").trim().toLowerCase();
+  return !normalized || normalized === "obrázek" || normalized === "obrazek";
+}
+
+module.exports = function (eleventyConfig) {
   // --- MARKDOWN ---
-  let md = markdownIt({ html: true, breaks: true, linkify: true })
+  const md = markdownIt({ html: true, breaks: true, linkify: true })
     .use(markdownItAttrs)
     .use(markdownItAnchor, { permalink: false })
-    .use(markdownItForInline, 'image_linker', 'image', (tokens, idx) => {
-   const token = tokens[idx];
-   const src = token.attrGet('src');
-   const alt = token.content || '';
-   token.type = 'html_inline';
-   token.content = `<a href="${src}" data-caption="${alt}"><img src="${src}" alt="${alt}"></a>`;
-});
+    .use(markdownItForInline, "image_linker", "image", (tokens, idx) => {
+      const token = tokens[idx];
+      const src = escapeHtmlAttr(token.attrGet("src") || "");
+      const rawAlt = token.content || "";
+      const alt = isGenericAlt(rawAlt) ? "" : escapeHtmlAttr(rawAlt.trim());
+      const captionAttr = alt ? ` data-caption="${alt}"` : "";
+      token.type = "html_inline";
+      token.content = `<a href="${src}"${captionAttr}><img src="${src}" alt="${alt}" loading="lazy" decoding="async"></a>`;
+    });
 
   eleventyConfig.setLibrary("md", md);
 
   // --- COLLECTIONS ---
   eleventyConfig.setDataDeepMerge(true);
 
-  eleventyConfig.addCollection("authors", collection => {
-    const blogs = collection.getFilteredByGlob("posts/*.md");
-    return blogs.reduce((coll, post) => {
-      const author = post.data.author;
-      if (!author) return coll;
-      if (!coll.hasOwnProperty(author)) coll[author] = [];
-      coll[author].push(post.data);
-      return coll;
-    }, {});
-  });
-
   eleventyConfig.addCollection("tagList", function (collectionApi) {
     const tagSet = new Set();
-    collectionApi.getAll().forEach((item) => {
+    collectionApi.getAll().forEach(item => {
+      if (item.data.draft) return;
       if ("tags" in item.data) {
-        let tags = Array.isArray(item.data.tags) ? item.data.tags : [item.data.tags];
-        tags.forEach((tag) => tagSet.add(tag));
+        const tags = Array.isArray(item.data.tags) ? item.data.tags : [item.data.tags];
+        tags.forEach(tag => {
+          if (tag && !SYSTEM_TAGS.has(tag)) tagSet.add(tag);
+        });
       }
     });
     return [...tagSet];
   });
 
-eleventyConfig.addCollection("postsAll", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("./posts/*.md").sort((a, b) => b.date - a.date);
-});
+  eleventyConfig.addCollection("tripList", function (collectionApi) {
+    const latestByTrip = new Map();
+    collectionApi.getFilteredByGlob("./posts/*.md").forEach(item => {
+      if (item.data.draft) return;
+      const tags = Array.isArray(item.data.tags) ? item.data.tags : [item.data.tags];
+      tags.forEach(tag => {
+        if (!tag || SYSTEM_TAGS.has(tag)) return;
+        const ts = item.date ? item.date.getTime() : 0;
+        if (!latestByTrip.has(tag) || ts > latestByTrip.get(tag)) {
+          latestByTrip.set(tag, ts);
+        }
+      });
+    });
+    return [...latestByTrip.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag]) => tag);
+  });
+
+  eleventyConfig.addCollection("postsAll", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("./posts/*.md")
+      .filter(item => !item.data.draft)
+      .sort((a, b) => b.date - a.date);
+  });
 
   // --- FILTERS ---
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -65,40 +91,56 @@ eleventyConfig.addCollection("postsAll", function(collectionApi) {
   });
 
   eleventyConfig.addFilter("czDate", dateObj => {
-    return new Intl.DateTimeFormat('cs-CZ', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
+    return new Intl.DateTimeFormat("cs-CZ", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
     }).format(dateObj);
   });
 
   eleventyConfig.addFilter("postYears", posts => {
-    if (!Array.isArray(posts)) return "";
-    const years = [...new Set(posts.map(post => DateTime.fromJSDate(post.date).toFormat("yyyy")))];
-    if (years.length <= 2) return years.join(", ");
-    return `${years[0]}-${years[years.length - 1]}`;
+    if (!Array.isArray(posts) || posts.length === 0) return "";
+    const years = [
+      ...new Set(
+        posts
+          .filter(post => post && post.date instanceof Date)
+          .map(post => DateTime.fromJSDate(post.date).toFormat("yyyy"))
+      ),
+    ].sort();
+    if (years.length === 0) return "";
+    if (years.length === 1) return years[0];
+    return `${years[0]}–${years[years.length - 1]}`;
   });
 
-  eleventyConfig.addFilter("cssmin", function(code) {
+  eleventyConfig.addFilter("czPostCount", count => {
+    const n = Number(count) || 0;
+    if (n === 1) return "1 článek";
+    if (n >= 2 && n <= 4) return `${n} články`;
+    return `${n} článků`;
+  });
+
+  eleventyConfig.addFilter("primaryTrip", tags => {
+    if (!tags) return "";
+    const list = Array.isArray(tags) ? tags : [tags];
+    return list.find(tag => tag && !SYSTEM_TAGS.has(tag)) || "";
+  });
+
+  eleventyConfig.addFilter("sortChronologically", posts => {
+    if (!Array.isArray(posts)) return [];
+    return [...posts].sort((a, b) => a.date - b.date);
+  });
+
+  eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  eleventyConfig.addFilter("jsmin", function(code) {
-    let minified = UglifyJS.minify(code);
-    if (minified.error) {
-      console.log("UglifyJS error: ", minified.error);
-      return code;
-    }
-    return minified.code;
-  });
-
   // --- TRANSFORMS ---
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if (outputPath.endsWith(".html")) {
+  eleventyConfig.addTransform("htmlmin", async function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
       return htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
     }
     return content;
@@ -107,8 +149,7 @@ eleventyConfig.addCollection("postsAll", function(collectionApi) {
   // --- STATIC FILES ---
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("static");
-  eleventyConfig.addPassthroughCopy("admin/");
-  eleventyConfig.addPassthroughCopy("_includes/assets/css/inline.css");
+  eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("images");
 
   // --- RETURN CONFIG ---
@@ -122,7 +163,7 @@ eleventyConfig.addCollection("postsAll", function(collectionApi) {
       input: ".",
       includes: "_includes",
       data: "_data",
-      output: "_site"
-    }
+      output: "_site",
+    },
   };
 };

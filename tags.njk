@@ -1,16 +1,16 @@
 ---
 pagination:
-  data: collections
+  data: collections.tripList
   size: 1
   alias: tag
-permalink: /tags/{{ tag }}/
+permalink: /tags/{{ tag | slug }}/
 layout: layouts/base.njk
 eleventyComputed:
-  title: "{{ tag }} {{ collections[tag] | postYears }}"
-  metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
+  title: "{{ tag }}{% if collections[tag] | postYears %} {{ collections[tag] | postYears }}{% endif %}"
+  metaDescription: "Všechny zápisky z cesty {{ tag }}."
 ---
 
-{% set postlist = collections[tag] or [] %}
+{% set postlist = (collections[tag] or []) | sortChronologically %}
 {% set years = postlist | postYears %}
 
 <section class="page-intro">
@@ -26,7 +26,7 @@ eleventyComputed:
 
   <aside class="content-sidebar" aria-label="Příspěvky v cestě">
     <h2>V téhle cestě</h2>
-    <nav class="timeline-list">
+    <nav class="timeline-list" aria-label="Články v cestě">
       {% for post in postlist %}
         <a href="{{ post.url | url }}">
           <time datetime="{{ post.date | machineDate }}">{{ post.date | czDate }}</time>

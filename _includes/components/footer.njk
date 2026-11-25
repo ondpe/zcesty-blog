@@ -1,19 +1,29 @@
-<footer>
-<script src="https://unpkg.com/baguettebox.js@1.11.1/dist/baguetteBox.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a img[alt]').forEach(img => {
-      if (!img.title) {
-        img.title = img.alt;
+<footer class="site-footer">
+  <p>
+    <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+    <span> · </span>
+    <a href="#main-content">Zpět nahoru</a>
+  </p>
+</footer>
+{% if section == "post" %}
+  <script src="/static/vendor/baguetteBox.min.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.baguetteBox) {
+        baguetteBox.run(".gallery", {
+          overlayBackgroundColor: "rgba(0, 0, 0, 0.85)"
+        });
+      }
+
+      var toggle = document.querySelector(".trip-toggle-btn");
+      var sidebar = document.querySelector("#trip-sidebar");
+      if (toggle && sidebar) {
+        toggle.addEventListener("click", function () {
+          var expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", String(!expanded));
+          sidebar.classList.toggle("is-open", !expanded);
+        });
       }
     });
-    baguetteBox.run('.gallery');
-  });
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    baguetteBox.run('.gallery');
-     overlayBackgroundColor: 'rgba(0,0,0,0.8)'
-  });
-</script>
-</footer>
+  </script>
+{% endif %}

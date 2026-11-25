@@ -1,33 +1,51 @@
+{% set pageTitle %}{% if title and title != metadata.title %}{{ title }} — {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}{% endset %}
+{% set pageDescription = summary or metaDescription or eleventyComputed.metaDescription or metadata.description %}
+{% set canonicalUrl = metadata.url + (page.url | url) %}
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYE7WSXV3K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YYE7WSXV3K');
-</script>
-<meta charset="utf-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYE7WSXV3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YYE7WSXV3K');
+  </script>
+  <meta charset="utf-8">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title or metadata.title }}</title>
-  <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  {% if page.url %}
+    <link rel="canonical" href="{{ canonicalUrl }}">
+  {% endif %}
+  <meta property="og:site_name" content="{{ metadata.title }}">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:type" content="{% if section == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ title or metadata.title }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  {% if page.url %}
+    <meta property="og:url" content="{{ canonicalUrl }}">
+  {% endif %}
+  {% if hero %}
+    <meta property="og:image" content="{{ metadata.url }}{{ hero | url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ metadata.url }}{{ hero | url }}">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+  {% endif %}
+  <meta name="twitter:title" content="{{ title or metadata.title }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
-  {# Uncomment below if you want to include minified inline JavaScript #}
-  {# {% set js %}
-    {% include "assets/js/inline.js" %}
-  {% endset %}
-<script>{{ js | jsmin | safe }}</script> #}
-<link rel="stylesheet" href="https://unpkg.com/baguettebox.js@1.11.1/dist/baguetteBox.min.css">
-<link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
-<link rel="shortcut icon" href="/static/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="Zcesty" />
-<link rel="manifest" href="/static/site.webmanifest" />
-
+  {% if section == "post" %}
+    <link rel="stylesheet" href="/static/vendor/baguetteBox.min.css">
+  {% endif %}
+  <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Z cesty" />
+  <link rel="manifest" href="/static/site.webmanifest" />
 </head>

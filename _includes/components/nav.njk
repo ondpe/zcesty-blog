@@ -1,10 +1,11 @@
-<nav>
+{% set activeTrip = tag or (tags | primaryTrip) %}
+<nav aria-label="Cesty">
   <ul>
-    {% for tag in collections.tagList %}
-      {% if tag != "post" and tag != "all" and tag != "postsAll" and tag != "tagList" and tag != "authors" %}
-        {% set years = collections[tag] | postYears %}
-        <li><a href="/tags/{{ tag | slug }}/">{{ tag }}{% if years %} {{ years }}{% endif %}</a></li>
-      {% endif %}
+    {% for trip in collections.tripList %}
+      {% set years = collections[trip] | postYears %}
+      <li>
+        <a href="/tags/{{ trip | slug }}/"{% if activeTrip == trip %} aria-current="page"{% endif %}>{{ trip }}{% if years %} {{ years }}{% endif %}</a>
+      </li>
     {% endfor %}
   </ul>
 </nav>

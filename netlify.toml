@@ -1,32 +1,22 @@
 [build]
   publish = "_site"
-  command = "eleventy"
+  command = "npm run build"
 
-# REDIRECT and HEADERS examples
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Redirect rule example
-# For more information see:- https://www.netlify.com/docs/netlify-toml-reference/
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
 
-#[[redirects]]
-#  from = "/*"
-#  to = "/blog/:splat"
-# status = 302
-
-# The default HTTP status code is 301, but you can define a different one e.g.
-
-# Headers rule example
-# For more information see:- https://www.netlify.com/docs/netlify-toml-reference/
-
-#[[headers]]
-#   Define which paths this specific [[headers]] block will cover.
-#   for = "/*"
-
-#[headers.values]
-#   X-Frame-Options = "DENY"
-#   X-XSS-Protection = "1; mode=block"
-#   Content-Security-Policy = "frame-ancestors https://www.facebook.com"
-
-# Redirects and headers are GLOBAL for all builds – they do not get scoped to
-# contexts no matter where you define them in the file.
-# For context-specific rules, use _headers or _redirects files, which are
-# applied on a PER-DEPLOY basis.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

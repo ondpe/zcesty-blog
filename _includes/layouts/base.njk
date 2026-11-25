@@ -4,6 +4,7 @@
 	{% include "components/head.njk" %}
 
 	<body>
+		<a class="skip-link" href="#main-content">Přeskočit na obsah</a>
 
 		<header class="site-header">
 			<div class="site-brand">
@@ -13,7 +14,7 @@
 			{% include "components/nav.njk" %}
 		</header>
 
-		<main>
+		<main id="main-content">
 			{{ layoutContent | safe }}
 		</main>
 

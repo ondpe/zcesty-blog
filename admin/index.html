@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Z cesty admin</title>
     <link rel="stylesheet" href="app.css" />
   </head>
@@ -15,37 +16,55 @@
             Heslo
             <input id="password" type="password" autocomplete="current-password" required />
           </label>
-          <button type="submit">Přihlásit</button>
-          <p class="message" id="loginMessage"></p>
+          <button id="loginSubmit" type="submit">Přihlásit</button>
+          <p class="message" id="loginMessage" role="alert"></p>
         </form>
       </section>
 
       <section class="admin-view" id="adminView" hidden>
         <header class="topbar">
-          <div>
+          <div class="topbar-left">
+            <button id="toggleSidebar" class="mobile-only" type="button" aria-expanded="false" aria-controls="sidebar">
+              Články
+            </button>
             <strong>Z cesty admin</strong>
-            <span id="saveState">Připraveno</span>
+            <span id="saveState" role="status" aria-live="polite">Připraveno</span>
           </div>
-          <nav>
-            <a href="/">Web</a>
+          <nav aria-label="Administrace">
+            <a href="/" target="_blank" rel="noopener">Web</a>
             <button id="logout" type="button">Odhlásit</button>
           </nav>
         </header>
 
         <div class="workspace">
-          <aside class="sidebar">
+          <aside class="sidebar" id="sidebar" aria-label="Seznam článků">
             <div class="sidebar-head">
-              <h2>Články</h2>
+              <h2>Články <small id="postCount"></small></h2>
               <button id="newPost" type="button">Nový</button>
+            </div>
+            <div class="sidebar-filters">
+              <input id="searchPosts" type="search" placeholder="Hledat článek..." aria-label="Hledat článek" />
+              <select id="tripFilter" aria-label="Filtrovat podle cesty">
+                <option value="">Všechny cesty</option>
+                <option value="__drafts__">Jen koncepty</option>
+              </select>
             </div>
             <div class="post-list" id="postList"></div>
           </aside>
 
           <section class="editor">
+            <div class="recovery-banner" id="recoveryBanner" hidden>
+              <span id="recoveryText">Nalezena neuložená lokální záloha.</span>
+              <div class="recovery-actions">
+                <button id="restoreBackup" type="button">Obnovit</button>
+                <button id="discardBackup" type="button">Zahodit</button>
+              </div>
+            </div>
+
             <div class="fields">
               <label>
                 Titulek
-                <input id="title" type="text" />
+                <input id="title" type="text" placeholder="Název dne nebo místa" />
               </label>
               <label>
                 Datum
@@ -53,37 +72,57 @@
               </label>
               <label>
                 Cesta
-                <input id="tags" type="text" placeholder="Tchaj-wan" />
+                <input id="tags" type="text" list="tripSuggestions" placeholder="Hokkaido" autocomplete="off" />
+                <datalist id="tripSuggestions"></datalist>
               </label>
               <label class="wide">
                 Shrnutí
-                <input id="summary" type="text" />
+                <input id="summary" type="text" placeholder="Krátká věta na kartu článku a pro sdílení" />
               </label>
-              <label class="wide">
-                Hero obrázek
-                <input id="hero" type="text" placeholder="/images/fotka.jpg" />
+              <div class="hero-field wide">
+                <label>
+                  Hero obrázek
+                  <input id="hero" type="text" placeholder="/images/fotka.jpg" />
+                </label>
+                <img class="hero-thumb" id="heroThumb" alt="" hidden />
+              </div>
+              <label class="draft-toggle wide">
+                <input id="draft" type="checkbox" />
+                <span>Koncept (uloží se do Gitu, ale nezobrazí se na veřejném blogu)</span>
               </label>
             </div>
 
             <div class="editor-toolbar">
-              <button type="button" data-prefix="# ">H1</button>
-              <button type="button" data-prefix="## ">H2</button>
-              <button type="button" data-prefix="### ">H3</button>
-              <button type="button" id="italic">Kurzíva</button>
-              <button type="button" id="link">Odkaz</button>
+              <button type="button" data-prefix="## " title="Nadpis 2">H2</button>
+              <button type="button" data-prefix="### " title="Nadpis 3">H3</button>
+              <button type="button" id="bold" title="Tučně"><strong>B</strong></button>
+              <button type="button" id="italic" title="Kurzíva"><em>I</em></button>
+              <button type="button" id="link" title="Vložit odkaz">Odkaz</button>
+              <button type="button" data-prefix="- " title="Odrážkový seznam">Seznam</button>
+              <button type="button" data-prefix="> " title="Citace">Citace</button>
               <label class="photo-button">
                 Vybrat fotky
                 <input id="photos" type="file" accept="image/*" multiple />
               </label>
-              <button id="togglePreview" type="button">Skrýt náhled</button>
+              <button id="togglePreview" class="desktop-only" type="button">Skrýt náhled</button>
               <button id="deletePost" class="danger-button" type="button">Smazat</button>
-              <button id="save" type="button">Uložit</button>
+              <button id="save" type="button" title="Uložit (Ctrl+S)">Uložit</button>
             </div>
 
             <div class="pending" id="pendingImages" hidden></div>
 
-            <div class="split">
-              <textarea id="body" spellcheck="true"></textarea>
+            <details class="photo-manager" id="photoManager" hidden>
+              <summary id="photoManagerSummary">Fotky v článku</summary>
+              <div class="photo-strip" id="photoStrip"></div>
+            </details>
+
+            <div class="mobile-tabs mobile-only" role="tablist" aria-label="Režim editoru">
+              <button id="tabWrite" type="button" role="tab" aria-selected="true" class="is-active">Psát</button>
+              <button id="tabPreview" type="button" role="tab" aria-selected="false">Náhled</button>
+            </div>
+
+            <div class="split" id="editorSplit">
+              <textarea id="body" spellcheck="true" placeholder="Piš text, vkládej fotky a nech mezi bloky volný řádek..."></textarea>
               <article class="preview" id="preview"></article>
             </div>
           </section>

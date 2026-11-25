@@ -5,8 +5,9 @@ Sbírka travel blogů z cest.
 Web je statický Eleventy blog. Články jsou Markdown soubory ve složce `posts`
 a vlastní administrace běží na `/admin/`.
 
-Admin čte a ukládá články přes Netlify Function `cms-api`. Při uložení vytvoří
-commit do GitHubu, takže Netlify následně spustí běžný statický build.
+Admin čte a ukládá články přes Netlify Function `cms-api`. Při uložení nahraje
+jednotlivé fotky jako Git bloby a pak vytvoří jeden commit do GitHubu, takže
+Netlify následně spustí běžný statický build.
 
 ### Environment variables
 
@@ -24,20 +25,18 @@ GITHUB_BRANCH=master
 `GITHUB_TOKEN` má být ideálně fine-grained token jen pro tohle repo s oprávněním
 `Contents: Read and write`.
 
-### Fotky v editoru
+### Fotky a koncepty v editoru
 
-Při psaní článku v `/admin/` použij v poli Obsah tlačítko `Vybrat fotky`.
+Při psaní článku v `/admin/` použij tlačítko `Vybrat fotky`:
 
 1. Vyber fotky z Apple Photos nebo ze souborů.
-2. Editor je zmenší na delší stranu 1920 px a uloží jako JPG kvalita 85.
-3. Fotky vloží do článku jako markdown obrázky, seřazené podle data pořízení.
-4. Při uložení článku se fotky uloží do složky `images` ve stejném commitu.
+2. Editor je postupně zmenší v prohlížeči na delší stranu 1920 px (JPG kvalita 85) a seřadí podle EXIF data pořízení.
+3. V panelu `Fotky v článku` můžeš jedním klikem vybrat hero obrázek, dopsat popisek (`alt`) nebo fotku odebrat.
+4. Při uložení se každá nová fotka nahraje samostatně (bez 6MB limitu) a uloží se do složky `images` ve stejném commitu jako článek.
 
-Řazení podle data pořízení funguje u JPEGů přes EXIF. U ostatních formátů editor
-použije datum souboru. Fotky se nikam neposílají, jen se lokálně zmenší v
-prohlížeči a potom odešlou do admin API při uložení článku.
+Články lze ukládat jako **Koncept** (`draft: true` ve frontmatteru) — bezpečně se uloží do Gitu, ale na veřejném blogu se nezobrazí. Rozpracovaný text se zároveň průběžně zálohuje lokálně v prohlížeči (`localStorage`).
 
 ### Editor článku
 
-CMS je záměrně nastavené jednoduše: nadpisy H1-H3, odstavce, odkazy, kurzíva
-a obrázky. Složitější sazbu je lepší případně doladit až doma v Markdownu.
+CMS podporuje nadpisy `H2`/`H3`, tučné písmo, kurzívu, odkazy, seznamy, citace,
+fotky a zkratku `Ctrl+S` / `Cmd+S` pro uložení.

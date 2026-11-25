@@ -1,15 +1,19 @@
 <section class="posts-list">
   {% for post in postlist %}
-    <article class="post-card">
+    {% set tripName = post.data.tags | primaryTrip %}
+    <article class="post-card{% if not post.data.hero %} post-card--no-image{% endif %}">
       {% if post.data.hero %}
-        <a class="post-card-image" href="{{ post.url | url }}">
-          <img src="{{ post.data.hero | url }}" alt="" loading="lazy" />
+        <a class="post-card-image" href="{{ post.url | url }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ post.data.hero | url }}" alt="" loading="lazy" decoding="async" />
         </a>
       {% endif %}
 
       <div class="post-card-body">
         <p class="post-date">
           <time datetime="{{ post.date | machineDate }}">{{ post.date | czDate }}</time>
+          {% if showTripBadge and tripName %}
+            <a class="post-trip-badge" href="/tags/{{ tripName | slug }}/">{{ tripName }}</a>
+          {% endif %}
         </p>
 
         <h2>
@@ -21,7 +25,6 @@
         {% if post.data.summary %}
           <p>{{ post.data.summary }}</p>
         {% endif %}
-
       </div>
     </article>
   {% endfor %}

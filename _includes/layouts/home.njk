@@ -2,33 +2,32 @@
 layout: layouts/base.njk
 title: "Z cesty"
 eleventyComputed:
-  metaDescription: "Všechny články z blogu"
+  metaDescription: "Všechny články z blogu Z cesty"
 ---
 
 <section class="page-intro">
   <p class="eyebrow">Travel blog</p>
   <h1>Všechny články od nejnovějšího</h1>
-  <p>Nejnovější zápisky jsou nahoře. Jednotlivé cesty si můžeš otevřít vpravo a číst je popořadě od prvního dne.</p>
+  <p>Nejnovější zápisky jsou nahoře. Jednotlivé cesty si můžeš otevřít v menu a číst je popořadě od prvního dne.</p>
 </section>
 
 <div class="content-grid">
   <section class="content-main">
-    {% set postlist = collections.post | reverse %}
+    {% set postlist = collections.postsAll %}
+    {% set showTripBadge = true %}
     {% include "components/postslist.njk" %}
   </section>
 
   <aside class="content-sidebar home-trip-sidebar" aria-label="Cesty">
     <h2>Cesty</h2>
     <p>Vyber cestu a čti ji chronologicky.</p>
-    <nav class="trip-list">
-      {% for tag in collections.tagList %}
-        {% if tag != "post" and tag != "all" and tag != "postsAll" and tag != "tagList" and tag != "authors" %}
-          {% set years = collections[tag] | postYears %}
-          <a href="/tags/{{ tag | slug }}/">
-            <span>{{ tag }}{% if years %} {{ years }}{% endif %}</span>
-            <small>{{ collections[tag].length }} článků</small>
-          </a>
-        {% endif %}
+    <nav class="trip-list" aria-label="Seznam cest">
+      {% for trip in collections.tripList %}
+        {% set years = collections[trip] | postYears %}
+        <a href="/tags/{{ trip | slug }}/">
+          <span>{{ trip }}{% if years %} {{ years }}{% endif %}</span>
+          <small>{{ collections[trip].length | czPostCount }}</small>
+        </a>
       {% endfor %}
     </nav>
   </aside>

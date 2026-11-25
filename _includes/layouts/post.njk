@@ -3,16 +3,8 @@ layout: layouts/base.njk
 section: post
 ---
 
-{% set currentTrip = "" %}
-{% if tags %}
-  {% if tags[0] != "post" %}
-    {% set currentTrip = tags[0] %}
-  {% elif tags[1] %}
-    {% set currentTrip = tags[1] %}
-  {% endif %}
-{% endif %}
-
-{% set tripPosts = collections[currentTrip] or [] %}
+{% set currentTrip = tags | primaryTrip %}
+{% set tripPosts = (collections[currentTrip] or []) | sortChronologically %}
 {% set currentTripYears = tripPosts | postYears %}
 
 <div class="content-grid post-layout">
@@ -21,38 +13,40 @@ section: post
       <h1>{{ title }}</h1>
       <p class="post-date">
         <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
-        {% if currentTrip %}<span> · {{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</span>{% endif %}
+        {% if currentTrip %}
+          <span> · <a href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a></span>
+        {% endif %}
       </p>
 
       {% if summary %}
-        <p><strong>{{ summary }}</strong></p>
+        <p class="post-summary"><strong>{{ summary }}</strong></p>
       {% endif %}
 
       <div class="gallery">
         {{ layoutContent | safe }}
       </div>
 
-      <nav class="post-nav">
+      <nav class="post-nav" aria-label="Navigace mezi články">
         {% set navPosts = collections.postsAll | reverse %}
         {% if tripPosts.length %}
           {% set navPosts = tripPosts %}
         {% endif %}
 
-        {% set currentIndex = 0 %}
+        {% set currentIndex = -1 %}
         {% for post in navPosts %}
           {% if post.url == page.url %}
             {% set currentIndex = loop.index0 %}
           {% endif %}
         {% endfor %}
 
-        {% if navPosts[currentIndex - 1] %}
+        {% if currentIndex > 0 and navPosts[currentIndex - 1] %}
           <a class="post-nav-link post-nav-prev" href="{{ navPosts[currentIndex - 1].url | url }}">
             <span>Předchozí</span>
             <strong>{{ navPosts[currentIndex - 1].data.title }}</strong>
           </a>
         {% endif %}
 
-        {% if navPosts[currentIndex + 1] %}
+        {% if currentIndex >= 0 and navPosts[currentIndex + 1] %}
           <a class="post-nav-link post-nav-next" href="{{ navPosts[currentIndex + 1].url | url }}">
             <span>Následující</span>
             <strong>{{ navPosts[currentIndex + 1].data.title }}</strong>
@@ -63,21 +57,25 @@ section: post
   </section>
 
   {% if currentTrip and tripPosts.length %}
-    <input class="trip-toggle" type="checkbox" id="trip-toggle">
-    <label class="trip-toggle-label" for="trip-toggle">
+    <button
+      class="trip-toggle-btn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="trip-sidebar"
+    >
       <span class="trip-toggle-icon" aria-hidden="true">
         <span></span>
         <span></span>
         <span></span>
       </span>
       <span>V téhle cestě</span>
-    </label>
+    </button>
 
-    <aside class="content-sidebar trip-sidebar" aria-label="Příspěvky v cestě">
+    <aside class="content-sidebar trip-sidebar" id="trip-sidebar" aria-label="Příspěvky v cestě">
       <h2>V téhle cestě</h2>
-      <nav class="timeline-list">
+      <nav class="timeline-list" aria-label="Články v cestě">
         {% for post in tripPosts %}
-          <a href="{{ post.url | url }}"{% if post.url == page.url %} class="is-current"{% endif %}>
+          <a href="{{ post.url | url }}"{% if post.url == page.url %} class="is-current" aria-current="page"{% endif %}>
             <time datetime="{{ post.date | machineDate }}">{{ post.date | czDate }}</time>
             <span>{{ post.data.title }}</span>
           </a>
