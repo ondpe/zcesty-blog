@@ -4,28 +4,28 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="cs">
-  <title>{{ metadata.title | xmlEscape }}</title>
-  <subtitle>{{ metadata.description | xmlEscape }}</subtitle>
-  <link href="{{ metadata.url }}/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="{{ metadata.url }}/" rel="alternate" type="text/html" />
+  <title>{{ metadata.title | xmlEscape | safe }}</title>
+  <subtitle>{{ metadata.description | xmlEscape | safe }}</subtitle>
+  <link href="{{ (metadata.url + '/feed.xml') | xmlEscape | safe }}" rel="self" type="application/atom+xml" />
+  <link href="{{ (metadata.url + '/') | xmlEscape | safe }}" rel="alternate" type="text/html" />
   {% set latestPost = collections.postsAll[0] %}
   <updated>{% if latestPost %}{{ latestPost.date | isoDate }}{% else %}2026-01-01T00:00:00Z{% endif %}</updated>
-  <id>{{ metadata.url }}/</id>
+  <id>{{ (metadata.url + '/') | xmlEscape | safe }}</id>
   <author>
-    <name>Ondřej Peterka</name>
+    <name>{{ metadata.author | xmlEscape | safe }}</name>
   </author>
   {% for post in collections.postsAll | head(25) %}
     {% set absolutePostUrl = metadata.url + (post.url | url) %}
     <entry>
-      <title>{{ (post.data.title or "Bez názvu") | xmlEscape }}</title>
-      <link href="{{ absolutePostUrl }}" rel="alternate" type="text/html" />
+      <title>{{ (post.data.title or "Bez názvu") | xmlEscape | safe }}</title>
+      <link href="{{ absolutePostUrl | xmlEscape | safe }}" rel="alternate" type="text/html" />
       <updated>{{ post.date | isoDate }}</updated>
       <published>{{ post.date | isoDate }}</published>
-      <id>{{ absolutePostUrl }}</id>
+      <id>{{ absolutePostUrl | xmlEscape | safe }}</id>
       {% if post.data.summary %}
-        <summary type="text">{{ post.data.summary | xmlEscape }}</summary>
+        <summary type="text">{{ post.data.summary | xmlEscape | safe }}</summary>
       {% endif %}
-      <content type="html">{{ (post.templateContent | absoluteUrls(metadata.url)) | xmlEscape }}</content>
+      <content type="html">{{ (post.templateContent | absoluteUrls(metadata.url)) | xmlEscape | safe }}</content>
     </entry>
   {% endfor %}
 </feed>

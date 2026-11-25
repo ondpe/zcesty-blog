@@ -441,6 +441,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("xmlEscape", escapeXml);
 
+  eleventyConfig.addFilter("imageDimensions", src => getImageDimensions(src));
+
   eleventyConfig.addFilter("jsonify", value => JSON.stringify(value));
 
   eleventyConfig.addFilter("head", (array, n) => {

@@ -1,6 +1,21 @@
-{% set pageTitle %}{% if title and title != metadata.title %}{{ title }} — {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}{% endset %}
-{% set pageDescription = summary or metaDescription or eleventyComputed.metaDescription or metadata.description %}
+{% set isPagedArchive = pagination and pagination.pageNumber > 0 and page.url and page.url.startsWith("/strana/") %}
+{% if isPagedArchive %}
+  {% set computedTitle = "Zápisky — strana " + (pagination.pageNumber + 1) %}
+  {% set pageDescription = "Archiv cestovních zápisků na blogu " + metadata.title + " (strana " + (pagination.pageNumber + 1) + " z " + pagination.pages.length + ")." %}
+{% else %}
+  {% set computedTitle = title or metadata.title %}
+  {% set pageDescription = summary or metaDescription or eleventyComputed.metaDescription or metadata.description %}
+{% endif %}
 {% set canonicalUrl = metadata.url + (page.url | url) %}
+{% set postTrip = tags | primaryTrip %}
+{% set ogHero = hero %}
+{% if not ogHero and tag and collections[tag] %}
+  {% set ogHero = collections[tag] | tripCover %}
+{% endif %}
+{% if not ogHero and not noindex and collections.postsAll and collections.postsAll[0] %}
+  {% set ogHero = collections.postsAll[0].data.hero %}
+{% endif %}
+{% set ogHeroDims = ogHero | imageDimensions %}
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYE7WSXV3K"></script>
@@ -23,29 +38,42 @@
   <meta charset="utf-8">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ pageTitle }}</title>
+  <title>{% if computedTitle and computedTitle != metadata.title %}{{ computedTitle }} — {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}</title>
   <meta name="description" content="{{ pageDescription }}">
   <meta name="color-scheme" content="light dark">
-  {% if page.url %}
+  {% if noindex %}
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  {% if page.url and not noindex %}
     <link rel="canonical" href="{{ canonicalUrl }}">
   {% endif %}
   <link rel="alternate" type="application/atom+xml" title="{{ metadata.title }} — RSS" href="/feed.xml">
   <meta property="og:site_name" content="{{ metadata.title }}">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:type" content="{% if section == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{{ title or metadata.title }}">
+  <meta property="og:title" content="{{ computedTitle }}">
   <meta property="og:description" content="{{ pageDescription }}">
-  {% if page.url %}
+  {% if page.url and not noindex %}
     <meta property="og:url" content="{{ canonicalUrl }}">
   {% endif %}
-  {% if hero %}
-    <meta property="og:image" content="{{ metadata.url }}{{ hero | url }}">
+  {% if section == "post" %}
+    <meta property="article:published_time" content="{{ page.date | isoDate }}">
+    {% if postTrip %}
+      <meta property="article:section" content="{{ postTrip }}">
+    {% endif %}
+  {% endif %}
+  {% if ogHero %}
+    <meta property="og:image" content="{{ metadata.url }}{{ ogHero | url }}">
+    {% if ogHeroDims %}
+      <meta property="og:image:width" content="{{ ogHeroDims.width }}">
+      <meta property="og:image:height" content="{{ ogHeroDims.height }}">
+    {% endif %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ metadata.url }}{{ hero | url }}">
+    <meta name="twitter:image" content="{{ metadata.url }}{{ ogHero | url }}">
   {% else %}
     <meta name="twitter:card" content="summary">
   {% endif %}
-  <meta name="twitter:title" content="{{ title or metadata.title }}">
+  <meta name="twitter:title" content="{{ computedTitle }}">
   <meta name="twitter:description" content="{{ pageDescription }}">
   {% if section == "post" %}
     <script type="application/ld+json">
@@ -56,12 +84,36 @@
         "description": {{ pageDescription | jsonify | safe }},
         "datePublished": {{ (page.date | isoDate) | jsonify | safe }},
         "url": {{ canonicalUrl | jsonify | safe }},
-        {% if hero %}"image": {{ (metadata.url + (hero | url)) | jsonify | safe }},{% endif %}
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": {{ canonicalUrl | jsonify | safe }}
+        },
+        "author": {
+          "@type": "Person",
+          "name": {{ metadata.author | jsonify | safe }}
+        },
+        {% if ogHero %}"image": {{ (metadata.url + (ogHero | url)) | jsonify | safe }},{% endif %}
+        {% if postTrip %}"articleSection": {{ postTrip | jsonify | safe }},{% endif %}
         "inLanguage": "cs",
         "isPartOf": {
           "@type": "Blog",
           "name": {{ metadata.title | jsonify | safe }},
           "url": {{ (metadata.url + "/") | jsonify | safe }}
+        }
+      }
+    </script>
+  {% elif page.url == "/" %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": {{ metadata.title | jsonify | safe }},
+        "description": {{ metadata.description | jsonify | safe }},
+        "url": {{ (metadata.url + "/") | jsonify | safe }},
+        "inLanguage": "cs",
+        "author": {
+          "@type": "Person",
+          "name": {{ metadata.author | jsonify | safe }}
         }
       }
     </script>
