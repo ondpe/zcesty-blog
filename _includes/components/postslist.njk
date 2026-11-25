@@ -4,9 +4,9 @@
     {% set stats = post.templateContent | readingStats %}
     <article class="post-card{% if not post.data.hero %} post-card--no-image{% endif %}">
       {% if post.data.hero %}
-        <a class="post-card-image" href="{{ post.url | url }}" tabindex="-1" aria-hidden="true">
+        <div class="post-card-image">
           {% cardImage post.data.hero, "(max-width: 880px) 100vw, 260px", loop.index0 < 2 %}
-        </a>
+        </div>
       {% endif %}
 
       <div class="post-card-body">

@@ -1,4 +1,41 @@
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/static/vendor/fonts/source-sans-3-latin-ext-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/static/vendor/fonts/source-sans-3-latin-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/static/vendor/fonts/source-sans-3-latin-ext-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/static/vendor/fonts/source-sans-3-latin-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
+  color-scheme: light;
   --primary: #1d5b79;
   --primary-dark: #15445c;
   --accent-soft: #e4f0f5;
@@ -11,14 +48,20 @@
   --muted: #525d66;
   --muted-on-accent: #3d4e5a;
   --line: #e2dcd0;
+  --scrollbar-thumb: #c8c0b2;
+  --scrollbar-track: #f1ece2;
   --shadow-sm: 0 2px 10px rgba(28, 34, 38, 0.05);
   --shadow: 0 12px 32px rgba(28, 34, 38, 0.07);
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --primary: #73bddb;
     --primary-dark: #8fd0ea;
     --accent-soft: #1d3442;
@@ -31,12 +74,15 @@
     --muted: #9ea9b3;
     --muted-on-accent: #b8c9d6;
     --line: #2a333b;
+    --scrollbar-thumb: #3c4854;
+    --scrollbar-track: #171c20;
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
     --shadow: 0 14px 36px rgba(0, 0, 0, 0.36);
   }
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --primary: #73bddb;
   --primary-dark: #8fd0ea;
   --accent-soft: #1d3442;
@@ -49,6 +95,8 @@
   --muted: #9ea9b3;
   --muted-on-accent: #b8c9d6;
   --line: #2a333b;
+  --scrollbar-thumb: #3c4854;
+  --scrollbar-track: #171c20;
   --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
   --shadow: 0 14px 36px rgba(0, 0, 0, 0.36);
 }
@@ -61,6 +109,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 html,
@@ -164,7 +213,7 @@ code {
 .site-brand a,
 .site-brand a:visited {
   color: var(--text);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.65rem, 3.6vw, 2.35rem);
   font-weight: 800;
   letter-spacing: -0.015em;
@@ -324,7 +373,7 @@ main {
 .section-head h1,
 .section-head h2 {
   margin: 0;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   letter-spacing: -0.015em;
   line-height: 1.12;
 }
@@ -410,7 +459,7 @@ main {
 }
 
 .trip-card-body strong {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.18rem;
   line-height: 1.2;
 }
@@ -442,6 +491,8 @@ main {
   top: 1.25rem;
   max-height: calc(100vh - 2.5rem);
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
   padding: 1.1rem;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -451,7 +502,7 @@ main {
 
 .content-sidebar h2 {
   margin: 0 0 0.5rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.15rem;
 }
 
@@ -535,6 +586,7 @@ main {
 }
 
 .post-card {
+  position: relative;
   display: grid;
   grid-template-columns: 250px minmax(0, 1fr);
   overflow: hidden;
@@ -542,6 +594,7 @@ main {
   border-radius: 10px;
   background: var(--surface);
   box-shadow: var(--shadow-sm);
+  cursor: pointer;
   transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
 }
 
@@ -549,6 +602,11 @@ main {
   border-color: var(--accent-border);
   box-shadow: var(--shadow);
   transform: translateY(-1px);
+}
+
+.post-card:has(h2 a:focus-visible) {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .post-card--no-image {
@@ -585,8 +643,9 @@ main {
 
 .post-card h2 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.28rem, 2.7vw, 1.62rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.28rem, 2.7vw, 1.6rem);
+  font-weight: 700;
   line-height: 1.22;
 }
 
@@ -595,7 +654,18 @@ main {
   color: var(--text);
 }
 
-.post-card h2 a:hover {
+.post-card h2 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.post-card h2 a:focus-visible {
+  outline: none;
+}
+
+.post-card:hover h2 a {
   color: var(--primary);
 }
 
@@ -627,6 +697,8 @@ main {
 
 .post-trip-badge,
 .post-trip-badge:visited {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   padding: 0.1rem 0.58rem;
@@ -699,7 +771,7 @@ main {
 
 .post-detail h1 {
   margin: 0.2rem 0 0.65rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.95rem, 4.8vw, 3rem);
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -725,7 +797,7 @@ main {
 .post-prose h2,
 .post-prose h3,
 .post-prose h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--text);
   line-height: 1.25;
   margin: 2.1rem 0 0.75rem;
@@ -869,7 +941,7 @@ pre {
 
 .post-nav-link strong {
   align-self: end;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.08rem;
   line-height: 1.25;
 }
@@ -909,7 +981,7 @@ pre {
 .footer-brand a,
 .footer-brand a:visited {
   color: var(--text);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.15rem;
 }
 
@@ -976,6 +1048,8 @@ pre {
 .search-results {
   max-height: min(60vh, 420px);
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
   padding: 0.5rem;
 }
 
@@ -1000,7 +1074,7 @@ pre {
 }
 
 .search-result strong {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.05rem;
 }
 

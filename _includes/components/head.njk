@@ -31,6 +31,7 @@
         var saved = localStorage.getItem("zcestyTheme");
         if (saved === "dark" || saved === "light") {
           document.documentElement.dataset.theme = saved;
+          document.documentElement.style.colorScheme = saved;
         }
       } catch (e) {}
     })();
@@ -41,6 +42,8 @@
   <title>{% if computedTitle and computedTitle != metadata.title %}{{ computedTitle }} — {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}</title>
   <meta name="description" content="{{ pageDescription }}">
   <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="/static/vendor/fonts/source-sans-3-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/vendor/fonts/source-sans-3-latin-ext-normal.woff2" as="font" type="font/woff2" crossorigin>
   {% if noindex %}
     <meta name="robots" content="noindex, nofollow">
   {% endif %}

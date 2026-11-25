@@ -46,6 +46,7 @@
         var current = root.dataset.theme || (prefersDark ? "dark" : "light");
         var next = current === "dark" ? "light" : "dark";
         root.dataset.theme = next;
+        root.style.colorScheme = next;
         try { localStorage.setItem("zcestyTheme", next); } catch (e) {}
       });
     }
