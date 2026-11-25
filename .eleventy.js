@@ -420,7 +420,7 @@ module.exports = function (eleventyConfig) {
       const photoWord = photos === 1 ? "fotka" : photos <= 4 ? "fotky" : "fotek";
       parts.push(`${photos} ${photoWord}`);
     }
-    return parts.join(" · ");
+    return parts.join(", ");
   });
 
   eleventyConfig.addFilter("plainExcerpt", (htmlContent, maxLen = 400) => {

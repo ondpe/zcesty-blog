@@ -27,10 +27,10 @@ section: post
     <article class="post-detail">
       <header class="post-header">
         {% if currentTrip %}
-          <p class="eyebrow">
+          <p class="eyebrow post-eyebrow">
             <a href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a>
             {% if currentIndex >= 0 and tripPosts.length %}
-              <span> · {{ currentIndex + 1 }}. z {{ tripPosts.length }}</span>
+              <span class="post-step">{{ currentIndex + 1 }} / {{ tripPosts.length }}</span>
             {% endif %}
           </p>
         {% endif %}
@@ -39,7 +39,7 @@ section: post
 
         <p class="post-date">
           <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
-          {% if stats %}<span> · {{ stats }}</span>{% endif %}
+          {% if stats %}<span class="post-stats">{{ stats }}</span>{% endif %}
         </p>
 
         {% if summary %}

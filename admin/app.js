@@ -893,7 +893,7 @@
   function renderPreview() {
     const frontmatter = readFrontmatter();
     const title = frontmatter.title || "Bez názvu";
-    const meta = [frontmatter.date, frontmatter.tags[0]].filter(Boolean).join(" · ");
+    const meta = [frontmatter.date, frontmatter.tags[0]].filter(Boolean).join(", ");
     const publicPath = `/posts/${eleventySlug(title)}/`;
     const draftBadge = frontmatter.draft ? '<span class="badge-draft">Koncept — není na webu</span>' : "";
     const linkHtml = frontmatter.draft

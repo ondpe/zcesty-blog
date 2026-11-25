@@ -28,7 +28,10 @@ eleventyComputed:
           </div>
           <div class="trip-card-body">
             <strong>{{ trip }}</strong>
-            <span>{% if years %}{{ years }} · {% endif %}{{ tripPosts.length | czPostCount }}</span>
+            <span class="trip-card-meta">
+              {% if years %}<span>{{ years }}</span>{% endif %}
+              <span>{{ tripPosts.length | czPostCount }}</span>
+            </span>
           </div>
         </a>
       {% endfor %}

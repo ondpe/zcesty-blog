@@ -262,7 +262,7 @@ textarea {
   display: inline-block;
   padding: 1px 6px;
   border: 1px solid var(--warn-border);
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--warn-bg);
   color: var(--warn-text);
   font-size: 0.72rem;

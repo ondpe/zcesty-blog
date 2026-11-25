@@ -98,7 +98,7 @@
       resultsEl.innerHTML = matches.slice(0, 15).map(function (item) {
         return '<a class="search-result" href="' + escapeHtml(item.url) + '">' +
           '<strong>' + escapeHtml(item.title) + '</strong>' +
-          '<small>' + escapeHtml(item.czDate) + (item.trip ? ' · ' + escapeHtml(item.trip) : '') + '</small>' +
+          '<small>' + escapeHtml(item.czDate) + (item.trip ? ', ' + escapeHtml(item.trip) : '') + '</small>' +
           (item.summary ? '<span>' + escapeHtml(item.summary) + '</span>' : '') +
         '</a>';
       }).join("");
