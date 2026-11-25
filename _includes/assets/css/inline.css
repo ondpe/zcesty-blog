@@ -131,10 +131,14 @@ body {
 a[href],
 a[href]:visited {
   color: var(--primary);
+  text-decoration: none;
 }
 
-a[href]:not(:hover) {
-  text-decoration: none;
+.eyebrow a:hover,
+.back-link:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 a:focus-visible,
