@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ metadata.url }}/</loc>
+    {% if collections.postsAll[0] %}<lastmod>{{ collections.postsAll[0].date | machineDate }}</lastmod>{% endif %}
+  </url>
+  {% for trip in collections.tripList %}
+    {% set tripPosts = collections[trip] | sortChronologically %}
+    {% set lastTripPost = tripPosts[tripPosts.length - 1] %}
+    <url>
+      <loc>{{ metadata.url }}/tags/{{ trip | slug }}/</loc>
+      {% if lastTripPost %}<lastmod>{{ lastTripPost.date | machineDate }}</lastmod>{% endif %}
+    </url>
+  {% endfor %}
+  {% for post in collections.postsAll %}
+    <url>
+      <loc>{{ metadata.url }}{{ post.url | url }}</loc>
+      <lastmod>{{ post.date | machineDate }}</lastmod>
+    </url>
+  {% endfor %}
+</urlset>

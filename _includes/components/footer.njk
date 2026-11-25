@@ -1,29 +1,170 @@
 <footer class="site-footer">
-  <p>
-    <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-    <span> · </span>
-    <a href="#main-content">Zpět nahoru</a>
-  </p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="{{ '/' | url }}"><strong>{{ metadata.title }}</strong></a>
+      <span>zápisky z cest vlakem, pěšky i náhodou</span>
+    </div>
+    <nav class="footer-links" aria-label="Odkazy v patičce">
+      {% for trip in collections.tripList %}
+        <a href="/tags/{{ trip | slug }}/">{{ trip }}</a>
+      {% endfor %}
+      <a href="/feed.xml">RSS</a>
+      <a href="#main-content">Zpět nahoru ↑</a>
+    </nav>
+  </div>
 </footer>
+
+<dialog class="search-dialog" id="searchDialog" aria-label="Hledat na blogu">
+  <div class="search-box">
+    <div class="search-head">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Hledej místo, téma nebo cestu (např. Kjóto, medvěd, SIMka)..."
+        autocomplete="off"
+        aria-label="Hledaný výraz"
+      />
+      <button class="search-close" id="closeSearch" type="button" aria-label="Zavřít hledání">✕</button>
+    </div>
+    <div class="search-results" id="searchResults" role="region" aria-live="polite">
+      <p class="search-hint">Začni psát — prohledám titulky, shrnutí i začátky článků bez ohledu na diakritiku.</p>
+    </div>
+  </div>
+</dialog>
+
 {% if section == "post" %}
   <script src="/static/vendor/baguetteBox.min.js" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      if (window.baguetteBox) {
-        baguetteBox.run(".gallery", {
-          overlayBackgroundColor: "rgba(0, 0, 0, 0.85)"
-        });
-      }
-
-      var toggle = document.querySelector(".trip-toggle-btn");
-      var sidebar = document.querySelector("#trip-sidebar");
-      if (toggle && sidebar) {
-        toggle.addEventListener("click", function () {
-          var expanded = toggle.getAttribute("aria-expanded") === "true";
-          toggle.setAttribute("aria-expanded", String(!expanded));
-          sidebar.classList.toggle("is-open", !expanded);
-        });
-      }
-    });
-  </script>
 {% endif %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // 1. Light/dark theme toggle
+    var themeBtn = document.getElementById("themeToggle");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var current = root.dataset.theme || (prefersDark ? "dark" : "light");
+        var next = current === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("zcestyTheme", next); } catch (e) {}
+      });
+    }
+
+    // 2. Client-side static search dialog
+    var dialog = document.getElementById("searchDialog");
+    var openBtn = document.getElementById("openSearch");
+    var closeBtn = document.getElementById("closeSearch");
+    var input = document.getElementById("searchInput");
+    var resultsEl = document.getElementById("searchResults");
+    var searchIndex = null;
+
+    function norm(s) {
+      return String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    function escapeHtml(s) {
+      return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    function loadIndex() {
+      if (searchIndex) return Promise.resolve(searchIndex);
+      return fetch("/search-index.json")
+        .then(function (r) { return r.json(); })
+        .then(function (items) {
+          searchIndex = items.map(function (item) {
+            return Object.assign({}, item, {
+              _hay: norm([item.title, item.trip, item.summary, item.excerpt, item.date].join(" "))
+            });
+          });
+          return searchIndex;
+        });
+    }
+
+    function renderSearch(query) {
+      var q = norm(query).trim();
+      if (!q) {
+        resultsEl.innerHTML = '<p class="search-hint">Začni psát — prohledám titulky, shrnutí i začátky článků bez ohledu na diakritiku.</p>';
+        return;
+      }
+      var terms = q.split(/\s+/).filter(Boolean);
+      var matches = (searchIndex || []).filter(function (item) {
+        return terms.every(function (t) { return item._hay.indexOf(t) !== -1; });
+      });
+      if (!matches.length) {
+        resultsEl.innerHTML = '<p class="search-hint">Nic jsem nenašel. Zkus jiné slovo.</p>';
+        return;
+      }
+      resultsEl.innerHTML = matches.slice(0, 15).map(function (item) {
+        return '<a class="search-result" href="' + escapeHtml(item.url) + '">' +
+          '<strong>' + escapeHtml(item.title) + '</strong>' +
+          '<small>' + escapeHtml(item.czDate) + (item.trip ? ' · ' + escapeHtml(item.trip) : '') + '</small>' +
+          (item.summary ? '<span>' + escapeHtml(item.summary) + '</span>' : '') +
+        '</a>';
+      }).join("");
+    }
+
+    function openSearch() {
+      if (!dialog || !dialog.showModal) return;
+      dialog.showModal();
+      input.focus();
+      input.select();
+      loadIndex().then(function () {
+        if (input.value) renderSearch(input.value);
+      }).catch(function () {
+        resultsEl.innerHTML = '<p class="search-hint">Vyhledávací index se nepodařilo načíst.</p>';
+      });
+    }
+
+    if (openBtn && dialog) {
+      openBtn.addEventListener("click", openSearch);
+      closeBtn.addEventListener("click", function () { dialog.close(); });
+      dialog.addEventListener("click", function (e) {
+        if (e.target === dialog) dialog.close();
+      });
+      input.addEventListener("input", function () {
+        loadIndex().then(function () { renderSearch(input.value); });
+      });
+      document.addEventListener("keydown", function (e) {
+        var tag = document.activeElement && document.activeElement.tagName;
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+          e.preventDefault();
+          openSearch();
+        } else if (e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && !dialog.open) {
+          e.preventDefault();
+          openSearch();
+        }
+      });
+    }
+
+    // 3. Post page enhancements (lightbox, mobile trip sidebar, reading progress)
+    if (window.baguetteBox && document.querySelector(".gallery")) {
+      baguetteBox.run(".gallery", {
+        overlayBackgroundColor: "rgba(12, 16, 20, 0.9)"
+      });
+    }
+
+    var toggle = document.querySelector(".trip-toggle-btn");
+    var sidebar = document.querySelector("#trip-sidebar");
+    if (toggle && sidebar) {
+      toggle.addEventListener("click", function () {
+        var expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        sidebar.classList.toggle("is-open", !expanded);
+      });
+    }
+
+    var progressBar = document.getElementById("readingProgressBar");
+    var article = document.querySelector(".post-detail");
+    if (progressBar && article) {
+      var updateProgress = function () {
+        var rect = article.getBoundingClientRect();
+        var total = Math.max(1, article.offsetHeight - window.innerHeight * 0.65);
+        var passed = Math.min(total, Math.max(0, -rect.top));
+        progressBar.style.transform = "scaleX(" + (passed / total).toFixed(4) + ")";
+      };
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress, { passive: true });
+      updateProgress();
+    }
+  });
+</script>

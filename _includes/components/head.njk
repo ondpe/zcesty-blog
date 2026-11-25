@@ -10,14 +10,26 @@
     gtag('js', new Date());
     gtag('config', 'G-YYE7WSXV3K');
   </script>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("zcestyTheme");
+        if (saved === "dark" || saved === "light") {
+          document.documentElement.dataset.theme = saved;
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <meta name="generator" content="{{ eleventy.generator }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDescription }}">
+  <meta name="color-scheme" content="light dark">
   {% if page.url %}
     <link rel="canonical" href="{{ canonicalUrl }}">
   {% endif %}
+  <link rel="alternate" type="application/atom+xml" title="{{ metadata.title }} — RSS" href="/feed.xml">
   <meta property="og:site_name" content="{{ metadata.title }}">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:type" content="{% if section == 'post' %}article{% else %}website{% endif %}">
@@ -35,6 +47,25 @@
   {% endif %}
   <meta name="twitter:title" content="{{ title or metadata.title }}">
   <meta name="twitter:description" content="{{ pageDescription }}">
+  {% if section == "post" %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ (title or metadata.title) | jsonify | safe }},
+        "description": {{ pageDescription | jsonify | safe }},
+        "datePublished": {{ (page.date | isoDate) | jsonify | safe }},
+        "url": {{ canonicalUrl | jsonify | safe }},
+        {% if hero %}"image": {{ (metadata.url + (hero | url)) | jsonify | safe }},{% endif %}
+        "inLanguage": "cs",
+        "isPartOf": {
+          "@type": "Blog",
+          "name": {{ metadata.title | jsonify | safe }},
+          "url": {{ (metadata.url + "/") | jsonify | safe }}
+        }
+      }
+    </script>
+  {% endif %}
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}

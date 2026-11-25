@@ -6,49 +6,62 @@ section: post
 {% set currentTrip = tags | primaryTrip %}
 {% set tripPosts = (collections[currentTrip] or []) | sortChronologically %}
 {% set currentTripYears = tripPosts | postYears %}
+{% set navPosts = collections.postsAll | reverse %}
+{% if tripPosts.length %}
+  {% set navPosts = tripPosts %}
+{% endif %}
+
+{% set currentIndex = -1 %}
+{% for post in navPosts %}
+  {% if post.url == page.url %}
+    {% set currentIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% set stats = layoutContent | readingStats %}
+
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
 
 <div class="content-grid post-layout">
   <section class="content-main">
     <article class="post-detail">
-      <h1>{{ title }}</h1>
-      <p class="post-date">
-        <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
+      <header class="post-header">
         {% if currentTrip %}
-          <span> · <a href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a></span>
+          <p class="eyebrow">
+            <a href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a>
+            {% if currentIndex >= 0 and tripPosts.length %}
+              <span> · {{ currentIndex + 1 }}. z {{ tripPosts.length }}</span>
+            {% endif %}
+          </p>
         {% endif %}
-      </p>
 
-      {% if summary %}
-        <p class="post-summary"><strong>{{ summary }}</strong></p>
-      {% endif %}
+        <h1>{{ title }}</h1>
 
-      <div class="gallery">
+        <p class="post-date">
+          <time datetime="{{ page.date | machineDate }}">{{ page.date | czDate }}</time>
+          {% if stats %}<span> · {{ stats }}</span>{% endif %}
+        </p>
+
+        {% if summary %}
+          <p class="post-summary">{{ summary }}</p>
+        {% endif %}
+      </header>
+
+      <div class="gallery post-prose">
         {{ layoutContent | safe }}
       </div>
 
       <nav class="post-nav" aria-label="Navigace mezi články">
-        {% set navPosts = collections.postsAll | reverse %}
-        {% if tripPosts.length %}
-          {% set navPosts = tripPosts %}
-        {% endif %}
-
-        {% set currentIndex = -1 %}
-        {% for post in navPosts %}
-          {% if post.url == page.url %}
-            {% set currentIndex = loop.index0 %}
-          {% endif %}
-        {% endfor %}
-
         {% if currentIndex > 0 and navPosts[currentIndex - 1] %}
           <a class="post-nav-link post-nav-prev" href="{{ navPosts[currentIndex - 1].url | url }}">
-            <span>Předchozí</span>
+            <span>← Předchozí</span>
             <strong>{{ navPosts[currentIndex - 1].data.title }}</strong>
           </a>
         {% endif %}
 
         {% if currentIndex >= 0 and navPosts[currentIndex + 1] %}
           <a class="post-nav-link post-nav-next" href="{{ navPosts[currentIndex + 1].url | url }}">
-            <span>Následující</span>
+            <span>Následující →</span>
             <strong>{{ navPosts[currentIndex + 1].data.title }}</strong>
           </a>
         {% endif %}
@@ -68,7 +81,7 @@ section: post
         <span></span>
         <span></span>
       </span>
-      <span>V téhle cestě</span>
+      <span>V téhle cestě ({{ currentIndex + 1 }}/{{ tripPosts.length }})</span>
     </button>
 
     <aside class="content-sidebar trip-sidebar" id="trip-sidebar" aria-label="Příspěvky v cestě">
@@ -81,7 +94,7 @@ section: post
           </a>
         {% endfor %}
       </nav>
-      <a class="back-link" href="/tags/{{ currentTrip | slug }}/">{{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a>
+      <a class="back-link" href="/tags/{{ currentTrip | slug }}/">Celá cesta {{ currentTrip }}{% if currentTripYears %} {{ currentTripYears }}{% endif %}</a>
     </aside>
   {% endif %}
 </div>

@@ -2,33 +2,73 @@
 layout: layouts/base.njk
 title: "Z cesty"
 eleventyComputed:
-  metaDescription: "Všechny články z blogu Z cesty"
+  metaDescription: "Všechny články z cestovního blogu Z cesty"
 ---
 
-<section class="page-intro">
-  <p class="eyebrow">Travel blog</p>
-  <h1>Všechny články od nejnovějšího</h1>
-  <p>Nejnovější zápisky jsou nahoře. Jednotlivé cesty si můžeš otevřít v menu a číst je popořadě od prvního dne.</p>
-</section>
+{% if pagination.pageNumber == 0 %}
+  <section class="trip-showcase-section" aria-label="Přehled cest">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Cesty jako deník</p>
+        <h1>Vyber cestu a čti popořadě</h1>
+      </div>
+      <p class="section-sub">Každou cestu si můžeš projít chronologicky od prvního dne, nebo níže číst nejnovější zápisky.</p>
+    </div>
 
-<div class="content-grid">
-  <section class="content-main">
-    {% set postlist = collections.postsAll %}
-    {% set showTripBadge = true %}
-    {% include "components/postslist.njk" %}
-  </section>
-
-  <aside class="content-sidebar home-trip-sidebar" aria-label="Cesty">
-    <h2>Cesty</h2>
-    <p>Vyber cestu a čti ji chronologicky.</p>
-    <nav class="trip-list" aria-label="Seznam cest">
+    <div class="trip-showcase">
       {% for trip in collections.tripList %}
-        {% set years = collections[trip] | postYears %}
-        <a href="/tags/{{ trip | slug }}/">
-          <span>{{ trip }}{% if years %} {{ years }}{% endif %}</span>
-          <small>{{ collections[trip].length | czPostCount }}</small>
+        {% set tripPosts = collections[trip] or [] %}
+        {% set years = tripPosts | postYears %}
+        {% set cover = tripPosts | tripCover %}
+        <a class="trip-card" href="/tags/{{ trip | slug }}/">
+          <div class="trip-card-media">
+            {% if cover %}
+              {% cardImage cover, "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px", loop.index0 < 2 %}
+            {% endif %}
+          </div>
+          <div class="trip-card-body">
+            <strong>{{ trip }}</strong>
+            <span>{% if years %}{{ years }} · {% endif %}{{ tripPosts.length | czPostCount }}</span>
+          </div>
         </a>
       {% endfor %}
+    </div>
+  </section>
+
+  <section class="feed-section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Deník</p>
+        <h2>Nejnovější zápisky</h2>
+      </div>
+    </div>
+{% else %}
+  <section class="page-intro">
+    <p class="eyebrow">Archiv</p>
+    <h1>Zápisky — strana {{ pagination.pageNumber + 1 }} z {{ pagination.pages.length }}</h1>
+  </section>
+  <section class="feed-section">
+{% endif %}
+
+  {% set postlist = pagedPosts or collections.postsAll %}
+  {% set showTripBadge = true %}
+  {% include "components/postslist.njk" %}
+
+  {% if pagination and pagination.pages.length > 1 %}
+    <nav class="pager" aria-label="Stránkování článků">
+      {% if pagination.href.previous %}
+        <a class="pager-link" href="{{ pagination.href.previous | url }}">← Novější</a>
+      {% else %}
+        <span class="pager-link is-disabled" aria-disabled="true">← Novější</span>
+      {% endif %}
+
+      <span class="pager-info">Strana {{ pagination.pageNumber + 1 }} z {{ pagination.pages.length }}</span>
+
+      {% if pagination.href.next %}
+        <a class="pager-link" href="{{ pagination.href.next | url }}">Starší →</a>
+      {% else %}
+        <span class="pager-link is-disabled" aria-disabled="true">Starší →</span>
+      {% endif %}
     </nav>
-  </aside>
-</div>
+  {% endif %}
+</section>

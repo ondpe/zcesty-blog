@@ -1,0 +1,17 @@
+---
+permalink: /search-index.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- for post in collections.postsAll %}
+  {
+    "title": {{ (post.data.title or "Bez názvu") | jsonify | safe }},
+    "url": {{ (post.url | url) | jsonify | safe }},
+    "date": {{ (post.date | machineDate) | jsonify | safe }},
+    "czDate": {{ (post.date | czDate) | jsonify | safe }},
+    "trip": {{ (post.data.tags | primaryTrip) | jsonify | safe }},
+    "summary": {{ (post.data.summary or "") | jsonify | safe }},
+    "excerpt": {{ (post.templateContent | plainExcerpt(500)) | jsonify | safe }}
+  }{% if not loop.last %},{% endif %}
+{%- endfor %}
+]
